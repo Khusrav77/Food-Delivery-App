@@ -51,6 +51,11 @@
 		A46642482C0335820025096A /* FoodDeliveryApp */ = {
 			isa = PBXGroup;
 			children = (
+				A466425C2C033A7A0025096A /* ViewModel */,
+				A466425B2C033A5D0025096A /* View */,
+				A466425A2C033A410025096A /* Model */,
+				A46642582C0339D70025096A /* UICommon */,
+				A46642572C0339C30025096A /* Fonts */,
 				A46642492C0335820025096A /* FoodDeliveryAppApp.swift */,
 				A466424B2C0335820025096A /* ContentView.swift */,
 				A466424D2C0335830025096A /* Assets.xcassets */,
@@ -65,6 +70,49 @@
 				A46642502C0335830025096A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A46642572C0339C30025096A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		A46642582C0339D70025096A /* UICommon */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UICommon;
+			sourceTree = "<group>";
+		};
+		A46642592C033A210025096A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		A466425A2C033A410025096A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A466425B2C033A5D0025096A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A46642592C033A210025096A /* Login */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A466425C2C033A7A0025096A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
