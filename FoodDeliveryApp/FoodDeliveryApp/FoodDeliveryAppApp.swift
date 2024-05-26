@@ -11,7 +11,10 @@ import SwiftUI
 struct FoodDeliveryAppApp: App {
     var body: some Scene {
         WindowGroup {
-            WelcomeView()
+            
+            NavigationView {
+                WelcomeView()
+            }
         }
     }
 }
