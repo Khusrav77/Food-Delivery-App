@@ -14,6 +14,7 @@
 		A466425E2C03501A0025096A /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A466425D2C03501A0025096A /* WelcomeView.swift */; };
 		A46642602C037D5E0025096A /* UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A466425F2C037D5E0025096A /* UIExtension.swift */; };
 		A46642622C03BE1B0025096A /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46642612C03BE1B0025096A /* RoundButton.swift */; };
+		A499C50E2C03C7B500F5F371 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A499C50D2C03C7B500F5F371 /* SignInView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		A466425D2C03501A0025096A /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		A466425F2C037D5E0025096A /* UIExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtension.swift; sourceTree = "<group>"; };
 		A46642612C03BE1B0025096A /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		A499C50D2C03C7B500F5F371 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				A466425D2C03501A0025096A /* WelcomeView.swift */,
+				A499C50D2C03C7B500F5F371 /* SignInView.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A499C50E2C03C7B500F5F371 /* SignInView.swift in Sources */,
 				A466424C2C0335820025096A /* ContentView.swift in Sources */,
 				A46642622C03BE1B0025096A /* RoundButton.swift in Sources */,
 				A466425E2C03501A0025096A /* WelcomeView.swift in Sources */,
