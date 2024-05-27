@@ -140,12 +140,28 @@ extension Color {
         return Color(hex: "E0E0E6")
     }
     
+    static var titleText: Color {
+        return Color(hex: "27214D")
+    }
+    
     static var primaryText: Color {
-        return Color.white
+        return Color(hex: "5D577E")
     }
     
     static var secondaryText: Color {
-        return .gray60
+        return Color(hex: "253F66")
+    }
+    
+    static var orangePrimary: Color {
+        return Color(hex: "EC7B15")
+    }
+    
+    static var orangeSecondary: Color {
+        return Color(hex: "FFE3C9")
+    }
+    
+    static var cardsColor: Color {
+        return Color(hex: "F8F6F1")
     }
     
     

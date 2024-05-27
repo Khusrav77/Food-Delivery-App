@@ -27,24 +27,20 @@ struct WelcomeView: View {
                     .font(.customfont(.medium, fontSize: 16))
                     .foregroundColor(.white.opacity(0.7))
                     .multilineTextAlignment(.center)
-                    //.padding(.top, 8)
+                //.padding(.top, 8)
                 Spacer()
-                Button {
-                    
-                } label: {
-                    Text("Начать")
-                        .font(.customfont(.semibold, fontSize: 20))
-                        .foregroundStyle(.green)
-                        .multilineTextAlignment(.center)
-                }
-                .frame(maxWidth: .infinity, maxHeight: 60)
-                .background(Color.white)
-                .cornerRadius(25)
                 
+                NavigationLink {
+                    SignInView()
+                } label: {
+                    RoundButton(title: "Начать") {
+                    }
+                }
+            
                 Spacer()
                     .frame(height: 60)
+                
             }
-            
             .padding(.horizontal, 20)
         }
         .navigationTitle("")
@@ -56,6 +52,8 @@ struct WelcomeView: View {
 
 struct WelcomeView_Previews: PreviewProvider {
     static var previews: some View {
-        WelcomeView()
+        NavigationView {
+            WelcomeView()
+        }
     }
 }

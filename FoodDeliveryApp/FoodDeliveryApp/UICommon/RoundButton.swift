@@ -21,7 +21,7 @@ struct RoundButton: View {
                     .foregroundStyle(.green)
                     .multilineTextAlignment(.center)
             }
-            .frame(maxWidth: .infinity, minHeight: 60, maxHeight: 60)
+            .frame(minWidth: 0,maxWidth: .infinity, minHeight: 60, maxHeight: 60)
             .background(Color.white)
             .cornerRadius(25)
         }
