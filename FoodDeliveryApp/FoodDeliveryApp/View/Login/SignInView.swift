@@ -57,7 +57,7 @@ struct SignInView: View {
                         .multilineTextAlignment(.center)
                 }
                 .frame(minWidth: 0,maxWidth: .infinity, minHeight: 60, maxHeight: 60)
-                .background(Color.green)
+                .background(Color.greenSecondary)
                 .cornerRadius(25)
                 .padding(.top, 20)
                 
@@ -73,6 +73,9 @@ struct SignInView: View {
                   
                 } label: {
                     Image("google_logo")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 25, height: 25)
                     Text("Google")
                         .font(.customfont(.semibold, fontSize: 20))
                         .foregroundStyle(.white)
@@ -87,6 +90,10 @@ struct SignInView: View {
                   
                 } label: {
                     Image("vk_logo")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 25, height: 25)
+                    
                     Text("Вконтакте")
                         .font(.customfont(.semibold, fontSize: 20))
                         .foregroundStyle(.white)

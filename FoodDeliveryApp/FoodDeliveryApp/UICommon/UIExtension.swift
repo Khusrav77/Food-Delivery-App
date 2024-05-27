@@ -164,6 +164,14 @@ extension Color {
         return Color(hex: "F8F6F1")
     }
     
+    static var greenPrimary: Color {
+        return Color(hex: "#03620C")
+    }
+    
+    static var greenSecondary: Color {
+        return Color(hex: "#0FCA21")
+    }
+    
     
     init(hex: String) {
         let hex = hex.trimmingCharacters(in: .alphanumerics.inverted)

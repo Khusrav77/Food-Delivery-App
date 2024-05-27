@@ -18,7 +18,7 @@ struct RoundButton: View {
             } label: {
                 Text(title)
                     .font(.customfont(.semibold, fontSize: 20))
-                    .foregroundStyle(.green)
+                    .foregroundStyle(Color.greenSecondary)
                     .multilineTextAlignment(.center)
             }
             .frame(minWidth: 0,maxWidth: .infinity, minHeight: 60, maxHeight: 60)

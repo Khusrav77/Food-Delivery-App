@@ -20,6 +20,7 @@ struct WelcomeView: View {
                 
                 Text("Food\nDelivery")
                     .font(.customfont(.semibold, fontSize: 48))
+                    .foregroundStyle(Color.greenPrimary)
                     .multilineTextAlignment(.center)
                     .padding(.top, 20)
                 
