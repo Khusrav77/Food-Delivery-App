@@ -9,10 +9,11 @@
 import SwiftUI
 
 enum Inter: String {
-    case regular = "Inter-Regular"
-    case medium = "Inter-Medium"
-    case semibold = "Inter-SemiBold"
-    case bold = "Inter-Bold"
+    case regular = "FiraSans-Regular"
+    case medium = "FiraSans-Medium"
+    case semibold = "FiraSans-SemiBold"
+    case bold = "FiraSans-Bold"
+    case alfaSlabOne = "AlfaSlabOne-Regular"
 }
 
 extension Font {
