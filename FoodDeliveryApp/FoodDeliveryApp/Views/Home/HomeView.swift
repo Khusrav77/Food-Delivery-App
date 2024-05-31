@@ -8,8 +8,29 @@
 import SwiftUI
 
 struct HomeView: View {
+    @StateObject var homeVM = HomeViewModel.shared
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            ScrollView {
+                VStack {
+                    HStack {
+                        Image("location")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 16, height: 16)
+                        
+                        Text("Санкт-Петербург")
+                            .font(.customfont(.regular, fontSize: 16))
+                    }
+                    SearchTextFild(placholder: "Search Store", text: $homeVM.textSearch)
+                        .padding(.horizontal, 20)
+                    
+                }
+                .padding(.top, .topInsets)
+            }
+        }
+        .ignoresSafeArea()
     }
 }
 

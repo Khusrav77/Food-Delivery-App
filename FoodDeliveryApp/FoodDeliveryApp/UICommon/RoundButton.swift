@@ -35,20 +35,14 @@ struct RoundButton: View {
 import SwiftUI
 
 struct RoundButton: View {
-    // Переменные
-    @State var title: String
+    
+    @State var title: String = "Title"
     var action: (() -> Void)?
 
-    // Инициализатор
-    init(title: String = "Title", action: (() -> Void)? = nil) {
-        self._title = State(initialValue: title)
-        self.action = action
-    }
-
     var body: some View {
-        Button(action: {
+        Button {
             action?()
-        }) {
+        } label: {
             Text(title)
                 .font(.customfont(.semibold, fontSize: 20))
                 .foregroundStyle(Color.greenPrimary)
