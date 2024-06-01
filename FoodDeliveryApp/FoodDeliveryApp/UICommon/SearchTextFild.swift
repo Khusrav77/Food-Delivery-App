@@ -15,10 +15,11 @@ struct SearchTextFild: View {
     var body: some View {
         HStack(spacing: 15) {
             
-            Image("search")
+            Image(systemName: "magnifyingglass")
                 .resizable()
                 .scaledToFit()
                 .frame(width: 20, height: 20)
+                .foregroundColor(.yellow)
             
             TextField(placholder, text: $text)
                 .font(.customfont(.regular, fontSize: 16))
@@ -28,8 +29,9 @@ struct SearchTextFild: View {
         }
         .frame(height: 30)
         .padding(10)
-        .background(Color(hex: "F8F7F2"))
+        .background(Color(hex: "F8F6F1"))
         .cornerRadius(20)
+        .shadow(color: .black.opacity(0.1), radius: 5, x: 0, y: 2)
     }
 }
 

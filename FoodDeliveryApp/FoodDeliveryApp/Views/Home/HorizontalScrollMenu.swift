@@ -23,9 +23,10 @@ struct HorizontalScrollMenu: View {
                             Text(category)
                                 .padding(.vertical, 8)
                                 .padding(.horizontal, 16)
-                                .background(selectedCategory == category ? Color.orangePrimary : Color.gray.opacity(0.2))
-                                .foregroundColor(selectedCategory == category ? .white : .black)
+                                .background(selectedCategory == category ? Color.orange : Color(hex: "F8F6F1"))
+                                .foregroundColor(selectedCategory == category ? .white : .gray)
                                 .cornerRadius(15)
+                                .shadow(color: .black.opacity(0.1), radius: 5, x: 0, y: 2 )
                         }
                     }
                 }
