@@ -15,6 +15,7 @@ struct HomeView: View {
             ScrollView {
                 VStack {
                     HStack {
+                        Spacer()
                         Image("location")
                             .resizable()
                             .scaledToFit()
@@ -22,9 +23,25 @@ struct HomeView: View {
                         
                         Text("Санкт-Петербург")
                             .font(.customfont(.regular, fontSize: 16))
+                        
+                        Spacer()
+                        
+                        Text("20-40 мин")
+                            .font(.customfont(.regular, fontSize: 16))
+                            .foregroundStyle(Color.green)
+                        
+                        Image("delivery_truc")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 25, height: 25)
+                        
+                        Spacer()
                     }
-                    SearchTextFild(placholder: "Search Store", text: $homeVM.textSearch)
-                        .padding(.horizontal, 20)
+                    
+                    HorizontalScrollMenu()
+                    
+//                   // SearchTextFild(placholder: "Найти продукты", text: $homeVM.textSearch)
+//                        .padding(.horizontal, 20)
                     
                 }
                 .padding(.top, .topInsets)
