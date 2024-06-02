@@ -31,29 +31,35 @@ struct CartButton: View {
                     .cornerRadius(12)
                     .shadow(color: .black.opacity(0.1), radius: 5)
                 } else {
-                    HStack(spacing: 24) {
+                    HStack(spacing: 16) {
+                        
                         Button(action: {
                             if counter > 0 {
                                 counter -= 1
                                 addedCart?()
                             }
                         }) {
-                            Image(systemName: "minus.circle")
-                                .font(.system(size: 16))
+                            Image(systemName: "minus")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 15, height: 15)
                                 .foregroundColor(.black.opacity(0.70))
                         }
-                        
+                        Spacer()
                         Text("\(counter)")
                             .font(.customfont(.regular, fontSize: 16))
-                        
+                        Spacer()
                         Button(action: {
                             counter += 1
                             addedCart?()
                         }) {
-                            Image(systemName: "plus.circle")
-                                .font(.system(size: 16))
+                            Image(systemName: "plus")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 15, height: 15)
                                 .foregroundColor(.black.opacity(0.70))
                         }
+                        
                     }
                     .frame(minWidth: 0, maxWidth: .infinity)
                     .padding(4)

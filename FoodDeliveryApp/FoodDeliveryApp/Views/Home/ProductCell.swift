@@ -40,18 +40,8 @@ struct ProductCell: View {
             
             Spacer()
             
-            Button(action: {
-                // Action for adding to cart
-            }) {
-                Text("В корзину")
-                    .font(.customfont(.regular, fontSize: 16))
-                    .foregroundStyle(.black.opacity(0.70))
-            }
-            .frame(minWidth: 0, maxWidth: .infinity)
-            .padding(4)
-            .background(Color.white)
-            .cornerRadius(12)
-            .shadow(color: .black.opacity(0.1), radius: 5)
+            CartButton(isSelect: false)
+                
         }
         .padding(8)
         .background(Color(hex: "F8F6F1"))

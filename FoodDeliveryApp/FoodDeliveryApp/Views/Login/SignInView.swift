@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SignInView: View {
     @State private var mobileNumber: String = ""
+    var action: (() -> Void)?
     
     var body: some View {
         VStack {
@@ -70,7 +71,7 @@ struct SignInView: View {
     
     private var continueButton: some View {
         Button {
-            // действие при нажатии
+            action?()
         } label: {
             Text("Продолжить")
                 .font(.customfont(.semibold, fontSize: 20))
@@ -103,7 +104,7 @@ struct SignInView: View {
     private func signInButton(imageName: String, text: String) -> some View {
         
             Button {
-                // действие при нажатии
+                action?()
                 
             } label: {
                 HStack {

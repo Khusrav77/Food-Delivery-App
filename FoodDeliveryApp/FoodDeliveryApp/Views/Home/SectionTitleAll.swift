@@ -11,19 +11,25 @@ struct SectionTitleAll: View {
     
     @State var title: String = "Title"
     @State var titleAll: String = "View All"
-    var didTap : (() -> ())?
+    var didTap : (() -> Void)?
     
     var body: some View {
        
         HStack {
             Text(title)
-                .font(.customfont(.semibold, fontSize: 18))
+                .font(.customfont(.regular, fontSize: 18))
+                .foregroundStyle(Color.greenPrimary)
 
             Spacer()
             
-            Text(titleAll)
-                .font(.customfont(.semibold, fontSize: 16))
-                .foregroundStyle(Color.greenPrimary)
+            Button {
+                didTap?()
+            } label: {
+                Text(titleAll)
+                    .font(.customfont(.regular, fontSize: 16))
+                    .foregroundStyle(Color.greenPrimary)
+            }
+            
                 
         }
     }

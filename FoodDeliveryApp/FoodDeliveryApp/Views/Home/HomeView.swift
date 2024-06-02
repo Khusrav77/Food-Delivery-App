@@ -14,7 +14,7 @@ struct HomeView: View {
         ZStack {
             ScrollView {
                 VStack {
-                    HStack(spacing: 8) {
+                    HStack {
                         Spacer()
                         Image("location")
                             .resizable()
