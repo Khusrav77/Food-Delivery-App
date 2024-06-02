@@ -34,7 +34,7 @@ struct RoundButton: View {
 }*/
 import SwiftUI
 
-struct RoundButton: View {
+struct StartedButton: View {
     
     @State var title: String = "Title"
     var action: (() -> Void)?
@@ -56,6 +56,6 @@ struct RoundButton: View {
 }
 
 #Preview {
-    RoundButton()
+    StartedButton()
         .padding(20)
 }

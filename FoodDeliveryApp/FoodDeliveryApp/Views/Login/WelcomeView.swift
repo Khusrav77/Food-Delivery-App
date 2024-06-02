@@ -61,7 +61,7 @@ struct WelcomeView: View {
     // Start Button
     private var startButton: some View {
         NavigationLink(destination: SignInView()) {
-            RoundButton(title: startButtonTitle) {
+            StartedButton(title: startButtonTitle) {
 
             }
         }

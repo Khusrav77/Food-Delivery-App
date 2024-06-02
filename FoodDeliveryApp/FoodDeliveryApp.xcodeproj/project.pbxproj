@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A45CAEFC2C0C6DC40076A99C /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45CAEFB2C0C6DC40076A99C /* UserModel.swift */; };
+		A45CAEFE2C0C9D830076A99C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A45CAEFD2C0C9D830076A99C /* GoogleService-Info.plist */; };
+		A45CAF012C0CADA30076A99C /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A45CAF002C0CADA30076A99C /* FirebaseAnalytics */; };
+		A45CAF032C0CADA30076A99C /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = A45CAF022C0CADA30076A99C /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		A45CE2872C0A4B080084FD80 /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45CE2862C0A4B080084FD80 /* TabButton.swift */; };
 		A45CE2892C0A6BC00084FD80 /* SearchTextFild.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45CE2882C0A6BC00084FD80 /* SearchTextFild.swift */; };
 		A466424A2C0335820025096A /* FoodDeliveryAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46642492C0335820025096A /* FoodDeliveryAppApp.swift */; };
@@ -14,7 +18,7 @@
 		A46642512C0335830025096A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A46642502C0335830025096A /* Preview Assets.xcassets */; };
 		A466425E2C03501A0025096A /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A466425D2C03501A0025096A /* WelcomeView.swift */; };
 		A46642602C037D5E0025096A /* UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A466425F2C037D5E0025096A /* UIExtension.swift */; };
-		A46642622C03BE1B0025096A /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46642612C03BE1B0025096A /* RoundButton.swift */; };
+		A46642622C03BE1B0025096A /* StartedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46642612C03BE1B0025096A /* StartedButton.swift */; };
 		A46739B22C09192D00AA4BDE /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46739B12C09192D00AA4BDE /* HomeViewModel.swift */; };
 		A46739B42C091A3900AA4BDE /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46739B32C091A3900AA4BDE /* MainViewModel.swift */; };
 		A46739B72C091AB800AA4BDE /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46739B62C091AB800AA4BDE /* MainTabView.swift */; };
@@ -37,6 +41,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A45CAEFB2C0C6DC40076A99C /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		A45CAEFD2C0C9D830076A99C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A45CE2862C0A4B080084FD80 /* TabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
 		A45CE2882C0A6BC00084FD80 /* SearchTextFild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextFild.swift; sourceTree = "<group>"; };
 		A46642462C0335820025096A /* FoodDeliveryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodDeliveryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,7 +51,7 @@
 		A46642502C0335830025096A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A466425D2C03501A0025096A /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		A466425F2C037D5E0025096A /* UIExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtension.swift; sourceTree = "<group>"; };
-		A46642612C03BE1B0025096A /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		A46642612C03BE1B0025096A /* StartedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartedButton.swift; sourceTree = "<group>"; };
 		A46739B12C09192D00AA4BDE /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		A46739B32C091A3900AA4BDE /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		A46739B62C091AB800AA4BDE /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
@@ -73,6 +79,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A45CAF012C0CADA30076A99C /* FirebaseAnalytics in Frameworks */,
+				A45CAF032C0CADA30076A99C /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +106,7 @@
 		A46642482C0335820025096A /* FoodDeliveryApp */ = {
 			isa = PBXGroup;
 			children = (
+				A45CAEFD2C0C9D830076A99C /* GoogleService-Info.plist */,
 				A499C53E2C05333100F5F371 /* Info.plist */,
 				A466425C2C033A7A0025096A /* ViewModel */,
 				A466425B2C033A5D0025096A /* Views */,
@@ -142,7 +151,7 @@
 			children = (
 				A466425D2C03501A0025096A /* WelcomeView.swift */,
 				A499C50D2C03C7B500F5F371 /* SignInView.swift */,
-				A46642612C03BE1B0025096A /* RoundButton.swift */,
+				A46642612C03BE1B0025096A /* StartedButton.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -150,6 +159,7 @@
 		A466425A2C033A410025096A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A45CAEFB2C0C6DC40076A99C /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -242,6 +252,10 @@
 			dependencies = (
 			);
 			name = FoodDeliveryApp;
+			packageProductDependencies = (
+				A45CAF002C0CADA30076A99C /* FirebaseAnalytics */,
+				A45CAF022C0CADA30076A99C /* FirebaseAnalyticsWithoutAdIdSupport */,
+			);
 			productName = FoodDeliveryApp;
 			productReference = A46642462C0335820025096A /* FoodDeliveryApp.app */;
 			productType = "com.apple.product-type.application";
@@ -270,6 +284,9 @@
 				Base,
 			);
 			mainGroup = A466423D2C0335820025096A;
+			packageReferences = (
+				A45CAEFF2C0CADA20076A99C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = A46642472C0335820025096A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -289,6 +306,7 @@
 				A46642512C0335830025096A /* Preview Assets.xcassets in Resources */,
 				A499C5352C0523D600F5F371 /* FiraSans-Light.ttf in Resources */,
 				A499C5342C0523D600F5F371 /* FiraSans-ExtraBold.ttf in Resources */,
+				A45CAEFE2C0C9D830076A99C /* GoogleService-Info.plist in Resources */,
 				A499C52B2C0523D600F5F371 /* FiraSans-SemiBold.ttf in Resources */,
 				A499C52E2C0523D600F5F371 /* FiraSans-Thin.ttf in Resources */,
 				A499C5372C0523D600F5F371 /* FiraSans-Regular.ttf in Resources */,
@@ -311,8 +329,9 @@
 				A499C50E2C03C7B500F5F371 /* SignInView.swift in Sources */,
 				A46739B22C09192D00AA4BDE /* HomeViewModel.swift in Sources */,
 				A46739B72C091AB800AA4BDE /* MainTabView.swift in Sources */,
-				A46642622C03BE1B0025096A /* RoundButton.swift in Sources */,
+				A46642622C03BE1B0025096A /* StartedButton.swift in Sources */,
 				A46739BD2C091F4600AA4BDE /* ExploreView.swift in Sources */,
+				A45CAEFC2C0C6DC40076A99C /* UserModel.swift in Sources */,
 				A466425E2C03501A0025096A /* WelcomeView.swift in Sources */,
 				A46CFE402C0B6EA700BF88DD /* SectionTitleAll.swift in Sources */,
 				A45CE2872C0A4B080084FD80 /* TabButton.swift in Sources */,
@@ -538,6 +557,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A45CAEFF2C0CADA20076A99C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.27.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A45CAF002C0CADA30076A99C /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A45CAEFF2C0CADA20076A99C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		A45CAF022C0CADA30076A99C /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A45CAEFF2C0CADA20076A99C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A466423E2C0335820025096A /* Project object */;
 }

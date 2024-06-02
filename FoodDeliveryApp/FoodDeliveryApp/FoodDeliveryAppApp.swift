@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct FoodDeliveryAppApp: App {
+    //@StateObject var mainVM = MainViewModel.shared
     var body: some Scene {
         WindowGroup {
             
