@@ -11,6 +11,7 @@
 		A45CAEFE2C0C9D830076A99C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A45CAEFD2C0C9D830076A99C /* GoogleService-Info.plist */; };
 		A45CAF012C0CADA30076A99C /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A45CAF002C0CADA30076A99C /* FirebaseAnalytics */; };
 		A45CAF032C0CADA30076A99C /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = A45CAF022C0CADA30076A99C /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		A45CAF062C0CB1830076A99C /* FlagPhoneNumber in Frameworks */ = {isa = PBXBuildFile; productRef = A45CAF052C0CB1830076A99C /* FlagPhoneNumber */; };
 		A45CE2872C0A4B080084FD80 /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45CE2862C0A4B080084FD80 /* TabButton.swift */; };
 		A45CE2892C0A6BC00084FD80 /* SearchTextFild.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45CE2882C0A6BC00084FD80 /* SearchTextFild.swift */; };
 		A466424A2C0335820025096A /* FoodDeliveryAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46642492C0335820025096A /* FoodDeliveryAppApp.swift */; };
@@ -79,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A45CAF062C0CB1830076A99C /* FlagPhoneNumber in Frameworks */,
 				A45CAF012C0CADA30076A99C /* FirebaseAnalytics in Frameworks */,
 				A45CAF032C0CADA30076A99C /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 			);
@@ -255,6 +257,7 @@
 			packageProductDependencies = (
 				A45CAF002C0CADA30076A99C /* FirebaseAnalytics */,
 				A45CAF022C0CADA30076A99C /* FirebaseAnalyticsWithoutAdIdSupport */,
+				A45CAF052C0CB1830076A99C /* FlagPhoneNumber */,
 			);
 			productName = FoodDeliveryApp;
 			productReference = A46642462C0335820025096A /* FoodDeliveryApp.app */;
@@ -286,6 +289,7 @@
 			mainGroup = A466423D2C0335820025096A;
 			packageReferences = (
 				A45CAEFF2C0CADA20076A99C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				A45CAF042C0CB1830076A99C /* XCRemoteSwiftPackageReference "FlagPhoneNumber" */,
 			);
 			productRefGroup = A46642472C0335820025096A /* Products */;
 			projectDirPath = "";
@@ -567,6 +571,14 @@
 				minimumVersion = 10.27.0;
 			};
 		};
+		A45CAF042C0CB1830076A99C /* XCRemoteSwiftPackageReference "FlagPhoneNumber" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/chronotruck/FlagPhoneNumber";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -579,6 +591,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A45CAEFF2C0CADA20076A99C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		A45CAF052C0CB1830076A99C /* FlagPhoneNumber */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A45CAF042C0CB1830076A99C /* XCRemoteSwiftPackageReference "FlagPhoneNumber" */;
+			productName = FlagPhoneNumber;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
