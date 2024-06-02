@@ -12,6 +12,10 @@
 		A45CAF012C0CADA30076A99C /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A45CAF002C0CADA30076A99C /* FirebaseAnalytics */; };
 		A45CAF032C0CADA30076A99C /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = A45CAF022C0CADA30076A99C /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		A45CAF062C0CB1830076A99C /* FlagPhoneNumber in Frameworks */ = {isa = PBXBuildFile; productRef = A45CAF052C0CB1830076A99C /* FlagPhoneNumber */; };
+		A45CAF0C2C0CEBB70076A99C /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A45CAF0B2C0CEBB70076A99C /* FirebaseAuth */; };
+		A45CAF132C0D03070076A99C /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45CAF122C0D03060076A99C /* AuthViewModel.swift */; };
+		A45CAF152C0D1E560076A99C /* AuthSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45CAF142C0D1E560076A99C /* AuthSelectionView.swift */; };
+		A45CAF172C0D20810076A99C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45CAF162C0D20810076A99C /* MainView.swift */; };
 		A45CE2872C0A4B080084FD80 /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45CE2862C0A4B080084FD80 /* TabButton.swift */; };
 		A45CE2892C0A6BC00084FD80 /* SearchTextFild.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45CE2882C0A6BC00084FD80 /* SearchTextFild.swift */; };
 		A466424A2C0335820025096A /* FoodDeliveryAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46642492C0335820025096A /* FoodDeliveryAppApp.swift */; };
@@ -44,6 +48,9 @@
 /* Begin PBXFileReference section */
 		A45CAEFB2C0C6DC40076A99C /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		A45CAEFD2C0C9D830076A99C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A45CAF122C0D03060076A99C /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		A45CAF142C0D1E560076A99C /* AuthSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSelectionView.swift; sourceTree = "<group>"; };
+		A45CAF162C0D20810076A99C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		A45CE2862C0A4B080084FD80 /* TabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
 		A45CE2882C0A6BC00084FD80 /* SearchTextFild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextFild.swift; sourceTree = "<group>"; };
 		A46642462C0335820025096A /* FoodDeliveryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodDeliveryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,17 +90,33 @@
 				A45CAF062C0CB1830076A99C /* FlagPhoneNumber in Frameworks */,
 				A45CAF012C0CADA30076A99C /* FirebaseAnalytics in Frameworks */,
 				A45CAF032C0CADA30076A99C /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				A45CAF0C2C0CEBB70076A99C /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A45CAF0A2C0CEBB70076A99C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A45CAF0D2C0CFF530076A99C /* Test */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
 		A466423D2C0335820025096A = {
 			isa = PBXGroup;
 			children = (
 				A46642482C0335820025096A /* FoodDeliveryApp */,
 				A46642472C0335820025096A /* Products */,
+				A45CAF0A2C0CEBB70076A99C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,6 +131,7 @@
 		A46642482C0335820025096A /* FoodDeliveryApp */ = {
 			isa = PBXGroup;
 			children = (
+				A45CAF0D2C0CFF530076A99C /* Test */,
 				A45CAEFD2C0C9D830076A99C /* GoogleService-Info.plist */,
 				A499C53E2C05333100F5F371 /* Info.plist */,
 				A466425C2C033A7A0025096A /* ViewModel */,
@@ -154,6 +178,7 @@
 				A466425D2C03501A0025096A /* WelcomeView.swift */,
 				A499C50D2C03C7B500F5F371 /* SignInView.swift */,
 				A46642612C03BE1B0025096A /* StartedButton.swift */,
+				A45CAF142C0D1E560076A99C /* AuthSelectionView.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -162,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				A45CAEFB2C0C6DC40076A99C /* UserModel.swift */,
+				A45CAF122C0D03060076A99C /* AuthViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -173,6 +199,7 @@
 				A46739B82C091D2200AA4BDE /* Home */,
 				A46739B52C091A6400AA4BDE /* MainTab */,
 				A46642592C033A210025096A /* Login */,
+				A45CAF162C0D20810076A99C /* MainView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -258,6 +285,7 @@
 				A45CAF002C0CADA30076A99C /* FirebaseAnalytics */,
 				A45CAF022C0CADA30076A99C /* FirebaseAnalyticsWithoutAdIdSupport */,
 				A45CAF052C0CB1830076A99C /* FlagPhoneNumber */,
+				A45CAF0B2C0CEBB70076A99C /* FirebaseAuth */,
 			);
 			productName = FoodDeliveryApp;
 			productReference = A46642462C0335820025096A /* FoodDeliveryApp.app */;
@@ -290,6 +318,7 @@
 			packageReferences = (
 				A45CAEFF2C0CADA20076A99C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				A45CAF042C0CB1830076A99C /* XCRemoteSwiftPackageReference "FlagPhoneNumber" */,
+				A45CAF072C0CD5B20076A99C /* XCRemoteSwiftPackageReference "cocoapods-generate" */,
 			);
 			productRefGroup = A46642472C0335820025096A /* Products */;
 			projectDirPath = "";
@@ -329,15 +358,18 @@
 			files = (
 				A46739BA2C091D4F00AA4BDE /* HomeView.swift in Sources */,
 				A46CFE442C0BD6B600BF88DD /* CartButton.swift in Sources */,
+				A45CAF152C0D1E560076A99C /* AuthSelectionView.swift in Sources */,
 				A46739B42C091A3900AA4BDE /* MainViewModel.swift in Sources */,
 				A499C50E2C03C7B500F5F371 /* SignInView.swift in Sources */,
 				A46739B22C09192D00AA4BDE /* HomeViewModel.swift in Sources */,
 				A46739B72C091AB800AA4BDE /* MainTabView.swift in Sources */,
+				A45CAF132C0D03070076A99C /* AuthViewModel.swift in Sources */,
 				A46642622C03BE1B0025096A /* StartedButton.swift in Sources */,
 				A46739BD2C091F4600AA4BDE /* ExploreView.swift in Sources */,
 				A45CAEFC2C0C6DC40076A99C /* UserModel.swift in Sources */,
 				A466425E2C03501A0025096A /* WelcomeView.swift in Sources */,
 				A46CFE402C0B6EA700BF88DD /* SectionTitleAll.swift in Sources */,
+				A45CAF172C0D20810076A99C /* MainView.swift in Sources */,
 				A45CE2872C0A4B080084FD80 /* TabButton.swift in Sources */,
 				A46CFE3E2C0B48A700BF88DD /* HorizontalScrollMenu.swift in Sources */,
 				A45CE2892C0A6BC00084FD80 /* SearchTextFild.swift in Sources */,
@@ -579,6 +611,14 @@
 				minimumVersion = 0.9.0;
 			};
 		};
+		A45CAF072C0CD5B20076A99C /* XCRemoteSwiftPackageReference "cocoapods-generate" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/square/cocoapods-generate";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -596,6 +636,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A45CAF042C0CB1830076A99C /* XCRemoteSwiftPackageReference "FlagPhoneNumber" */;
 			productName = FlagPhoneNumber;
+		};
+		A45CAF0B2C0CEBB70076A99C /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A45CAEFF2C0CADA20076A99C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

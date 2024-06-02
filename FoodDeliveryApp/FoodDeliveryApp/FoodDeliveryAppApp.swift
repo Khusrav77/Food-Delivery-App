@@ -6,16 +6,24 @@
 //
 
 import SwiftUI
+import Firebase
+
+class AppDelegate: NSObject, UIApplicationDelegate {
+    func application(_ application: UIApplication, launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
+        FirebaseApp.configure()
+        return true
+    }
+}
+
 
 @main
 struct FoodDeliveryAppApp: App {
-    //@StateObject var mainVM = MainViewModel.shared
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+
     var body: some Scene {
         WindowGroup {
             
-            NavigationView {
-                WelcomeView()
-            }
+            MainView()
         }
     }
 }
