@@ -15,16 +15,84 @@ struct HomeView: View {
             ScrollView {
                 VStack {
                     HStack {
+                        Spacer()
                         Image("location")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 16, height: 16)
                         
                         Text("Санкт-Петербург")
-                            .font(.customfont(.regular, fontSize: 16))
+                            .font(.customfont(.regular, fontSize: 14))
+                        
+                        Spacer()
+                        
+                        Text("20-40 мин")
+                            .font(.customfont(.regular, fontSize: 14))
+                            .foregroundStyle(Color.green)
+                        
+                        Image(systemName: "figure.outdoor.cycle")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 24, height: 24)
+                            .foregroundColor(.orange)
+                        
+                        Spacer()
                     }
-                    SearchTextFild(placholder: "Search Store", text: $homeVM.textSearch)
-                        .padding(.horizontal, 20)
+                    
+                    HorizontalScrollMenu()
+                   
+                    
+                    SectionTitleAll(title: "Специалные предложения!", titleAll: "Все") {
+                            
+                        }
+                        .padding(.horizontal, 16)
+                    
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        LazyHStack(spacing: 12) {
+                            ForEach (0...5, id: \.self) {index in
+                               productCell
+                           }
+                        }
+                        .padding(.horizontal)
+                        .padding(.vertical, 16)
+                    }
+                    
+                    SectionTitleAll(title: "Больше всего покупают", titleAll: "Все") {
+                        
+                    }
+                    .padding(.horizontal, 16)
+                    
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        LazyHStack(spacing: 12) {
+                            ForEach (0...5, id: \.self) {index in
+                               productCell
+                           }
+                        }
+                        .padding(.horizontal)
+                        .padding(.vertical, 8)
+                    }
+                    
+                    
+                    SectionTitleAll(title: "Готовая еда", titleAll: "Все") {
+                        
+                    }
+                    .padding(.horizontal, 16)
+                    .padding(.vertical, 8)
+                    
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        LazyHStack(spacing: 12) {
+                            ForEach (0...5, id: \.self) {index in
+                                productCell
+                           }
+                        }
+                        .padding(.horizontal)
+                        .padding(.vertical, 8)
+                    }
+                    .padding(.bottom, 8)
+                    
+                    
+//                   // SearchTextFild(placholder: "Найти продукты", text: $homeVM.textSearch)
+//                        .padding(.horizontal, 20)
                     
                 }
                 .padding(.top, .topInsets)
