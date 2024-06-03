@@ -8,7 +8,12 @@
 import SwiftUI
 
 struct SignInView: View {
-    @State private var mobileNumber: String = ""
+    @State private var mobileNumber = ""
+    private var isLoginButtonDisabled: Bool {
+        !isPhoneNumberValid(mobileNumber)
+    }
+ 
+    
     var action: (() -> Void)?
     
     var body: some View {
@@ -62,12 +67,21 @@ struct SignInView: View {
             TextField("999 000 00 00", text: $mobileNumber)
                 .keyboardType(.phonePad)
                 .frame(minWidth: 0, maxWidth: .infinity)
+                //.onChange(of: mobileNumber) {
+                    
+               // }
         }
         .frame(minHeight: 60)
         .background(Color.cardsColor)
-        .cornerRadius(25)
+        .clipShape(RoundedRectangle(cornerRadius: 24))
         .padding(.top, 16)
+        
+        
     }
+    private func isPhoneNumberValid(_ number: String) -> Bool {
+            let cleanedNumber = number.filter { $0.isNumber }
+            return cleanedNumber.count == 10
+        }
     
     private var continueButton: some View {
         Button {
@@ -80,7 +94,7 @@ struct SignInView: View {
                 .frame(minHeight: 60)
                 .frame(maxWidth: .infinity)
                 .background(Color.greenSecondary)
-                .cornerRadius(25)
+                .cornerRadius(24)
                 .padding(.top, 16)
         }
         
@@ -94,14 +108,16 @@ struct SignInView: View {
     }
     
     private var googleSignInButton: some View {
-        signInButton(imageName: "google_logo", text: "Google")
+        signInButton(imageName: "google_logo", text: "Google", actiov: {})
     }
     
     private var vkSignInButton: some View {
-        signInButton(imageName: "vk_logo", text: "Вконтакте")
+            signInButton(imageName: "vk_logo", text: "Вконтакте", actiov: {})
     }
     
-    private func signInButton(imageName: String, text: String) -> some View {
+    
+    
+    private func signInButton(imageName: String, text: String, actiov: (() -> Void)?) -> some View {
         
             Button {
                 action?()
@@ -122,13 +138,19 @@ struct SignInView: View {
                     Spacer().padding()
                 }
                 .background(Color.gray50)
-                .cornerRadius(25)
+                .clipShape(RoundedRectangle(cornerRadius: 24))
                 .padding(.top, 16)
         }
+        
         .navigationTitle("")
         .navigationBarBackButtonHidden(true)
         .navigationBarHidden(true)
         .ignoresSafeArea()
+        
+        
+        
+        
+        
         
     }
 }

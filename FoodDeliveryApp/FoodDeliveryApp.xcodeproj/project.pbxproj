@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A45A898B2C0DE0FF0015A0A4 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45A898A2C0DE0FF0015A0A4 /* ProductModel.swift */; };
+		A45A898D2C0DEF0B0015A0A4 /* UIKitExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45A898C2C0DEF0B0015A0A4 /* UIKitExtension.swift */; };
+		A45CAEFC2C0C6DC40076A99C /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45CAEFB2C0C6DC40076A99C /* UserModel.swift */; };
+		A45CAEFE2C0C9D830076A99C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A45CAEFD2C0C9D830076A99C /* GoogleService-Info.plist */; };
+		A45CAF132C0D03070076A99C /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45CAF122C0D03060076A99C /* AuthViewModel.swift */; };
+		A45CAF152C0D1E560076A99C /* AuthSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45CAF142C0D1E560076A99C /* AuthSelectionView.swift */; };
+		A45CAF172C0D20810076A99C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45CAF162C0D20810076A99C /* MainView.swift */; };
 		A45CE2872C0A4B080084FD80 /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45CE2862C0A4B080084FD80 /* TabButton.swift */; };
 		A45CE2892C0A6BC00084FD80 /* SearchTextFild.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45CE2882C0A6BC00084FD80 /* SearchTextFild.swift */; };
 		A466424A2C0335820025096A /* FoodDeliveryAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46642492C0335820025096A /* FoodDeliveryAppApp.swift */; };
@@ -14,7 +21,7 @@
 		A46642512C0335830025096A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A46642502C0335830025096A /* Preview Assets.xcassets */; };
 		A466425E2C03501A0025096A /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A466425D2C03501A0025096A /* WelcomeView.swift */; };
 		A46642602C037D5E0025096A /* UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A466425F2C037D5E0025096A /* UIExtension.swift */; };
-		A46642622C03BE1B0025096A /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46642612C03BE1B0025096A /* RoundButton.swift */; };
+		A46642622C03BE1B0025096A /* StartedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46642612C03BE1B0025096A /* StartedButton.swift */; };
 		A46739B22C09192D00AA4BDE /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46739B12C09192D00AA4BDE /* HomeViewModel.swift */; };
 		A46739B42C091A3900AA4BDE /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46739B32C091A3900AA4BDE /* MainViewModel.swift */; };
 		A46739B72C091AB800AA4BDE /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46739B62C091AB800AA4BDE /* MainTabView.swift */; };
@@ -37,6 +44,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A45A898A2C0DE0FF0015A0A4 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		A45A898C2C0DEF0B0015A0A4 /* UIKitExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitExtension.swift; sourceTree = "<group>"; };
+		A45CAEFB2C0C6DC40076A99C /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		A45CAEFD2C0C9D830076A99C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A45CAF122C0D03060076A99C /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		A45CAF142C0D1E560076A99C /* AuthSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSelectionView.swift; sourceTree = "<group>"; };
+		A45CAF162C0D20810076A99C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		A45CE2862C0A4B080084FD80 /* TabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
 		A45CE2882C0A6BC00084FD80 /* SearchTextFild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextFild.swift; sourceTree = "<group>"; };
 		A46642462C0335820025096A /* FoodDeliveryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodDeliveryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,7 +59,7 @@
 		A46642502C0335830025096A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A466425D2C03501A0025096A /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		A466425F2C037D5E0025096A /* UIExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtension.swift; sourceTree = "<group>"; };
-		A46642612C03BE1B0025096A /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		A46642612C03BE1B0025096A /* StartedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartedButton.swift; sourceTree = "<group>"; };
 		A46739B12C09192D00AA4BDE /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		A46739B32C091A3900AA4BDE /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		A46739B62C091AB800AA4BDE /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
@@ -79,11 +93,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A45CAF0A2C0CEBB70076A99C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A45CAF0D2C0CFF530076A99C /* Test */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
 		A466423D2C0335820025096A = {
 			isa = PBXGroup;
 			children = (
 				A46642482C0335820025096A /* FoodDeliveryApp */,
 				A46642472C0335820025096A /* Products */,
+				A45CAF0A2C0CEBB70076A99C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,6 +127,8 @@
 		A46642482C0335820025096A /* FoodDeliveryApp */ = {
 			isa = PBXGroup;
 			children = (
+				A45CAF0D2C0CFF530076A99C /* Test */,
+				A45CAEFD2C0C9D830076A99C /* GoogleService-Info.plist */,
 				A499C53E2C05333100F5F371 /* Info.plist */,
 				A466425C2C033A7A0025096A /* ViewModel */,
 				A466425B2C033A5D0025096A /* Views */,
@@ -133,6 +164,7 @@
 			children = (
 				A466425F2C037D5E0025096A /* UIExtension.swift */,
 				A45CE2882C0A6BC00084FD80 /* SearchTextFild.swift */,
+				A45A898C2C0DEF0B0015A0A4 /* UIKitExtension.swift */,
 			);
 			path = UICommon;
 			sourceTree = "<group>";
@@ -142,7 +174,8 @@
 			children = (
 				A466425D2C03501A0025096A /* WelcomeView.swift */,
 				A499C50D2C03C7B500F5F371 /* SignInView.swift */,
-				A46642612C03BE1B0025096A /* RoundButton.swift */,
+				A46642612C03BE1B0025096A /* StartedButton.swift */,
+				A45CAF142C0D1E560076A99C /* AuthSelectionView.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -150,6 +183,8 @@
 		A466425A2C033A410025096A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A45CAEFB2C0C6DC40076A99C /* UserModel.swift */,
+				A45A898A2C0DE0FF0015A0A4 /* ProductModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -161,6 +196,7 @@
 				A46739B82C091D2200AA4BDE /* Home */,
 				A46739B52C091A6400AA4BDE /* MainTab */,
 				A46642592C033A210025096A /* Login */,
+				A45CAF162C0D20810076A99C /* MainView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -170,6 +206,7 @@
 			children = (
 				A46739B12C09192D00AA4BDE /* HomeViewModel.swift */,
 				A46739B32C091A3900AA4BDE /* MainViewModel.swift */,
+				A45CAF122C0D03060076A99C /* AuthViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -242,6 +279,8 @@
 			dependencies = (
 			);
 			name = FoodDeliveryApp;
+			packageProductDependencies = (
+			);
 			productName = FoodDeliveryApp;
 			productReference = A46642462C0335820025096A /* FoodDeliveryApp.app */;
 			productType = "com.apple.product-type.application";
@@ -270,6 +309,12 @@
 				Base,
 			);
 			mainGroup = A466423D2C0335820025096A;
+			packageReferences = (
+				A45CAEFF2C0CADA20076A99C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				A45CAF042C0CB1830076A99C /* XCRemoteSwiftPackageReference "FlagPhoneNumber" */,
+				A45CAF072C0CD5B20076A99C /* XCRemoteSwiftPackageReference "cocoapods-generate" */,
+				A45CAF452C0D39B70076A99C /* XCRemoteSwiftPackageReference "FirebaseUI-iOS" */,
+			);
 			productRefGroup = A46642472C0335820025096A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -289,6 +334,7 @@
 				A46642512C0335830025096A /* Preview Assets.xcassets in Resources */,
 				A499C5352C0523D600F5F371 /* FiraSans-Light.ttf in Resources */,
 				A499C5342C0523D600F5F371 /* FiraSans-ExtraBold.ttf in Resources */,
+				A45CAEFE2C0C9D830076A99C /* GoogleService-Info.plist in Resources */,
 				A499C52B2C0523D600F5F371 /* FiraSans-SemiBold.ttf in Resources */,
 				A499C52E2C0523D600F5F371 /* FiraSans-Thin.ttf in Resources */,
 				A499C5372C0523D600F5F371 /* FiraSans-Regular.ttf in Resources */,
@@ -307,19 +353,25 @@
 			files = (
 				A46739BA2C091D4F00AA4BDE /* HomeView.swift in Sources */,
 				A46CFE442C0BD6B600BF88DD /* CartButton.swift in Sources */,
+				A45CAF152C0D1E560076A99C /* AuthSelectionView.swift in Sources */,
 				A46739B42C091A3900AA4BDE /* MainViewModel.swift in Sources */,
 				A499C50E2C03C7B500F5F371 /* SignInView.swift in Sources */,
 				A46739B22C09192D00AA4BDE /* HomeViewModel.swift in Sources */,
 				A46739B72C091AB800AA4BDE /* MainTabView.swift in Sources */,
-				A46642622C03BE1B0025096A /* RoundButton.swift in Sources */,
+				A45CAF132C0D03070076A99C /* AuthViewModel.swift in Sources */,
+				A46642622C03BE1B0025096A /* StartedButton.swift in Sources */,
 				A46739BD2C091F4600AA4BDE /* ExploreView.swift in Sources */,
+				A45CAEFC2C0C6DC40076A99C /* UserModel.swift in Sources */,
 				A466425E2C03501A0025096A /* WelcomeView.swift in Sources */,
 				A46CFE402C0B6EA700BF88DD /* SectionTitleAll.swift in Sources */,
+				A45CAF172C0D20810076A99C /* MainView.swift in Sources */,
 				A45CE2872C0A4B080084FD80 /* TabButton.swift in Sources */,
 				A46CFE3E2C0B48A700BF88DD /* HorizontalScrollMenu.swift in Sources */,
 				A45CE2892C0A6BC00084FD80 /* SearchTextFild.swift in Sources */,
 				A46CFE422C0B90B500BF88DD /* ProductCell.swift in Sources */,
 				A466424A2C0335820025096A /* FoodDeliveryAppApp.swift in Sources */,
+				A45A898B2C0DE0FF0015A0A4 /* ProductModel.swift in Sources */,
+				A45A898D2C0DEF0B0015A0A4 /* UIKitExtension.swift in Sources */,
 				A46642602C037D5E0025096A /* UIExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -538,6 +590,41 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A45CAEFF2C0CADA20076A99C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.27.0;
+			};
+		};
+		A45CAF042C0CB1830076A99C /* XCRemoteSwiftPackageReference "FlagPhoneNumber" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/chronotruck/FlagPhoneNumber";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
+		A45CAF072C0CD5B20076A99C /* XCRemoteSwiftPackageReference "cocoapods-generate" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/square/cocoapods-generate";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		A45CAF452C0D39B70076A99C /* XCRemoteSwiftPackageReference "FirebaseUI-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/FirebaseUI-iOS.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = A466423E2C0335820025096A /* Project object */;
 }

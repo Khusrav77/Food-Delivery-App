@@ -7,14 +7,23 @@
 
 import SwiftUI
 
+
+//class AppDelegate: NSObject, UIApplicationDelegate {
+//    func application(_ application: UIApplication, launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
+//        FirebaseApp.configure()
+//        return true
+//    }
+//}
+
+
 @main
 struct FoodDeliveryAppApp: App {
+   // @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+
     var body: some Scene {
         WindowGroup {
             
-            NavigationView {
-                WelcomeView()
-            }
+            MainView()
         }
     }
 }

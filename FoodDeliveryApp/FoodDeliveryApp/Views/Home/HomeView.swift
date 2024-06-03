@@ -90,10 +90,6 @@ struct HomeView: View {
                     }
                     .padding(.bottom, 8)
                     
-                    
-//                   // SearchTextFild(placholder: "Найти продукты", text: $homeVM.textSearch)
-//                        .padding(.horizontal, 20)
-                    
                 }
                 .padding(.top, .topInsets)
             }

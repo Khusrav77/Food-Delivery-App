@@ -45,8 +45,8 @@ struct MainTabView: View {
     
     private var tabBar: some View {
         HStack {
-            tabButton(title: "Профиль", icon: "account_tab", tab: .profile)
-            tabButton(title: "Любимые", icon: "favorite_tab", tab: .favorite)
+            tabButton(title: "Профиль", icon: "profilesvg", tab: .profile)
+            tabButton(title: "Любимые", icon: "favoritesvg", tab: .favorite)
             tabButton(title: "Корзина", icon: "cart_tab", tab: .cart)
             tabButton(title: "Найти", icon: "search_tab", tab: .search)
             tabButton(title: "Главная", icon: "home_tab", tab: .home)
