@@ -27,7 +27,7 @@ struct SectionTitleAll: View {
             } label: {
                 Text(titleAll)
                     .font(.customfont(.regular, fontSize: 16))
-                    .foregroundStyle(Color.greenPrimary)
+                    .foregroundStyle(Color.green)
             }
             
                 

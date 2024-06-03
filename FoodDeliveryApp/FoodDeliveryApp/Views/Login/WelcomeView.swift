@@ -12,7 +12,7 @@ struct WelcomeView: View {
     let appLogoImageName = "app_logo"
     let appTitle = "Food\nDelivery"
     let appSubtitle = "Заказ продуктов прямо домой"
-    let startButtonTitle = "Начать"
+   // let startButtonTitle = "Начать"
     
     var body: some View {
         ZStack {
@@ -61,7 +61,7 @@ struct WelcomeView: View {
     // Start Button
     private var startButton: some View {
         NavigationLink(destination: SignInView()) {
-            StartedButton(title: startButtonTitle) {
+            StartedButton(title: "Начать") {
 
             }
         }

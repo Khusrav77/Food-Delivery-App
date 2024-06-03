@@ -10,7 +10,7 @@ import SwiftUI
 struct SignInView: View {
     @State private var mobileNumber = ""
     private var isLoginButtonDisabled: Bool {
-        mobileNumber.isEmpty
+        !isPhoneNumberValid(mobileNumber)
     }
  
     
@@ -67,12 +67,21 @@ struct SignInView: View {
             TextField("999 000 00 00", text: $mobileNumber)
                 .keyboardType(.phonePad)
                 .frame(minWidth: 0, maxWidth: .infinity)
+                //.onChange(of: mobileNumber) {
+                    
+               // }
         }
         .frame(minHeight: 60)
         .background(Color.cardsColor)
         .clipShape(RoundedRectangle(cornerRadius: 24))
         .padding(.top, 16)
+        
+        
     }
+    private func isPhoneNumberValid(_ number: String) -> Bool {
+            let cleanedNumber = number.filter { $0.isNumber }
+            return cleanedNumber.count == 10
+        }
     
     private var continueButton: some View {
         Button {
@@ -106,6 +115,8 @@ struct SignInView: View {
             signInButton(imageName: "vk_logo", text: "Вконтакте", actiov: {})
     }
     
+    
+    
     private func signInButton(imageName: String, text: String, actiov: (() -> Void)?) -> some View {
         
             Button {
@@ -130,10 +141,16 @@ struct SignInView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 24))
                 .padding(.top, 16)
         }
+        
         .navigationTitle("")
         .navigationBarBackButtonHidden(true)
         .navigationBarHidden(true)
         .ignoresSafeArea()
+        
+        
+        
+        
+        
         
     }
 }
