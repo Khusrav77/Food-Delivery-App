@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A45A898B2C0DE0FF0015A0A4 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45A898A2C0DE0FF0015A0A4 /* ProductModel.swift */; };
 		A45A898D2C0DEF0B0015A0A4 /* UIKitExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45A898C2C0DEF0B0015A0A4 /* UIKitExtension.swift */; };
+		A45A898F2C0E33160015A0A4 /* TypeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45A898E2C0E33160015A0A4 /* TypeModel.swift */; };
 		A45CAEFC2C0C6DC40076A99C /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45CAEFB2C0C6DC40076A99C /* UserModel.swift */; };
 		A45CAEFE2C0C9D830076A99C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A45CAEFD2C0C9D830076A99C /* GoogleService-Info.plist */; };
 		A45CAF132C0D03070076A99C /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45CAF122C0D03060076A99C /* AuthViewModel.swift */; };
@@ -46,6 +47,7 @@
 /* Begin PBXFileReference section */
 		A45A898A2C0DE0FF0015A0A4 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		A45A898C2C0DEF0B0015A0A4 /* UIKitExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitExtension.swift; sourceTree = "<group>"; };
+		A45A898E2C0E33160015A0A4 /* TypeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeModel.swift; sourceTree = "<group>"; };
 		A45CAEFB2C0C6DC40076A99C /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		A45CAEFD2C0C9D830076A99C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A45CAF122C0D03060076A99C /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 			children = (
 				A45CAEFB2C0C6DC40076A99C /* UserModel.swift */,
 				A45A898A2C0DE0FF0015A0A4 /* ProductModel.swift */,
+				A45A898E2C0E33160015A0A4 /* TypeModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 				A466424A2C0335820025096A /* FoodDeliveryAppApp.swift in Sources */,
 				A45A898B2C0DE0FF0015A0A4 /* ProductModel.swift in Sources */,
 				A45A898D2C0DEF0B0015A0A4 /* UIKitExtension.swift in Sources */,
+				A45A898F2C0E33160015A0A4 /* TypeModel.swift in Sources */,
 				A46642602C037D5E0025096A /* UIExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
