@@ -61,7 +61,7 @@ struct CartButton: View {
                         }
                         
                     }
-                    .frame(minWidth: 0, maxWidth: .infinity)
+                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
                     .padding(4)
                     .background(Color.white)
                     .cornerRadius(12)

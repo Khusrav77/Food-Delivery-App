@@ -17,40 +17,63 @@ struct ProductCell: View {
     var productWeight: String
     
     var body: some View {
-        VStack {
+        ZStack {
+            
             Image(productImage)
                 .resizable()
                 .scaledToFit()
                 .frame(width: 80, height: 100)
             
-            Spacer()
             
-            Text(productPrice)
-                .font(.customfont(.medium, fontSize: 16))
-                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
             
-            Text(productName)
-                .font(.customfont(.regular, fontSize: 16))
-                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-            
-            Text(productWeight)
-                .font(.customfont(.regular, fontSize: 16))
-                .foregroundStyle(.gray)
-                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-            
-            Spacer()
-            
-            CartButton(isSelect: false)
+            VStack {
+                HStack {
+                    Spacer()
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "heart")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 16, height: 16)
+                            .foregroundColor(.gray)
+                            .padding(6)
+                            .background(Color.cardsColor)
+                            .clipShape(Circle())
+                            .shadow(color: .black.opacity(0.1), radius: 5, x: 0, y: 2)
+                        
+                    }
+                    
+                    
+                }
+                Spacer()
                 
+                Text(productPrice)
+                    .font(.customfont(.medium, fontSize: 16))
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                
+                Text(productName)
+                    .font(.customfont(.regular, fontSize: 16))
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                
+                Text(productWeight)
+                    .font(.customfont(.regular, fontSize: 16))
+                    .foregroundStyle(.gray)
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                
+                
+                
+                CartButton(isSelect: false)
+                
+            }
+            .padding(8)
+            .background(Color(hex: "F8F6F1"))
+            .frame(width: 180, height: 230)
+            .cornerRadius(16)
+            .overlay(RoundedRectangle(cornerRadius: 16).stroke(Color.black.opacity(0.1)))
         }
-        .padding(8)
-        .background(Color(hex: "F8F6F1"))
-        .frame(width: 180, height: 230)
-        .cornerRadius(16)
-        .overlay(RoundedRectangle(cornerRadius: 16).stroke(Color.black.opacity(0.1)))
     }
 }
-
 var productCell = ProductCell(productImage: "apple_image", productPrice: "$139", productName: "Яблоки голден", productWeight: "1 кг")
 
 #Preview {
