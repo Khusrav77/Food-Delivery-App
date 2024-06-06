@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class ProductDetailViewModel: ObservableObject {
+final class ProductDetailViewModel: ObservableObject {
     
     @Published var prodObj: ProductModel = ProductModel(dictionary: [:])
     @Published var showError = false
@@ -19,7 +19,7 @@ class ProductDetailViewModel: ObservableObject {
     @Published var isFav: Bool = false
     @Published var isShowDetail: Bool = false
     @Published var isShowNutrition: Bool = false
-    @Published var quantity: Int = 0
+    @Published var quantity: Int = 1
     
    
     func showDetail() {

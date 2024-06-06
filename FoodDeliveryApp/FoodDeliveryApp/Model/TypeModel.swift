@@ -10,9 +10,9 @@ import SwiftUI
 
 struct TypeModel: Identifiable, Equatable {
     
-    var id: Int
-    var name: String
-    var image: String
+    var id: Int = 0
+    var name: String = ""
+    var image: String = ""
     var color: Color = Color.cardsColor
     
     init(dictionary: NSDictionary) {

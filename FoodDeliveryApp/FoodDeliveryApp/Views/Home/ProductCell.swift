@@ -15,7 +15,7 @@ struct ProductCell: View {
     var productPrice: String
     var productName: String
     var productWeight: String
-    
+    @State private var counter = 0
     var body: some View {
         ZStack {
             
@@ -47,23 +47,22 @@ struct ProductCell: View {
                     
                 }
                 Spacer()
-                
-                Text(productPrice)
-                    .font(.customfont(.medium, fontSize: 16))
-                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                
                 Text(productName)
                     .font(.customfont(.regular, fontSize: 16))
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 
-                Text(productWeight)
-                    .font(.customfont(.regular, fontSize: 16))
-                    .foregroundStyle(.gray)
-                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                HStack {
+                    Text(productWeight)
+                        .font(.customfont(.regular, fontSize: 16))
+                        .foregroundStyle(.gray)
+                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                    
+                    Text(productPrice)
+                        .font(.customfont(.medium, fontSize: 16))
+                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
+                }
                 
-                
-                
-                CartButton(isSelect: false)
+                CartButtontest(counter: $counter, title: "В корзину", isSelect: false, width: .infinity, height: 24)
                 
             }
             .padding(8)

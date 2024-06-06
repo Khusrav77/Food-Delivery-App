@@ -8,13 +8,8 @@
 import SwiftUI
 
 struct SignInView: View {
-    @State private var mobileNumber = ""
-    private var isLoginButtonDisabled: Bool {
-        !isPhoneNumberValid(mobileNumber)
-    }
- 
+    @StateObject private var viewModel = SignInViewModel()
     
-    var action: (() -> Void)?
     
     var body: some View {
         VStack {
@@ -22,6 +17,7 @@ struct SignInView: View {
             welcomeText
             phoneNumberInput
             continueButton
+            verificationCodeInput
             Spacer()
             alternativeSignInText
             googleSignInButton
@@ -64,28 +60,21 @@ struct SignInView: View {
                     .font(.customfont(.medium, fontSize: 18))
                     .foregroundColor(.black.opacity(0.7))
             }
-            TextField("999 000 00 00", text: $mobileNumber)
+            TextField("999 000 00 00", text: $viewModel.mobileNumber)
                 .keyboardType(.phonePad)
                 .frame(minWidth: 0, maxWidth: .infinity)
-                //.onChange(of: mobileNumber) {
-                    
-               // }
+                
         }
         .frame(minHeight: 60)
         .background(Color.cardsColor)
         .clipShape(RoundedRectangle(cornerRadius: 24))
         .padding(.top, 16)
         
-        
     }
-    private func isPhoneNumberValid(_ number: String) -> Bool {
-            let cleanedNumber = number.filter { $0.isNumber }
-            return cleanedNumber.count == 10
-        }
     
     private var continueButton: some View {
         Button {
-            action?()
+            viewModel.sendCode()
         } label: {
             Text("Продолжить")
                 .font(.customfont(.semibold, fontSize: 20))
@@ -97,7 +86,21 @@ struct SignInView: View {
                 .cornerRadius(24)
                 .padding(.top, 16)
         }
+        .disabled(viewModel.isLoadinButtonDisabled)
+    }
+
+    private var verificationCodeInput: some view {
+        VStack {
+            TextField("Введите код", text: $viewModel.verificationCode)
+        }
+        .keyboardType(.numberPad)
+        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 60)
+        .background(Color.cardsColor)
+        .clipShape(RoundedRectangle(cornerRadius: 24))
+        .padding(.top, 16)
         
+        
+    
     }
     
     private var alternativeSignInText: some View {
@@ -120,7 +123,7 @@ struct SignInView: View {
     private func signInButton(imageName: String, text: String, actiov: (() -> Void)?) -> some View {
         
             Button {
-                action?()
+                
                 
             } label: {
                 HStack {
@@ -154,6 +157,7 @@ struct SignInView: View {
         
     }
 }
+
 
 #Preview {
     SignInView()

@@ -10,8 +10,8 @@ import SwiftUI
 struct NutritionModel: Identifiable, Equatable {
     
     var id: Int
-    var nutritionName: String
-    var nutritionValue: String
+    var nutritionName: String = ""
+    var nutritionValue: String = ""
     
     
     init(dictionary: NSDictionary) {

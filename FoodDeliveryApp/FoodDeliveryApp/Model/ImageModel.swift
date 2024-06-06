@@ -9,16 +9,16 @@ import SwiftUI
 
 struct ImageModel: Identifiable, Equatable {
     
-    var id: Int
-    var prodId: Int
-    var image: String
+    var id: Int = 0
+    var prodId: Int = 0
+    var image: String = ""  
     
     
     
     init(dictionary: NSDictionary) {
         self.id = dictionary.value(forKey: "img_id") as? Int ?? 0
         self.prodId = dictionary.value(forKey: "prod_id") as? Int ?? 0
-        self.image = dictionary.value(forKey: "image_") as? String ?? ""
+        self.image = dictionary.value(forKey: "image") as? String ?? ""
     }
     
     static func == (lhs: ImageModel, rhs: ImageModel) -> Bool {
