@@ -1,18 +1,21 @@
 //
-//  CartButton.swift
+//  CartButtontest.swift
 //  FoodDeliveryApp
 //
-//  Created by Khusrav Safiev on 6/2/24.
+//  Created by Khusrav Safiev on 6/5/24.
 //
 
 import SwiftUI
 
-struct CartButton: View {
+struct CartButtontest: View {
     
     
-        @State var counter: Int = 0
+        @Binding var counter: Int 
+        @State var title : String
         var addedCart: (() -> Void)?
         var isSelect: Bool
+        var width: CGFloat
+        var height: CGFloat
         
         var body: some View {
             VStack {
@@ -21,18 +24,19 @@ struct CartButton: View {
                         counter += 1
                         addedCart?()
                     }) {
-                        Text("В корзину")
+                        Text(title)
                             .font(.customfont(.regular, fontSize: 16))
                             .foregroundColor(.black.opacity(0.70))
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
                     }
-                    .frame(minWidth: 0, maxWidth: .infinity)
+                    .frame(width: width, height: height)
                     .padding(4)
                     .background(Color.white)
-                    .cornerRadius(12)
+                    .clipShape(Capsule())
+                    .overlay(Capsule().stroke(Color.gray10))
                     .shadow(color: .black.opacity(0.1), radius: 5)
                 } else {
                     HStack(spacing: 16) {
-                        
                         Button(action: {
                             if counter > 0 {
                                 counter -= 1
@@ -45,6 +49,7 @@ struct CartButton: View {
                                 .frame(width: 15, height: 15)
                                 .foregroundColor(.black.opacity(0.70))
                         }
+                        .padding(8)
                         Spacer()
                         Text("\(counter)")
                             .font(.customfont(.regular, fontSize: 16))
@@ -58,31 +63,25 @@ struct CartButton: View {
                                 .scaledToFit()
                                 .frame(width: 15, height: 15)
                                 .foregroundColor(.black.opacity(0.70))
+                            
                         }
-                        
+                        .padding(8)
                     }
-                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+                    .frame(width: width, height: height)
                     .padding(4)
                     .background(Color.white)
-                    .cornerRadius(12)
+                    .clipShape(Capsule())
+                    .overlay(Capsule().stroke(Color.yellow))
                     .shadow(color: .black.opacity(0.1), radius: 5)
                 }
             }
         }
     }
 
-    struct CartButton_Previews: PreviewProvider {
-        static var previews: some View {
-            CartButton(isSelect: false)
-                .padding(20)
-                .previewLayout(.sizeThatFits)
-        }
+struct CartButtontest_Previews: PreviewProvider {
+    @State static var counter = 0
+    static var previews: some View {
+        CartButtontest(counter: $counter, title: "В карзину", isSelect: false, width: 300, height: 50)
     }
-
-                    
-                  
-         
-
-                
-
-
+    
+}

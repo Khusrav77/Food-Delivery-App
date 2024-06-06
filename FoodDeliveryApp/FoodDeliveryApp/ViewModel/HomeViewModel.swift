@@ -13,5 +13,20 @@ class HomeViewModel: ObservableObject {
    
     @Published var selectTab: Int = 4
     @Published var textSearch: String = ""
+    
+    @Published var showError = false
+    @Published var errorMessage = ""
+    
+    @Published var offerArray: [ProductModel] = []
+    @Published var bestArray: [ProductModel] = []
+    @Published var listArray: [ProductModel] = []
+    
+    
+    
+    
+    //MARK: Service call
+    
+    
+    
 }
 

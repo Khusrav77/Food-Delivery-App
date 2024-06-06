@@ -68,67 +68,11 @@ struct WelcomeView: View {
     }
 }
 
-struct WelcomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationView {
-            WelcomeView()
-        }
-    }
+#Preview {
+    WelcomeView()
 }
 
 
 
 
 
-/*import SwiftUI
-
-struct WelcomeView: View {
-    var body: some View {
-        ZStack {
-            Color.green
-            VStack {
-                Spacer()
-                Image("app_logo")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 100, height: 100)
-                
-                Text("Food\nDelivery")
-                    .font(.customfont(.alfaSlabOne, fontSize: 48))
-                    .foregroundStyle(Color.greenPrimary)
-                    .multilineTextAlignment(.center)
-                
-                Text("Заказ продуктов прямо домой")
-                    .font(.customfont(.medium, fontSize: 16))
-                    .foregroundColor(.white.opacity(0.7))
-                    .multilineTextAlignment(.center)
-                
-                Spacer()
-                
-                NavigationLink {
-                    SignInView()
-                } label: {
-                    RoundButton(title: "Начать") { 
-                    }
-                }
-            
-                Spacer()
-                    .frame(height: 60)
-                
-            }
-            .padding(.horizontal, 20)
-        }
-        .navigationTitle("")
-        .navigationBarBackButtonHidden(true)
-        .navigationBarHidden(true)
-        .ignoresSafeArea()
-    }
-}
-
-struct WelcomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationView {
-            WelcomeView()
-        }
-    }
-}*/

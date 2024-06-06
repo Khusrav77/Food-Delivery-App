@@ -25,9 +25,11 @@ struct SectionTitleAll: View {
             Button {
                 didTap?()
             } label: {
+                
                 Text(titleAll)
                     .font(.customfont(.regular, fontSize: 16))
                     .foregroundStyle(Color.green)
+                
             }
             
                 
