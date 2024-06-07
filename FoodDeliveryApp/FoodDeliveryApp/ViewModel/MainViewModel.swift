@@ -1,25 +1,15 @@
-////
-////  MainViewModel.swift
-////  FoodDeliveryApp
-////
-////  Created by Khusrav Safiev on 5/30/24.
-////
 //
-//import SwiftUI
+//  MainViewModel.swift
+//  FoodDeliveryApp
 //
-//struct MainViewModel: View {
-//    @StateObject var viewModel = AuthViewModel()
-//    var body: some View {
-//        NavigationView {
-//            if authVM.isAuthenticated {
-//                AdditionalInfoView(viewModel: viewModel)
-//            } else {
-//                AuthSelectionView(viewModel: viewModel)
-//            }
-//        }
-//    }
-//}
+//  Created by Khusrav Safiev on 5/30/24.
 //
-//#Preview {
-//    MainViewModel()
-//}
+
+import SwiftUI
+
+final class MainViewModel: ObservedObject {
+    
+    
+    
+    
+}

@@ -84,9 +84,9 @@
 //    }
 //    
 //    
-//    func signInWithVK() {
+//
 //        
-//    }
+//    
 //    
 //    
 //    func updateAdditionalInfo() {

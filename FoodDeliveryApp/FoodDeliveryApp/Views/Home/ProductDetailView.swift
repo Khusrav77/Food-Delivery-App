@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ProductDetailView: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-    @StateObject var detailVM: ProductDetailViewModel = ProductDetailViewModel (prodObj: ProductModel(dictionary: [:]))
+    @StateObject var detailVM: ProductDetailViewModel = ProductDetailViewModel (prodObj: ProductModel())
     
     var body: some View {
         ZStack {
