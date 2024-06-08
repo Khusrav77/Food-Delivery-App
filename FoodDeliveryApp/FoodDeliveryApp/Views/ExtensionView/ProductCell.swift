@@ -62,7 +62,7 @@ struct ProductCell: View {
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
                 }
                 
-                CartButtontest(counter: $counter, title: "В корзину", isSelect: false, width: .infinity, height: 24)
+                CartButtont(counter: $counter, title: "В корзину", isSelect: false, width: .infinity, height: 24)
                 
             }
             .padding(8)

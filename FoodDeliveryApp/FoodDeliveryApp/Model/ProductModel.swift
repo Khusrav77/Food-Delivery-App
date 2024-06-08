@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct ProductModel: Identifiable, Equatable {
+struct ProductModel: Identifiable, Equatable, Codable {
    
    
     var id: Int
@@ -79,6 +79,27 @@ struct ProductModel: Identifiable, Equatable {
         let isFavInt = try container.decode(Int.self, forKey: .isFav)
         self.isFav = isFavInt == 1
     }
+    
+    init(id: Int, prodId: Int, catId: Int, brandId: Int, typeId: Int, name: String, unitName: String, unitValue: String, nutritionWeight: String, image: String, detail: String, catName: String, typeName: String, price: Int, offerPrice: Int, startDate: Date, endDate: Date, isFav: Bool) {
+            self.id = id
+            self.prodId = prodId
+            self.catId = catId
+            self.brandId = brandId
+            self.typeId = typeId
+            self.name = name
+            self.unitName = unitName
+            self.unitValue = unitValue
+            self.nutritionWeight = nutritionWeight
+            self.image = image
+            self.detail = detail
+            self.catName = catName
+            self.typeName = typeName
+            self.price = price
+            self.offerPrice = offerPrice
+            self.startDate = startDate
+            self.endDate = endDate
+            self.isFav = isFav
+        }
         
        
     static func == (lhs: ProductModel, rhs: ProductModel) -> Bool {
@@ -87,4 +108,10 @@ struct ProductModel: Identifiable, Equatable {
 }
 
     
-
+extension String {
+    func stringDateToDate() -> Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        return dateFormatter.date(from: self)
+    }
+}

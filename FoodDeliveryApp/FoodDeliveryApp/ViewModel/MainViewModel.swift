@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-final class MainViewModel: ObservedObject {
-    
-    
-    
-    
-}
+//final class MainViewModel:  {
+//    
+//    
+//    
+//    
+//}

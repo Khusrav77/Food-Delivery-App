@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct CartButtontest: View {
+struct CartButtont: View {
     
     
-        @Binding var counter: Int 
+        @Binding var counter: Int
         @State var title : String
         var addedCart: (() -> Void)?
         var isSelect: Bool
@@ -33,7 +33,7 @@ struct CartButtontest: View {
                     .padding(4)
                     .background(Color.white)
                     .clipShape(Capsule())
-                    .overlay(Capsule().stroke(Color.gray10))
+                    .overlay(Capsule().stroke(Color.gray20))
                     .shadow(color: .black.opacity(0.1), radius: 5)
                 } else {
                     HStack(spacing: 16) {
@@ -50,10 +50,15 @@ struct CartButtontest: View {
                                 .foregroundColor(.black.opacity(0.70))
                         }
                         .padding(8)
+                        
                         Spacer()
+                        
                         Text("\(counter)")
+                        
                             .font(.customfont(.regular, fontSize: 16))
+                        
                         Spacer()
+                        
                         Button(action: {
                             counter += 1
                             addedCart?()
@@ -78,10 +83,10 @@ struct CartButtontest: View {
         }
     }
 
-struct CartButtontest_Previews: PreviewProvider {
+struct CartButton_Previews: PreviewProvider {
     @State static var counter = 0
     static var previews: some View {
-        CartButtontest(counter: $counter, title: "В карзину", isSelect: false, width: 300, height: 50)
+        CartButtont(counter: $counter, title: "В карзину", isSelect: false, width: 300, height: 50)
     }
     
 }
