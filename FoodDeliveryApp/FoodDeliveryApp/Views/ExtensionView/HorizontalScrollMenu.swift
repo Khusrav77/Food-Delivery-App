@@ -25,9 +25,12 @@ struct HorizontalScrollMenu: View {
                                 .padding(.horizontal, 16)
                                 .background(selectedCategory == category ? Color.orange : Color(hex: "F8F6F1"))
                                 .foregroundColor(selectedCategory == category ? .white : .gray)
-                                .cornerRadius(15)
+                                .clipShape(Capsule())
+                                .overlay(Capsule().stroke(Color.yellow, lineWidth: 0.3))
                                 .shadow(color: .black.opacity(0.1), radius: 5, x: 0, y: 2 )
+                            
                         }
+                        
                     }
                 }
                 .padding()

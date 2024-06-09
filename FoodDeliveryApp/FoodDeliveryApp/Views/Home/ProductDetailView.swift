@@ -33,7 +33,9 @@ struct ProductDetailView: View {
                         Image("app_logoG")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: .screenWidth * 0.8, height: .screenWidth * 0.8 )
+                            .frame(width: .screenWidth * 0.8, height: .screenWidth * 0.8)
+                            .padding(.top, .topInsets)
+                            
                         
                         Text ("Яблока голден")
                             .font(.customfont(.medium, fontSize: 24))
@@ -79,15 +81,12 @@ struct ProductDetailView: View {
                             }
                                 .padding(.vertical,16)
                         }
-                       
                     }
-                   
                     .padding(.horizontal, 16)
                 
                 }
                 
             }
-            
             
             VStack {
                 HStack {
@@ -165,7 +164,6 @@ struct ProductDetailView: View {
                 
             }
             .padding(.top, .topInsets)
-            
             
         }
         .navigationTitle("")
