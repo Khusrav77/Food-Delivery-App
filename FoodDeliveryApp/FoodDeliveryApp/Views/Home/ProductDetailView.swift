@@ -9,9 +9,15 @@ import SwiftUI
 
 struct ProductDetailView: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-    @StateObject var detailVM: ProductDetailViewModel = ProductDetailViewModel (prodObj: ProductModel(dictionary: [:]))
+    @StateObject var detailVM: ProductDetailViewModel
+    
+    init(prodObj: ProductModel) {
+        _detailVM = StateObject(wrappedValue: ProductDetailViewModel(prodObj: prodObj))
+    }
+    @State var counter = 0
     
     var body: some View {
+        
         ZStack {
             
             ScrollView {
@@ -24,22 +30,29 @@ struct ProductDetailView: View {
                     .shadow(color: .black.opacity(0.2), radius:5)
                 
                     VStack {
-                        Image("")
+                        Image("app_logoG")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: .screenWidth * 0.8, height: .screenWidth * 1 )
+                            .frame(width: .screenWidth * 0.8, height: .screenWidth * 0.8)
+                            .padding(.top, .topInsets)
+                            
+                        
+                        Text ("Яблока голден")
+                            .font(.customfont(.medium, fontSize: 24))
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                        
                         HStack {
-                            
-                            Text ("Яблока голден")
-                                .font(.customfont(.medium, fontSize: 24))
-                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                            Spacer()
-                            Text("1кг")
-                                .frame(minWidth: 0, maxWidth: 30, alignment: .trailing)
-                            
+                          
                             Text("300$")
-                                .frame(minWidth: 0, maxWidth: 50, alignment: .trailing)
+                                .frame(minWidth: 0, maxWidth: 50, alignment: .leading)
                             
+                            Text("|")
+                                .foregroundStyle(.gray)
+                                .frame(minWidth: 0, maxWidth: 5, alignment: .leading)
+                            
+                            Text("1кг")
+                                .frame(minWidth: 0, maxWidth: 25, alignment: .leading)
+                        Spacer()
                         }
                         
                         Divider()
@@ -68,15 +81,12 @@ struct ProductDetailView: View {
                             }
                                 .padding(.vertical,16)
                         }
-                       
                     }
-                   
                     .padding(.horizontal, 16)
                 
                 }
                 
             }
-            
             
             VStack {
                 HStack {
@@ -136,8 +146,8 @@ struct ProductDetailView: View {
                         .frame(alignment: .leading)
                         .padding(.horizontal,20)
                     Spacer()
-                    CartButton(isSelect: false)
-                        .frame(width: 200)
+                    CartButtont(counter: $counter , title: "Вкарзину", addedCart: {},isSelect: false, width: 200, height: 40)
+                        
                     
                     Spacer()
                 }
@@ -155,7 +165,6 @@ struct ProductDetailView: View {
             }
             .padding(.top, .topInsets)
             
-            
         }
         .navigationTitle("")
         .navigationBarBackButtonHidden(true)
@@ -166,8 +175,30 @@ struct ProductDetailView: View {
 }
 
 #Preview {
-    ProductDetailView(detailVM: ProductDetailViewModel(prodObj: ProductModel(dictionary: [:])))
-}
+    let sampleProduct = ProductModel(
+            id: 1,
+            prodId: 1,
+            catId: 1,
+            brandId: 1,
+            typeId: 1,
+            name: "Sample Product",
+            unitName: "kg",
+            unitValue: "1",
+            nutritionWeight: "100g",
+            image: "sampleImage",
+            detail: "Sample Detail",
+            catName: "Category",
+            typeName: "Type",
+            price: 100,
+            offerPrice: 80,
+            startDate: Date(),
+            endDate: Date(),
+            isFav: false
+        )
+        return ProductDetailView(prodObj: sampleProduct)
+    }
+
+
 
 
 private var tabBar: some View {

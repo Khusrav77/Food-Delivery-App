@@ -9,7 +9,7 @@ import SwiftUI
 
 final class ProductDetailViewModel: ObservableObject {
     
-    @Published var prodObj: ProductModel = ProductModel(dictionary: [:])
+    @Published var prodObj: ProductModel
     @Published var showError = false
     @Published var errorMessage = ""
     

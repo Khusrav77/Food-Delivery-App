@@ -19,16 +19,13 @@ struct ProductCell: View {
     var body: some View {
         ZStack {
             
-            Image(productImage)
-                .resizable()
-                .scaledToFit()
-                .frame(width: 80, height: 100)
+            
             
             
             
             VStack {
                 HStack {
-                    Spacer()
+                 Spacer()
                     Button {
                         
                     } label: {
@@ -41,11 +38,15 @@ struct ProductCell: View {
                             .background(Color.cardsColor)
                             .clipShape(Circle())
                             .shadow(color: .black.opacity(0.1), radius: 5, x: 0, y: 2)
-                        
                     }
                     
-                    
                 }
+                Image(productImage)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 80, height: 100)
+                
+                
                 Spacer()
                 Text(productName)
                     .font(.customfont(.regular, fontSize: 16))
@@ -62,7 +63,7 @@ struct ProductCell: View {
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
                 }
                 
-                CartButtontest(counter: $counter, title: "В корзину", isSelect: false, width: .infinity, height: 24)
+                CartButtont(counter: $counter, title: "В корзину", isSelect: false, width: .infinity, height: 24)
                 
             }
             .padding(8)
@@ -73,11 +74,11 @@ struct ProductCell: View {
         }
     }
 }
-var productCell = ProductCell(productImage: "apple_image", productPrice: "$139", productName: "Яблоки голден", productWeight: "1 кг")
+var productCell = ProductCell(productImage: "app_logoG", productPrice: "$139", productName: "Яблоки голден", productWeight: "1 кг")
 
 #Preview {
     ProductCell(
-        productImage: "apple_image",
+        productImage: "app_logoG",
         productPrice: "$139",
         productName: "Яблоки голден",
         productWeight: "1 кг"

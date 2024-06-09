@@ -6,23 +6,23 @@
 //
 
 import Foundation
+import FirebaseAuth
+import FirebaseFirestoreSwift
 
 
-struct UserModel: Identifiable, Equatable, Decodable {
-    var id: Int
-    var phoneNumber: String
-    var verificationCode: String
-    var authToken: String
-    var name: String?
-    var email: String?
+struct UserModel: Identifiable, Equatable, Codable {
+    @DocumentID  var id: String? = ""
+    var phoneNumber: String = ""
+    var name: String? = ""
+    var email: String? = ""
     
     enum CodingKeys: String, CodingKey {
         case id = "user_id"
         case phoneNumber = "phone_number"
-        case verificationCode = "verification_code"
-        case authToken = "auth_token"
         case name
         case email
+        
+        
     }
     
     static func == (lhs: UserModel, rhs: UserModel) -> Bool {

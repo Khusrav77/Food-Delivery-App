@@ -33,6 +33,10 @@ final class SignInViewModel: ObservableObject{
         isLoading = true
     }
     
+    func getCountryCode() -> String {
+        let regionCode = Locale.current.regionCode ?? ""
+        return countries[regionCode] ?? ""
+    }
     
     private func isPhoneNuberValid(_ number: String) -> Bool {
         let cleanedNumber = number.filter{ $0.isNumber}
