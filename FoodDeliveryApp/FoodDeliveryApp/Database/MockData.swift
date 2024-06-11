@@ -1,0 +1,58 @@
+//
+//  MockDataJson.swift
+//  FoodDeliveryApp
+//
+//  Created by Khusrav Safiev on 6/10/24.
+//
+
+import Foundation
+
+
+
+let mockData: [[String: Any]] = [
+   
+    [
+        "id": 1,
+        "prodId": 101,
+        "catId": 1,
+        "brandId": 10,
+        "typeId": 5,
+        "name": "Apple",
+        "unitName": "kg",
+        "unitValue": "1",
+        "nutritionWeight": "100",
+        "image": "apple_image",
+        "detail": "Fresh and juicy apples",
+        "catName": "Fruits",
+        "typeName": "Food",
+        "price": 100,
+        "offerPrice": 90,
+        "startDate": "2024-06-10T12:00:00Z",
+        "endDate": "2024-07-10T12:00:00Z",
+        "isFav": false
+],
+    [
+        "id": 2,
+        "prodId": 102,
+        "catId": 2,
+        "brandId": 11,
+        "typeId": 5,
+        "name": "Banana",
+        "unitName": "kg",
+        "unitValue": "1",
+        "nutritionWeight": "100",
+        "image": "banana_image",
+        "detail": "Fresh bananas",
+        "catName": "Fruits",
+        "typeName": "Food",
+        "price": 80,
+        "offerPrice": 70,
+        "startDate": "2024-06-10T12:00:00Z",
+        "endDate": "2024-07-10T12:00:00Z",
+        "isFav": true
+    
+  ]
+]
+
+    
+
