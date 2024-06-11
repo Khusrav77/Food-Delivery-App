@@ -17,14 +17,17 @@ class HomeViewModel: ObservableObject {
     @Published var showError = false
     @Published var errorMessage = ""
     
-    @Published var offerArray: [ProductModel] = []
-    @Published var bestArray: [ProductModel] = []
-    @Published var listArray: [ProductModel] = []
+    @Published var offerProduct: [ProductModel] = []
+    @Published var bestProduct: [ProductModel] = []
+    @Published var listProduc: [ProductModel] = []
     
     
-    
+    init() {
+        
+    }
     
     //MARK: Service call
+    
     
     
     

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SignInView: View {
-    @StateObject private var viewModel = SignInViewModel()
+    @StateObject private var viewModel = SignInViewModel.shared
     
     
     var body: some View {
@@ -45,7 +45,7 @@ struct SignInView: View {
                     Button {
                        // viewModel.getCountryCode()
                     } label: {
-                        Text("+7\(viewModel.getCountryCode())")
+                        Text("+7")
                             .font(.customfont(.medium, fontSize: 18))
                             .foregroundColor(.black.opacity(0.7))
                             .padding(8)

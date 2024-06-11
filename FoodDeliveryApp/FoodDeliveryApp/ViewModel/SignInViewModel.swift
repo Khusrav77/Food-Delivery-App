@@ -9,6 +9,8 @@ import SwiftUI
 import Combine
 
 final class SignInViewModel: ObservableObject{
+    static let shared: SignInViewModel = SignInViewModel()
+    
     @Published var mobileNumber: String = ""
     @Published var isLoading: Bool = false
     @Published var errorMessage: String = ""
@@ -33,10 +35,10 @@ final class SignInViewModel: ObservableObject{
         isLoading = true
     }
     
-    func getCountryCode() -> String {
-        let regionCode = Locale.current.regionCode ?? ""
-        return countries[regionCode] ?? ""
-    }
+//    func getCountryCode() -> String {
+//        let regionCode = Locale.current.regionCode ?? ""
+//        return countries[regionCode] ?? ""
+//    }
     
     private func isPhoneNuberValid(_ number: String) -> Bool {
         let cleanedNumber = number.filter{ $0.isNumber}

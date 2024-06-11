@@ -11,7 +11,7 @@ import Firebase
 import FirebaseStorage
 
 final class AuthService {
-    static var shared = AuthService()
+    static let shared = AuthService()
     
     @Published var currentUser: UserModel?
     

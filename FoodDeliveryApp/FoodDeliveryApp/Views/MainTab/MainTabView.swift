@@ -17,30 +17,32 @@ struct MainTabView: View {
     }
     
     var body: some View {
-        VStack {
-            TabView(selection: $homeVM.selectTab) {
-                ExploreView().tag(Tab.profile.rawValue)
-                ExploreView().tag(Tab.favorite.rawValue)
-                ExploreView().tag(Tab.cart.rawValue)
-                ExploreView().tag(Tab.search.rawValue)
-                HomeView().tag(Tab.home.rawValue)
+        ZStack {
+            
+            VStack {
                 
+                TabView(selection: $homeVM.selectTab) {
+                    ExploreView().tag(Tab.profile.rawValue)
+                    FavoriteView().tag(Tab.favorite.rawValue)
+                    ExploreView().tag(Tab.cart.rawValue)
+                    ExploreView().tag(Tab.search.rawValue)
+                    HomeView().tag(Tab.home.rawValue)
+                 
+                }
+                .tabViewStyle(.page(indexDisplayMode: .never))
+                .onChange(of: homeVM.selectTab) { newValue in
+                    debugPrint("Selected Tab: \(newValue)")
+                }
                 
+                tabBar
                 
             }
-            .tabViewStyle(.page(indexDisplayMode: .never))
-            .onChange(of: homeVM.selectTab) { newValue in
-                debugPrint("Selected Tab: \(newValue)")
-            }
-            
-            tabBar
-            
-            
+            .navigationTitle("")
+            .navigationBarBackButtonHidden(true)
+            .navigationBarHidden(true)
+            .ignoresSafeArea()
         }
-        .navigationTitle("")
-        .navigationBarBackButtonHidden(true)
-        .navigationBarHidden(true)
-        .ignoresSafeArea()
+        
     }
     
     private var tabBar: some View {

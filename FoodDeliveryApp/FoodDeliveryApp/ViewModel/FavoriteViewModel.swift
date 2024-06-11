@@ -7,10 +7,11 @@
 
 import SwiftUI
 
-final class FavoriteViewModel {
-    static var shared: FavoriteViewModel = FavoriteViewModel()
+final class FavoriteViewModel: ObservableObject {
+    static let shared: FavoriteViewModel = FavoriteViewModel()
     
     @Published var showError = false
     @Published var errorMessage = ""
-    @Published var listProductData: [ProductModel] = []
+    
+    @Published var listProductFavorite: [ProductModel] = []
 }

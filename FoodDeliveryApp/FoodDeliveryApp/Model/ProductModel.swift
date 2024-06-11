@@ -8,98 +8,65 @@
 import Foundation
 
 
-struct ProductModel: Identifiable, Equatable, Codable {
+struct ProductModel: Identifiable, Equatable{
    
    
-    var id: Int
-    var prodId: Int
-    var catId: Int
-    var brandId: Int
-    var typeId: Int
-    var name: String
-    var unitName: String
-    var unitValue: String
-    var nutritionWeight: String
-    var image: String
-    var detail: String
-    var catName: String
-    var typeName: String
-    var price: Int
-    var offerPrice: Int
-    var startDate: Date
-    var endDate: Date
-    var isFav: Bool
+    var id: Int = 0
+    var prodId: Int = 0
+    var catId: Int = 0
+    var brandId: Int = 0
+    var typeId: Int = 0
+    var orderId: Int = 0
+    var qty: Int = 0
+    var detail: String = ""
+    var name: String = ""
+    var unitName: String = ""
+    var unitValue: String = ""
+    var nutritionWeight: String = ""
+    var image: String = ""
+    var catName: String = ""
+    var typeName: String = ""
+    var offerPrice: Int?
+    var itemPrice: Int = 0
+    var totalPrice: Int = 0
+    var price: Int = 0
+    var startDate: Date = Date()
+    var endDate: Date = Date()
+    var isFav: Bool = false
         
-    enum CodingKeys: String, CodingKey {
-        case id
-        case prodId = "prod_id"
-        case catId = "cat_id"
-        case brandId = "brand_id"
-        case typeId = "type_id"
-        case name
-        case unitName = "unit_name"
-        case unitValue = "unit_value"
-        case nutritionWeight = "nutrition_weight"
-        case image
-        case detail
-        case catName = "cat_name"
-        case typeName = "type_name"
-        case price
-        case offerPrice = "offer_price"
-        case startDate = "start_date"
-        case endDate = "end_date"
-        case isFav = "is_fav"
-    }
         
-        // Custom decoding to handle date and isFav conversions
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-            
-        self.id = try container.decode(Int.self, forKey: .id)
-        self.prodId = try container.decode(Int.self, forKey: .prodId)
-        self.catId = try container.decode(Int.self, forKey: .catId)
-        self.brandId = try container.decode(Int.self, forKey: .brandId)
-        self.typeId = try container.decode(Int.self, forKey: .typeId)
-        self.name = try container.decode(String.self, forKey: .name)
-        self.unitName = try container.decode(String.self, forKey: .unitName)
-        self.unitValue = try container.decode(String.self, forKey: .unitValue)
-        self.nutritionWeight = try container.decode(String.self, forKey: .nutritionWeight)
-        self.image = try container.decode(String.self, forKey: .image)
-        self.detail = try container.decode(String.self, forKey: .detail)
-        self.catName = try container.decode(String.self, forKey: .catName)
-        self.typeName = try container.decode(String.self, forKey: .typeName)
-        self.price = try container.decode(Int.self, forKey: .price)
-        self.offerPrice = try container.decode(Int.self, forKey: .offerPrice)
-        
-        let startDateString = try container.decode(String.self, forKey: .startDate)
-        let endDateString = try container.decode(String.self, forKey: .endDate)
-        self.startDate = startDateString.stringDateToDate() ?? Date()
-        self.endDate = endDateString.stringDateToDate() ?? Date()
-        
-        let isFavInt = try container.decode(Int.self, forKey: .isFav)
-        self.isFav = isFavInt == 1
-    }
+   
     
-    init(id: Int, prodId: Int, catId: Int, brandId: Int, typeId: Int, name: String, unitName: String, unitValue: String, nutritionWeight: String, image: String, detail: String, catName: String, typeName: String, price: Int, offerPrice: Int, startDate: Date, endDate: Date, isFav: Bool) {
-            self.id = id
-            self.prodId = prodId
-            self.catId = catId
-            self.brandId = brandId
-            self.typeId = typeId
-            self.name = name
-            self.unitName = unitName
-            self.unitValue = unitValue
-            self.nutritionWeight = nutritionWeight
-            self.image = image
-            self.detail = detail
-            self.catName = catName
-            self.typeName = typeName
-            self.price = price
-            self.offerPrice = offerPrice
-            self.startDate = startDate
-            self.endDate = endDate
-            self.isFav = isFav
-        }
+        
+    init(dict: NSDictionary) {
+           self.id = dict.value(forKey: "prod_id") as? Int ?? 0
+           self.prodId = dict.value(forKey: "prod_id") as? Int ?? 0
+           self.catId = dict.value(forKey: "cat_id") as? Int ?? 0
+           self.brandId = dict.value(forKey: "brand_id") as? Int ?? 0
+           self.typeId = dict.value(forKey: "type_id") as? Int ?? 0
+           self.orderId = dict.value(forKey: "order_id") as? Int ?? 0
+           self.qty = dict.value(forKey: "qty") as? Int ?? 0
+           self.isFav = dict.value(forKey: "is_fav") as? Int ?? 0 == 1
+           
+           self.detail = dict.value(forKey: "detail") as? String ?? ""
+           self.name = dict.value(forKey: "name") as? String ?? ""
+           self.unitName = dict.value(forKey: "unit_name") as? String ?? ""
+           self.unitValue = dict.value(forKey: "unit_value") as? String ?? ""
+           self.nutritionWeight = dict.value(forKey: "nutrition_weight") as? String ?? ""
+           self.image = dict.value(forKey: "image") as? String ?? ""
+           self.catName = dict.value(forKey: "cat_name") as? String ?? ""
+           self.typeName = dict.value(forKey: "type_name") as? String ?? ""
+           self.offerPrice = dict.value(forKey: "offer_price") as? Int
+           self.price = dict.value(forKey: "price") as? Int ?? 0
+           self.itemPrice = dict.value(forKey: "item_price") as? Int ?? 0
+           self.totalPrice = dict.value(forKey: "total_price") as? Int ?? 0
+           self.startDate = (dict.value(forKey: "start_date") as? String ?? "").stringDateToDate() ?? Date()
+           self.endDate = (dict.value(forKey: "end_date") as? String ?? "").stringDateToDate() ?? Date()
+   
+        
+       
+    }
+   
         
        
     static func == (lhs: ProductModel, rhs: ProductModel) -> Bool {
@@ -108,10 +75,5 @@ struct ProductModel: Identifiable, Equatable, Codable {
 }
 
     
-extension String {
-    func stringDateToDate() -> Date? {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-        return dateFormatter.date(from: self)
-    }
-}
+
+

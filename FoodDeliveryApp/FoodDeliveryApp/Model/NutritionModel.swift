@@ -9,18 +9,20 @@ import SwiftUI
 
 struct NutritionModel: Identifiable, Equatable {
     
-    var id: Int
+    var id: Int = 0
     var nutritionName: String = ""
     var nutritionValue: String = ""
-    
-    
-    init(dictionary: NSDictionary) {
-        self.id = dictionary.value(forKey: "nutrition_id") as? Int ?? 0
-        self.nutritionName = dictionary.value(forKey: "nutrition_name") as? String ?? ""
-        self.nutritionValue = dictionary.value(forKey: "nutrition_value") as? String ?? ""
-    }
-    
-    static func == (lhs: NutritionModel, rhs: NutritionModel) -> Bool {
-        return lhs.id == rhs.id
-    }
+      
+      
+      
+    init(dict: NSDictionary) {
+        self.id = dict.value(forKey: "nutrition_id") as? Int ?? 0
+        self.nutritionName = dict.value(forKey: "nutrition_name") as? String ?? ""
+        self.nutritionValue = dict.value(forKey: "nutrition_value") as? String ?? ""
+         
+      }
+      
+  static func == (lhs: NutritionModel, rhs: NutritionModel) -> Bool {
+          return lhs.id == rhs.id
+      }
 }

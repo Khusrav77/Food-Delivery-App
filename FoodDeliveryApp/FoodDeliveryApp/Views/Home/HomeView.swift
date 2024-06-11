@@ -49,8 +49,10 @@ struct HomeView: View {
                     
                     ScrollView(.horizontal, showsIndicators: false) {
                         LazyHStack(spacing: 12) {
-                            ForEach (0...5, id: \.self) {index in
-                               productCell
+                            ForEach (homeVM.offerProduct, id: \.id) {current in
+                                ProductCell(model: current) {
+                                    
+                                }
                            }
                         }
                         .padding(.horizontal)
@@ -64,8 +66,10 @@ struct HomeView: View {
                     
                     ScrollView(.horizontal, showsIndicators: false) {
                         LazyHStack(spacing: 12) {
-                            ForEach (0...5, id: \.self) {index in
-                               productCell
+                            ForEach (homeVM.bestProduct, id: \.id) {current in
+                                ProductCell(model: current) {
+                                    
+                                }
                            }
                         }
                         .padding(.horizontal)
@@ -81,8 +85,10 @@ struct HomeView: View {
                     
                     ScrollView(.horizontal, showsIndicators: false) {
                         LazyHStack(spacing: 12) {
-                            ForEach (0...5, id: \.self) {index in
-                                productCell
+                            ForEach (homeVM.listProduc, id: \.id) {current in
+                                ProductCell(model: current) {
+                                    
+                                }
                            }
                         }
                         .padding(.horizontal)
@@ -99,5 +105,7 @@ struct HomeView: View {
 }
 
 #Preview {
-    HomeView()
+    NavigationView {
+        HomeView()
+    }
 }

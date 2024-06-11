@@ -9,13 +9,12 @@ import SwiftUI
 
 struct ProductDetailView: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-    @StateObject var detailVM: ProductDetailViewModel
+    @StateObject var viewModel: ProductDetailViewModel = ProductDetailViewModel(products: ProductModel(dict: [:]))
     
-    init(prodObj: ProductModel) {
-        _detailVM = StateObject(wrappedValue: ProductDetailViewModel(prodObj: prodObj))
-    }
+   
     @State var counter = 0
     
+   
     var body: some View {
         
         ZStack {
@@ -30,27 +29,27 @@ struct ProductDetailView: View {
                     .shadow(color: .black.opacity(0.2), radius:5)
                 
                     VStack {
-                        Image("app_logoG")
+                      Image("app_logoG")
                             .resizable()
                             .scaledToFit()
                             .frame(width: .screenWidth * 0.8, height: .screenWidth * 0.8)
                             .padding(.top, .topInsets)
                             
                         
-                        Text ("Яблока голден")
+                        Text (viewModel.products.name)
                             .font(.customfont(.medium, fontSize: 24))
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                         
                         HStack {
                           
-                            Text("300$")
+                            Text(viewModel.products.unitName)
                                 .frame(minWidth: 0, maxWidth: 50, alignment: .leading)
                             
                             Text("|")
                                 .foregroundStyle(.gray)
                                 .frame(minWidth: 0, maxWidth: 5, alignment: .leading)
                             
-                            Text("1кг")
+                            Text(viewModel.products.unitValue)
                                 .frame(minWidth: 0, maxWidth: 25, alignment: .leading)
                         Spacer()
                         }
@@ -61,7 +60,7 @@ struct ProductDetailView: View {
                                 
                             }label: {
                                 HStack {
-                                    Text("Подробнее о товаре")
+                                    Text(viewModel.products.detail)
                                         .font(.customfont(.regular, fontSize: 16))
                                         .foregroundStyle(Color.black)
                                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
@@ -122,7 +121,7 @@ struct ProductDetailView: View {
                     
                     
                     Button {
-                        
+                        mode.wrappedValue.dismiss()
                     } label: {
                         Image(systemName: "xmark")
                             .resizable()
@@ -141,7 +140,7 @@ struct ProductDetailView: View {
                 Spacer()
                 HStack {
                     Spacer()
-                    Text("399")
+                    Text(viewModel.products.unitValue)
                         .font(.customfont(.medium, fontSize: 28))
                         .frame(alignment: .leading)
                         .padding(.horizontal,20)
@@ -175,29 +174,29 @@ struct ProductDetailView: View {
 }
 
 #Preview {
-    let sampleProduct = ProductModel(
-            id: 1,
-            prodId: 1,
-            catId: 1,
-            brandId: 1,
-            typeId: 1,
-            name: "Sample Product",
-            unitName: "kg",
-            unitValue: "1",
-            nutritionWeight: "100g",
-            image: "sampleImage",
-            detail: "Sample Detail",
-            catName: "Category",
-            typeName: "Type",
-            price: 100,
-            offerPrice: 80,
-            startDate: Date(),
-            endDate: Date(),
-            isFav: false
-        )
-        return ProductDetailView(prodObj: sampleProduct)
-    }
-
+    ProductDetailView(viewModel: ProductDetailViewModel(products: ProductModel(dict: [
+        "offer_price": 100,
+        "start_date": "2023-07-30T18:30:00.000Z",
+        "end_date": "2023-08-29T18:30:00.000Z",
+        "prod_id": 5,
+        "cat_id": 1,
+        "brand_id": 1,
+        "type_id": 1,
+        "name": "Organic Banana",
+        "detail": "banana, fruit of the genus Musa, of the family Musaceae, one of the most important fruit crops of the world. The banana is grown in the tropics, and, though it is most widely consumed in those regions, it is valued worldwide for its flavour, nutritional value, and availability throughout the year",
+        "unit_name": "кг",
+        "unit_value": "1",
+        "nutrition_weight": "200g",
+        "price": 150,
+        "image":"http://192.168.1.3:3001/img/product/202307310947354735xuruflIucc.png",
+        "cat_name": "Frash Fruits & Vegetable",
+        "type_name": "Pulses",
+        "is_fav": 1
+    
+    
+    ])))
+    
+}
 
 
 
