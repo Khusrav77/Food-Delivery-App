@@ -66,7 +66,7 @@ struct Verification: View {
                         .foregroundStyle(.white)
                         .padding(.vertical)
                         .frame(width: UIScreen.main.bounds.width - 30)
-                        .background(Color.green)
+                        .background(viewModel.isCodeSent ? Color.green : Color.gray30)
                         .clipShape(Capsule())
                 }
                 .padding()
@@ -77,7 +77,7 @@ struct Verification: View {
             
             Spacer()
         }
-        .background(Color(hex: "F1F1F1"))
+        .background(Color.cardsColor)
         .ignoresSafeArea(.all, edges: .bottom)
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)

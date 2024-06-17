@@ -15,6 +15,7 @@ struct SignInView: View {
         
         ZStack{
             Color.cardsColor
+                .ignoresSafeArea()
             VStack {
                 
                 VStack(spacing: 20) {
@@ -34,12 +35,12 @@ struct SignInView: View {
                         .multilineTextAlignment(.center)
                        
                 }
-                .frame(width: .screenWidth, height: .screenHeight / 2.8)
+                .frame(width: .screenWidth, height: .screenHeight / 2.6)
                 .background(.white)
                 .clipShape(RoundedRectangle(cornerRadius: 24))
                 .shadow(color: .black.opacity(0.1), radius: 5)
-                
-                Spacer()
+                .ignoresSafeArea(edges: .top)
+              
                 
                 HStack {
                     Button {
@@ -71,11 +72,11 @@ struct SignInView: View {
                             .multilineTextAlignment(.center)
                             .frame(minHeight: 60)
                             .frame(maxWidth: .infinity)
-                            .background(Color.greenSecondary)
-                            .cornerRadius(24)
+                            .background(viewModel.isLoadinButtonDisabled ? Color.gray30 : Color.green)
+                            .clipShape(RoundedRectangle(cornerRadius: 24))
                             .padding()
                     }
-                    .disabled(viewModel.isLoadinButtonDisabled)
+                    .disabled(viewModel.isLoadinButtonDisabled) 
                     
                     Spacer()
                     
@@ -124,7 +125,7 @@ struct SignInView: View {
                         .background(Color.gray50)
                         .clipShape(RoundedRectangle(cornerRadius: 24))
                         .padding(.horizontal)
-                        .padding(.bottom)
+                        
                     }
                     
                 }
@@ -136,8 +137,6 @@ struct SignInView: View {
         .navigationTitle("")
         .navigationBarBackButtonHidden(true)
         .navigationBarHidden(true)
-        .ignoresSafeArea()
-        
     }
     
 }

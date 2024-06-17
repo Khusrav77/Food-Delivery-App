@@ -33,12 +33,13 @@ struct ExploreView: View {
                             }
                         }
                     }
-                    // .padding(.vertical)
-                    Spacer()
+                    
+                    
                 }
                 .padding(.horizontal)
-                .padding(.top, .topInsets + 10)
+                .padding(.top, .topInsets)
             }
+            .padding(.top, .topInsets + 10)
             .ignoresSafeArea()
         }
     }

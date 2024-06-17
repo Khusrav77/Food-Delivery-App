@@ -40,7 +40,7 @@ struct ExploreItemView: View {
                     
                     
                     Text("Фрукты и ягоды")
-                        .font(.customfont(.semibold, fontSize: 20))
+                        .font(.customfont(.medium, fontSize: 20))
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
                     
                     

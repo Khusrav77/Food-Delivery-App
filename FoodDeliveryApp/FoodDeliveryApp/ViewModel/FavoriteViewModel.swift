@@ -13,5 +13,5 @@ final class FavoriteViewModel: ObservableObject {
     @Published var showError = false
     @Published var errorMessage = ""
     
-    @Published var listProductFavorite: [ProductModel] = []
+    @Published var listFavoriteProduct: [ProductModel] = []
 }

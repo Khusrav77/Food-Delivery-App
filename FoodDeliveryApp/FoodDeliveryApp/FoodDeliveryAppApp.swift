@@ -23,7 +23,7 @@ struct FoodDeliveryAppApp: App {
     var body: some Scene {
         WindowGroup {
             
-            MainView()
+           HomeView()
         }
     }
 }
