@@ -273,13 +273,13 @@
 		A466425C2C033A7A0025096A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				A462E5D22C201DD60078B7EA /* MainViewModel.swift */,
 				A4F4A8262C111E9200EBC384 /* SignInViewModel.swift */,
 				A46739B12C09192D00AA4BDE /* HomeViewModel.swift */,
 				A45A89922C0E54B30015A0A4 /* ProductDetailViewModel.swift */,
 				A45C62732C15E91A00E7E11F /* FavoriteViewModel.swift */,
 				A45C62752C161E1B00E7E11F /* ExploreViewModel.swift */,
 				A45C627C2C164C3900E7E11F /* ExploreItemsViewModel.swift */,
-				A462E5D22C201DD60078B7EA /* MainViewModel.swift */,
 				A462E5D42C202D030078B7EA /* CartViewModel.swift */,
 				A462E5D62C20444E0078B7EA /* DeliveryAddressViewModel.swift */,
 			);

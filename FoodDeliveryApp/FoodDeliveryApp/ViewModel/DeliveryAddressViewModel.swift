@@ -26,7 +26,7 @@ final class DeliveryAddressViewModel: ObservableObject {
     @Published var listAddress: [AddressModal] = []
     
     init() {
-           // Initial setup if needed
+           serviceCallList()
        }
        
     func clearAll() {
