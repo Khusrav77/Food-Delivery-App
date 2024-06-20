@@ -17,18 +17,54 @@ class HomeViewModel: ObservableObject {
     @Published var showError = false
     @Published var errorMessage = ""
     
-    @Published var offerProduct: [ProductModel] = []
-    @Published var bestProduct: [ProductModel] = []
+    @Published var offerList: [ProductModel] = []
+    @Published var bestLisr: [ProductModel] = []
     @Published var listProduc: [ProductModel] = []
+    @Published var typeList: [TypeModel] = []
     
     
     init() {
-        
+        serviceCallList()
     }
     
-    //MARK: Service call
     
     
+    //MARK: - Service call
+    
+    func serviceCallList() {
+        ServiceCall.post(parameter: [:], path: Globals.SV_HOME, isToken: true) { responseObj in
+           
+            if let response = responseObj as? NSDictionary {
+                if response.value(forKey: KKey.status) as? String ?? "" == "1" {
+                    if let payload = response.value(forKey: KKey.payload) as? NSDictionary {
+                        self.offerList = (payload.value(forKey: "offer_list") as? NSArray ?? []).map({ item in
+                            return ProductModel(dict: item as? NSDictionary ?? [:])
+                        })
+                        
+                        self.bestLisr = (payload.value(forKey: "best_sell_list") as? NSArray ?? []).map({ item in
+                            return ProductModel(dict: item as? NSDictionary ?? [:])
+                        })
+                        
+                        self.listProduc = (payload.value(forKey: "list") as? NSArray ?? []).map({ item in
+                            return ProductModel(dict: item as? NSDictionary ?? [:])
+                        })
+                        
+                        self.typeList = (payload.value(forKey: "type_list") as? NSArray ?? []).map({ item in
+                            return TypeModel(dict: item as? NSDictionary ?? [:])
+                        })
+                    }
+                } else {
+                    self.errorMessage = response.value(forKey: KKey.message) as? String ?? "Fail"
+                    self.showError = true
+                }
+            }
+                
+        } failure: { error in
+            self.errorMessage = error?.localizedDescription ?? "Fail"
+            self.showError = true
+        }
+
+    }
     
     
 }

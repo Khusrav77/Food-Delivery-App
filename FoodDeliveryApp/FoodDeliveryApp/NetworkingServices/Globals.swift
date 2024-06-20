@@ -18,6 +18,7 @@ struct Globals {
     
     static let SV_LOGIN = BASE_URL + "login"
     static let SV_SIGN_UP = BASE_URL + "sign_up"
+    static let SV_HOME = BASE_URL + "home"
     
     static let SV_PRODUCT_DETAIL = BASE_URL + "product_detail"
     static let SV_ADD_REMOVE_FAVORITE = BASE_URL + "add_remove_favorite"
@@ -51,8 +52,8 @@ struct Globals {
     static let SV_UPDATE_PROFILE = BASE_URL + "update_profile"
     static let SV_CHANGE_PASSWORD = BASE_URL + "change_password"
     
-    static let SV_FORGOT_PASSWORD_REQUEST = BASE_URL + "forgot_password_request"
-    static let SV_FORGOT_PASSWORD_VERIFY = BASE_URL + "forgot_password_verify"
+    static let SV_SEND_VERIFICATION_CODE = BASE_URL + "forgot_password_request"
+    static let SV_VERIFY_CODE = BASE_URL + "forgot_password_verify"
     static let SV_FORGOT_PASSWORD_SET_PASSWORD = BASE_URL + "forgot_password_set_password"
     
     
@@ -66,24 +67,4 @@ struct KKey {
 }
 
 
-class Utils {
-    class func UDSET(data: Any, key: String) {
-        UserDefaults.standard.set(data, forKey: key)
-    }
-    
-    class func UDValue(key: String) -> Any {
-        return UserDefaults.standard.value(forKey: key) as Any
-    }
-    
-    class func UDValueBool(key: String) -> Bool {
-        return UserDefaults.standard.value(forKey: key) as? Bool ?? false
-    }
-    
-    class func UDValueTrueBool(key: String) -> Bool {
-        return UserDefaults.standard.value(forKey: key) as? Bool ?? true
-    }
-    
-    class func UDRemove(key: String) {
-        UserDefaults.standard.removeObject(forKey: key)
-    }
-}
+

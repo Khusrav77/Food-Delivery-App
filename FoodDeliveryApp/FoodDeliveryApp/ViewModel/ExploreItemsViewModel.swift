@@ -19,17 +19,19 @@ final class ExploreItemsViewModel: ObservableObject {
     
     init(expItems: ExploreCategoryModel) {
         self.expItems = expItems
+        
+        serviceCallList()
     }
     
     
     //MARK: - SERVICE CALL
     
     func serviceCallList() {
-        ProductServiceCall.post(parameter: ["cat_id": self.expItems.id], path: Globals.SV_EXPLORE_ITEMS_LIST, isToken: true) { responseObj in
+        ServiceCall.post(parameter: ["cat_id": self.expItems.id], path: Globals.SV_EXPLORE_ITEMS_LIST, isToken: true) { responseObj in
             if let response = responseObj as? NSDictionary {
                 if response.value(forKey: KKey.status) as? String ?? "" == "1" {
-                    self.listItems = (response.value(forKey: KKey.payload)) as? NSArray ?? [])
-                        .map({list in
+                    self.listItems = (response.value(forKey: KKey.payload) as? NSArray ?? [])
+                        .map({ list in
                             return ProductModel(dict: list as? NSDictionary ?? [:])
                             
                         })

@@ -53,7 +53,7 @@ final class DeliveryAddressViewModel: ObservableObject {
        
        func serviceCallList() {
            isLoading = true
-           ProductServiceCall.post(parameter: [:], path: Globals.SV_ADDRESS_LIST, isToken: true) { responseObj in
+           ServiceCall.post(parameter: [:], path: Globals.SV_ADDRESS_LIST, isToken: true) { responseObj in
                self.isLoading = false
                if let response = responseObj as? NSDictionary {
                    if response.value(forKey: KKey.status) as? String == "1" {
@@ -74,7 +74,7 @@ final class DeliveryAddressViewModel: ObservableObject {
        
        func serviceCallRemove(address: AddressModal) {
            isLoading = true
-           ProductServiceCall.post(parameter: ["address_id": address.id], path: Globals.SV_REMOVE_ADDRESS, isToken: true) { responseObj in
+           ServiceCall.post(parameter: ["address_id": address.id], path: Globals.SV_REMOVE_ADDRESS, isToken: true) { responseObj in
                self.isLoading = false
                
                if let response = responseObj as? NSDictionary {
@@ -95,7 +95,7 @@ final class DeliveryAddressViewModel: ObservableObject {
        
        func serviceCallUpdateAddress(address: AddressModal?, didDone: (() -> ())?) {
            isLoading = true
-           ProductServiceCall.post(parameter: [
+           ServiceCall.post(parameter: [
                "address_id": address?.id ?? "",
                "name": txtName,
                "type_name": txtTypeName,
@@ -127,7 +127,7 @@ final class DeliveryAddressViewModel: ObservableObject {
        
        func serviceCallAddAddress(didDone: (() -> ())?) {
            isLoading = true
-           ProductServiceCall.post(parameter: [
+           ServiceCall.post(parameter: [
                "name": txtName,
                "phone": txtMobile,
                "address": txtAddress,

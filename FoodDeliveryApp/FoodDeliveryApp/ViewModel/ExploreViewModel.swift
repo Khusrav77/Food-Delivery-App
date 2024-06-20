@@ -27,7 +27,7 @@ final class ExploreViewModel: ObservableObject {
     // MARK: - ServiceCall
     
     func serviceCallList() {
-        ProductServiceCall.post(parameter: [:], path: Globals.SV_EXPLORE_LIST, isToken: true) { responseObj in
+        ServiceCall.post(parameter: [:], path: Globals.SV_EXPLORE_LIST, isToken: true) { responseObj in
             if let response = responseObj as? NSDictionary {
                 if response.value(forKey: KKey.status) as? String ?? "" == "1" {
                     self.listCategory = (response.value(forKey: KKey.payload) as? NSArray ?? []).map({list in

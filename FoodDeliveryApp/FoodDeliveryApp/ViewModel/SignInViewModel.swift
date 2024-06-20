@@ -11,7 +11,7 @@ import Combine
 final class SignInViewModel: ObservableObject{
     static let shared: SignInViewModel = SignInViewModel()
     
-    @Published var mobileNumber: String = ""
+    @Published var phoneNumber: String = ""
     @Published var isLoading: Bool = false
     @Published var errorMessage: String = ""
     @Published var isCodeSent: Bool = false
@@ -19,7 +19,7 @@ final class SignInViewModel: ObservableObject{
     @Published var isSignedIn: Bool = false
     
     var isLoadinButtonDisabled: Bool {
-        !isPhoneNuberValid(mobileNumber)
+        !isPhoneNuberValid(phoneNumber)
     }
 
     var isVerifiButtonDisabled: Bool {

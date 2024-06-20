@@ -8,7 +8,7 @@
 import Foundation
 
 
-final class ProductServiceCall {
+final class ServiceCall {
    
         
     class func post(parameter: NSDictionary, path: String, isToken: Bool = false, withSuccess: @escaping (_ responseObj: AnyObject?) -> (), failure: @escaping (_ error: Error?) -> ()) {
@@ -39,7 +39,7 @@ final class ProductServiceCall {
             request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
             
             if isToken {
-                request.addValue(MainViewModel.shared.userObj.authToken, forHTTPHeaderField: "access_token")
+                request.addValue(UserAuthViewModel.shared.userObj?.authToken ?? "", forHTTPHeaderField: "access_token")
             }
             
             request.httpMethod = "POST"
