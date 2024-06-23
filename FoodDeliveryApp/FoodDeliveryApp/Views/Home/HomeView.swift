@@ -51,7 +51,7 @@ struct HomeView: View {
                     
                     ScrollView(.horizontal, showsIndicators: false) {
                         LazyHStack(spacing: 12) {
-                            ForEach (homeVM.offerProduct, id: \.id) {product in
+                            ForEach (homeVM.offerList, id: \.id) {product in
                                 ProductCell(model: product) {
                                     
                                 }
@@ -68,7 +68,7 @@ struct HomeView: View {
                     
                     ScrollView(.horizontal, showsIndicators: false) {
                         LazyHStack(spacing: 12) {
-                            ForEach (homeVM.bestProduct, id: \.id) {product in
+                            ForEach (homeVM.bestLisr, id: \.id) {product in
                                 ProductCell(model: product) {
                                     
                                 }

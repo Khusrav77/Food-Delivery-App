@@ -15,7 +15,7 @@ final class ServiceCall {
         
         DispatchQueue.global(qos: .userInitiated).async {
             
-            var parameterData = NSMutableData()
+            let parameterData = NSMutableData()
             let dictKeys = parameter.allKeys as? [String] ?? []
             
             for (i, key) in dictKeys.enumerated() {

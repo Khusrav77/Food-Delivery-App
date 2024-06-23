@@ -53,9 +53,11 @@ final class AuthService {
                     
                     self.fetchOrCreateUser(firebaseUser: firebaseUser) { result in
                         switch result {
+                            
                         case .success(let userModel):
                             self.currentUser = userModel  // Сохраняем текущего пользователя
                             promise(.success(userModel))
+                            
                         case .failure(let error):
                             promise(.failure(error))
                         }
@@ -82,7 +84,8 @@ final class AuthService {
                     }
                 } else {
                     // Пользователь не существует, создать нового пользователя
-                    let newUser = UserModel(id: firebaseUser.uid, phoneNumber: firebaseUser.phoneNumber ?? "")
+                    let phoneNumber = UserDefaults.standard.string(forKey: "phoneNumber") ?? ""
+                    let newUser = UserModel(id: firebaseUser.uid, phonumber: firebaseUser.phoneNumber ?? "")
                     do {
                         try docRef.setData(from: newUser)
                         completion(.success(newUser))

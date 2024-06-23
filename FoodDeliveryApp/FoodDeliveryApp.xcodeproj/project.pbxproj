@@ -36,6 +36,7 @@
 		A462E5D72C20444E0078B7EA /* DeliveryAddressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A462E5D62C20444E0078B7EA /* DeliveryAddressViewModel.swift */; };
 		A462E5D92C2179900078B7EA /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A462E5D82C2179900078B7EA /* Utils.swift */; };
 		A464CAA72C2455FB0078D222 /* MyOrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A464CAA62C2455FB0078D222 /* MyOrderViewModel.swift */; };
+		A464CAA92C2460A50078D222 /* MyOrderDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A464CAA82C2460A50078D222 /* MyOrderDetailViewModel.swift */; };
 		A466424A2C0335820025096A /* FoodDeliveryAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46642492C0335820025096A /* FoodDeliveryAppApp.swift */; };
 		A466424E2C0335830025096A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A466424D2C0335830025096A /* Assets.xcassets */; };
 		A46642512C0335830025096A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A46642502C0335830025096A /* Preview Assets.xcassets */; };
@@ -107,6 +108,7 @@
 		A462E5D62C20444E0078B7EA /* DeliveryAddressViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryAddressViewModel.swift; sourceTree = "<group>"; };
 		A462E5D82C2179900078B7EA /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		A464CAA62C2455FB0078D222 /* MyOrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrderViewModel.swift; sourceTree = "<group>"; };
+		A464CAA82C2460A50078D222 /* MyOrderDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrderDetailViewModel.swift; sourceTree = "<group>"; };
 		A46642462C0335820025096A /* FoodDeliveryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodDeliveryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A46642492C0335820025096A /* FoodDeliveryAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDeliveryAppApp.swift; sourceTree = "<group>"; };
 		A466424D2C0335830025096A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 				A462E5D42C202D030078B7EA /* CartViewModel.swift */,
 				A462E5D62C20444E0078B7EA /* DeliveryAddressViewModel.swift */,
 				A464CAA62C2455FB0078D222 /* MyOrderViewModel.swift */,
+				A464CAA82C2460A50078D222 /* MyOrderDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -489,6 +492,7 @@
 				A47638632C1872ED00763BE9 /* OrderItemModel.swift in Sources */,
 				A47638652C18731000763BE9 /* PaymentModel.swift in Sources */,
 				A45C62832C17560100E7E11F /* MockData.swift in Sources */,
+				A464CAA92C2460A50078D222 /* MyOrderDetailViewModel.swift in Sources */,
 				A46739B22C09192D00AA4BDE /* HomeViewModel.swift in Sources */,
 				A46739B72C091AB800AA4BDE /* MainTabView.swift in Sources */,
 				A46739BD2C091F4600AA4BDE /* ExploreView.swift in Sources */,

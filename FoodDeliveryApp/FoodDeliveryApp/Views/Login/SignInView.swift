@@ -51,7 +51,7 @@ struct SignInView: View {
                             .foregroundColor(.black.opacity(0.7))
                             .padding(8)
                     }
-                    TextField("999 000 00 00", text: $viewModel.mobileNumber)
+                    TextField("999 000 00 00", text: $viewModel.phoneNumber)
                         .keyboardType(.phonePad)
                         .frame(minWidth: 0, maxWidth: .infinity)
                         .padding()

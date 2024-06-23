@@ -36,7 +36,7 @@ struct Verification: View {
                 }
                 .padding()
                 
-                Text("Код отправлена на номер\n\(viewModel.mobileNumber)")
+                Text("Код отправлена на номер\n\(viewModel.phoneNumber)")
                     .foregroundStyle(.gray)
                     .padding(.bottom)
                     .multilineTextAlignment(.center)
