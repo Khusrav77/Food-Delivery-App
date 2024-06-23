@@ -27,18 +27,19 @@ struct ExploreView: View {
                 
                 ScrollView(showsIndicators: false) {
                     LazyVGrid(columns: colums) {
-                        ForEach(exploreMV.listProductCategory, id: \.id) {current in
-                            NavigationLink(destination: ExploreItemView(itemVM: ExploreItemsViewModel(expItemsObj:current))) { ExploreCategoryCell(model: current)
+                        ForEach(exploreMV.listCategory, id: \.id) {current in
+                            NavigationLink(destination: ExploreItemView(itemVM: ExploreItemsViewModel(expItems:current))) { ExploreCategoryCell(model: current)
                                     .aspectRatio(0.95,contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
                             }
                         }
                     }
-                    // .padding(.vertical)
-                    Spacer()
+                    
+                    
                 }
                 .padding(.horizontal)
-                .padding(.top, .topInsets + 10)
+                .padding(.top, .topInsets)
             }
+            .padding(.top, .topInsets + 10)
             .ignoresSafeArea()
         }
     }

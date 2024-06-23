@@ -15,15 +15,19 @@ struct UserModel: Identifiable, Equatable, Codable {
     var phoneNumber: String = ""
     var name: String? = ""
     var email: String? = ""
+    var authToken: String? = ""
+
+        
     
-    enum CodingKeys: String, CodingKey {
-        case id = "user_id"
-        case phoneNumber = "phone_number"
-        case name
-        case email
-        
-        
+    
+    init(dict: NSDictionary) {
+        self.id = dict.value(forKey: "user_id") as? String ?? ""
+        self.phoneNumber = dict.value(forKey: "phone_number") as? String ?? ""
+        self.name = dict.value(forKey: "name") as? String ?? ""
+        self.email = dict.value(forKey: "email") as? String ?? ""
+        self.authToken = dict.value(forKey: "auth_token") as? String ?? ""
     }
+    
     
     static func == (lhs: UserModel, rhs: UserModel) -> Bool {
         return lhs.id == rhs.id

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ExploreItemView: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-    @StateObject var itemVM = ExploreItemsViewModel(expItemsObj: ExploreCategoryModel(dict: [:]))
+    @StateObject var itemVM = ExploreItemsViewModel(expItems: ExploreCategoryModel(dict: [:]))
    
     var colums = [
         GridItem(.flexible(), spacing: 15),
@@ -40,7 +40,7 @@ struct ExploreItemView: View {
                     
                     
                     Text("Фрукты и ягоды")
-                        .font(.customfont(.semibold, fontSize: 20))
+                        .font(.customfont(.medium, fontSize: 20))
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
                     
                     
@@ -65,7 +65,7 @@ struct ExploreItemView: View {
                 
                 ScrollView{
                     LazyVGrid(columns: colums) {
-                        ForEach(itemVM.listProductItem, id: \.id) {
+                        ForEach(itemVM.listItems, id: \.id) {
                             current in ProductCell(model: current)
                         }
                     }
@@ -83,7 +83,7 @@ struct ExploreItemView: View {
 
 #Preview {
     NavigationView {
-        ExploreItemView(itemVM: ExploreItemsViewModel(expItemsObj: ExploreCategoryModel(dict: [
+        ExploreItemView(itemVM: ExploreItemsViewModel(expItems: ExploreCategoryModel(dict: [
             "cat_id":"1",
             "cat_name":"Fruits & Vegetable",
             "image":"http://192.168.1.3:3001/img/category/20230726155407547qM5gSxkrCh.png",

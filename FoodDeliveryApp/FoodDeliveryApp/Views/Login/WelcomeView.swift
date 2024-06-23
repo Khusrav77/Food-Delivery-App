@@ -18,8 +18,11 @@ struct WelcomeView: View {
         NavigationView{
             ZStack {
                 Color.green
+                    .ignoresSafeArea()
                 VStack {
+                    
                     Spacer()
+                
                     Image(appLogoImageName)
                         .resizable()
                         .scaledToFit()
@@ -47,15 +50,14 @@ struct WelcomeView: View {
                             .background(Color.cardsColor)
                             .clipShape(RoundedRectangle(cornerRadius: 25))
                     }
-                    Spacer()
-                        .frame(height: 60)
+                   
                 }
                 .padding()
             }
             .navigationTitle("")
             .navigationBarBackButtonHidden(true)
             .navigationBarHidden(true)
-            .ignoresSafeArea()
+           
         }
     }
 }

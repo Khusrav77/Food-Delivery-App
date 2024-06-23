@@ -13,9 +13,10 @@ struct HomeView: View {
     var body: some View {
         ZStack {
             ScrollView {
-                VStack {
+                VStack(spacing: 16) {
+                    // Header
                     HStack {
-                        Spacer()
+                        
                         Image("location")
                             .resizable()
                             .scaledToFit()
@@ -34,73 +35,72 @@ struct HomeView: View {
                             .resizable()
                             .scaledToFit()
                             .frame(width: 24, height: 24)
-                            .foregroundColor(.orange)
+                            .foregroundColor(.green)
                         
-                        Spacer()
-                    }
+                        
+                    }// header
+                    .padding(.horizontal)
                     
-                    HorizontalScrollMenu()
-                   
+                    CategoryListView()
+                        
                     
-                    SectionTitleAll(title: "Специалные предложения!", titleAll: "Все") {
+                    SectionTitleAll(title: "Специалные предложения!") {
                             
                         }
-                        .padding(.horizontal, 16)
+                    .padding(.horizontal)
                     
                     ScrollView(.horizontal, showsIndicators: false) {
                         LazyHStack(spacing: 12) {
-                            ForEach (homeVM.offerProduct, id: \.id) {current in
-                                ProductCell(model: current) {
+                            ForEach (homeVM.offerList, id: \.id) {product in
+                                ProductCell(model: product) {
                                     
                                 }
                            }
                         }
-                        .padding(.horizontal)
-                        .padding(.vertical, 16)
-                    }
-                    
-                    SectionTitleAll(title: "Больше всего покупают", titleAll: "Все") {
+                       
                         
                     }
-                    .padding(.horizontal, 16)
                     
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        LazyHStack(spacing: 12) {
-                            ForEach (homeVM.bestProduct, id: \.id) {current in
-                                ProductCell(model: current) {
-                                    
-                                }
-                           }
-                        }
-                        .padding(.horizontal)
-                        .padding(.vertical, 8)
-                    }
-                    
-                    
-                    SectionTitleAll(title: "Готовая еда", titleAll: "Все") {
+                    SectionTitleAll(title: "Больше всего покупают") {
                         
                     }
-                    .padding(.horizontal, 16)
-                    .padding(.vertical, 8)
+                    .padding(.horizontal)
                     
                     ScrollView(.horizontal, showsIndicators: false) {
                         LazyHStack(spacing: 12) {
-                            ForEach (homeVM.listProduc, id: \.id) {current in
-                                ProductCell(model: current) {
+                            ForEach (homeVM.bestLisr, id: \.id) {product in
+                                ProductCell(model: product) {
                                     
                                 }
                            }
                         }
-                        .padding(.horizontal)
-                        .padding(.vertical, 8)
+                        
                     }
-                    .padding(.bottom, 8)
+                    
+                    
+                    SectionTitleAll(title: "Готовая еда") {
+                        
+                    }
+                    .padding(.horizontal)
+                   
+                    
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        LazyHStack(spacing: 12) {
+                            ForEach (homeVM.listProduc, id: \.id) {product in
+                                ProductCell(model: product) {
+                                    
+                                }
+                           }
+                        }
+                        
+                    }
+                    
                     
                 }
-                .padding(.top, .topInsets)
             }
+
         }
-        .ignoresSafeArea()
+        
     }
 }
 

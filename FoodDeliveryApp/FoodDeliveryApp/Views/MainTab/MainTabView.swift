@@ -27,11 +27,12 @@ struct MainTabView: View {
                     ExploreView().tag(Tab.cart.rawValue)
                     ExploreView().tag(Tab.search.rawValue)
                     HomeView().tag(Tab.home.rawValue)
-                 
+                  
                 }
                 .tabViewStyle(.page(indexDisplayMode: .never))
                 .onChange(of: homeVM.selectTab) { newValue in
                     debugPrint("Selected Tab: \(newValue)")
+                       
                 }
                 
                 tabBar
@@ -61,7 +62,7 @@ struct MainTabView: View {
         .shadow(color: .black.opacity(0.15), radius: 3, x: 0, y: -2)
     }
     
-    
+//  MARK: FUNCTIONS
     
     private func tabButton(title: String, icon: String, tab: Tab, iconWidth: CGFloat = 24, iconHeight: CGFloat = 24) -> some View {
         TabButton(title: title, icon: icon, isSelect: homeVM.selectTab == tab.rawValue) {

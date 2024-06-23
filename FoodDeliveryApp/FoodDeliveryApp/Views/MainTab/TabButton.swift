@@ -36,7 +36,7 @@ struct TabButton: View {
 }
 
 #Preview {
-    TabButton(title: "Home", icon: "home_tab", isSelect: true)
+    TabButton(title: "Home", icon: "home_tab", isSelect: false)
 }
 
 

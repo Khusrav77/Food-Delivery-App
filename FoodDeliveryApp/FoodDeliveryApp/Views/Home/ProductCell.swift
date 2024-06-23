@@ -27,62 +27,64 @@ struct ProductCell: View {
            
             ZStack {
                 
+
                 VStack {
-                    
-                    HStack {
-                        Spacer()
-                        Button {
-                            
-                        } label: {
-                            Image(systemName: "heart")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 16, height: 16)
-                                .foregroundColor(.gray)
-                                .padding(6)
-                                .background(Color.cardsColor)
+                    ZStack(alignment: .top) {
+                        Image("app_logoG")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 80, height: 100)
+                            .padding(.top, 8)
+                        
+                        HStack{
+                            Spacer()
+                            Image (systemName: "heart")
+                                .padding(8)
+                                .foregroundColor(.black.opacity(0.3))
+                                .background(.white)
                                 .clipShape(Circle())
-                                .shadow(color: .black.opacity(0.1), radius: 5, x: 0, y: 2)
+                                .shadow(radius: 2)
                         }
                         
                     }
-                    Image("")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 80, height: 100)
                     
-                    
-                    Spacer()
-                    Text("")
-                        .font(.customfont(.regular, fontSize: 16))
-                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                    
-                    HStack {
-                        Text("")
-                            .font(.customfont(.regular, fontSize: 16))
-                            .foregroundStyle(.gray)
+                    VStack{
+                        Text(model.name)
+                            .font(.customfont(.semibold, fontSize: 16))
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                         
-                        Text("")
-                            .font(.customfont(.medium, fontSize: 16))
-                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
+                        HStack {
+                            Group {
+                                
+                                Text("1 к")
+                                Text("100$")
+                                
+                            }
+                            .font(.customfont(.regular, fontSize: 16))
+                           
+                             Spacer()
+                        }
                     }
-                    
+                    Spacer()
+                   
                     CartButtont(counter: $counter, title: "В корзину", isSelect: false, width: .infinity, height: 24)
                     
                 }
-                .padding(8)
-                .background(Color(hex: "F8F6F1"))
-                .frame(width: 180, height: 230)
-                .cornerRadius(16)
-                .overlay(RoundedRectangle(cornerRadius: 16).stroke(Color.black.opacity(0.1)))
+                
             }
+            .padding(8)
+            .frame(width: 180, height: 230)
+            .background(Color(hex: "F8F6F1"))
+            .cornerRadius(16)
+            .overlay(RoundedRectangle(cornerRadius: 16).stroke(Color.black.opacity(0.1)))
+            
         }
     }
 }
 
 
 #Preview {
+    
     ProductCell(model: ProductModel(dict: [
         "offer_price": 2.49,
         "start_date": "2023-07-30T18:30:00.000Z",
