@@ -7,9 +7,13 @@
 
 import SwiftUI
 
-struct Verification: View {
-    @ObservedObject var viewModel : SignInViewModel
+struct VerificationView: View {
+    
+    // MARK: - Properties
+    @ObservedObject var vm : SignInViewModel
     @Environment(\.presentationMode) var present
+   
+    // MARK: - Body
     var body: some View {
      
         VStack {
@@ -36,7 +40,7 @@ struct Verification: View {
                 }
                 .padding()
                 
-                Text("Код отправлена на номер\n\(viewModel.phoneNumber)")
+                Text("Код отправлена на номер\n\(vm.phoneNumber)")
                     .foregroundStyle(.gray)
                     .padding(.bottom)
                     .multilineTextAlignment(.center)
@@ -66,7 +70,7 @@ struct Verification: View {
                         .foregroundStyle(.white)
                         .padding(.vertical)
                         .frame(width: UIScreen.main.bounds.width - 30)
-                        .background(viewModel.isCodeSent ? Color.green : Color.gray30)
+                        .background(vm.isCodeSent ? Color.green : Color.gray30)
                         .clipShape(Capsule())
                 }
                 .padding()
@@ -86,17 +90,17 @@ struct Verification: View {
     // gatting Code At Each Index...
     
     func getCodeAtIndex(index: Int) -> String {
-        if viewModel.verificationCode.count > index {
-            let start = viewModel.verificationCode.startIndex
-            let current = viewModel.verificationCode.index(start, offsetBy: index)
-            return String(viewModel.verificationCode[current])
+        if vm.verificationCode.count > index {
+            let start = vm.verificationCode.startIndex
+            let current = vm.verificationCode.index(start, offsetBy: index)
+            return String(vm.verificationCode[current])
         }
         return ""
     }
 }
 
 #Preview {
-    Verification(viewModel: SignInViewModel())
+    VerificationView(vm: SignInViewModel())
 }
 
 struct CodeView: View {

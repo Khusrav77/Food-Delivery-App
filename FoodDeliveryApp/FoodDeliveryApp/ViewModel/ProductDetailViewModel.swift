@@ -49,56 +49,56 @@ final class ProductDetailViewModel: ObservableObject {
     //MARK: Service call
     
     func serviceCallDetail() {
-        ServiceCall.post(parameter: ["prod_id": self.products.prodId], path: Globals.SV_PRODUCT_DETAIL, isToken: true) { responseObj in
-            
-            if let response = responseObj as? NSDictionary {
-                
-                if response.value(forKey: KKey.status) as? String ?? "" == "1" {
-                    
-                    if let payload = response.value(forKey: KKey.payload) as? NSDictionary {
-                        
-                        self.products = ProductModel(dict: payload)
-                        self.nutritions = (payload.value(forKey: "nutrition_list") as? NSArray ?? []).map({ nutrition in
-                            return NutritionModel(dict: nutrition as? NSDictionary ?? [:])
-                        })
-                        
-                        self.images = (payload.value(forKey: "images") as? NSArray ?? []).map({ image in
-                            return ImageModel(dict: image as? NSDictionary ?? [:])
-                        })
-                    }
-                } else {
-                    self.errorMessage = response.value(forKey: KKey.message) as? String ?? "Fail"
-                    self.showError = true
-                }
-            }
-        } failure: { error in
-            self .errorMessage = error?.localizedDescription ?? "Fail"
-            self.showError = true
-        }
+//        ServiceCall.post(parameter: ["prod_id": self.products.prodId], path: Globals.SV_PRODUCT_DETAIL, isToken: true) { responseObj in
+//            
+//            if let response = responseObj as? NSDictionary {
+//                
+//                if response.value(forKey: KKey.status) as? String ?? "" == "1" {
+//                    
+//                    if let payload = response.value(forKey: KKey.payload) as? NSDictionary {
+//                        
+//                        self.products = ProductModel(dict: payload)
+//                        self.nutritions = (payload.value(forKey: "nutrition_list") as? NSArray ?? []).map({ nutrition in
+//                            return NutritionModel(dict: nutrition as? NSDictionary ?? [:])
+//                        })
+//                        
+//                        self.images = (payload.value(forKey: "images") as? NSArray ?? []).map({ image in
+//                            return ImageModel(dict: image as? NSDictionary ?? [:])
+//                        })
+//                    }
+//                } else {
+//                    self.errorMessage = response.value(forKey: KKey.message) as? String ?? "Fail"
+//                    self.showError = true
+//                }
+//            }
+//        } failure: { error in
+//            self .errorMessage = error?.localizedDescription ?? "Fail"
+//            self.showError = true
+//        }
 
     }
     
     func serviceCallAddRemoveFav() {
-        ServiceCall.post(parameter: ["prod_id": self.products.prodId], path: Globals.SV_ADD_REMOVE_FAVORITE, isToken: true) { responseObj in
-            if let response = responseObj as? NSDictionary {
-                if response.value(forKey: KKey.status) as? String ?? "" == "1" {
-                    
-                    self.isFav = self.isFav
-                    HomeViewModel.shared.serviceCallList()
-                    
-                    self.errorMessage = response.value(forKey: KKey.message) as? String ?? "Done"
-                    self.showError = true
-                } else {
-                    self.errorMessage = response.value(forKey: KKey.message) as? String ?? "Fail"
-                    self.showError = true
-                }
-            }
-        } failure: { error in
-            self.errorMessage = error?.localizedDescription ?? "Fail"
-            self.showError = true
-        }
-
-    }
+//        ServiceCall.post(parameter: ["prod_id": self.products.prodId], path: Globals.SV_ADD_REMOVE_FAVORITE, isToken: true) { responseObj in
+//            if let response = responseObj as? NSDictionary {
+//                if response.value(forKey: KKey.status) as? String ?? "" == "1" {
+//                    
+//                    self.isFav = self.isFav
+//                    HomeViewModel.shared.serviceCallList()
+//                    
+//                    self.errorMessage = response.value(forKey: KKey.message) as? String ?? "Done"
+//                    self.showError = true
+//                } else {
+//                    self.errorMessage = response.value(forKey: KKey.message) as? String ?? "Fail"
+//                    self.showError = true
+//                }
+//            }
+//        } failure: { error in
+//            self.errorMessage = error?.localizedDescription ?? "Fail"
+//            self.showError = true
+//        }
+//
+   }
     
 }
 

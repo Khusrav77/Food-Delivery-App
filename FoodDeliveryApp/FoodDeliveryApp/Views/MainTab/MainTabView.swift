@@ -10,27 +10,28 @@ import SwiftUI
 
 struct MainTabView: View {
     
-    @StateObject var homeVM = HomeViewModel.shared
+    // MARK: - Properties
+    @StateObject var vm = HomeViewModel.shared
     
     private enum Tab: Int {
         case profile = 0, favorite, cart, search, home
     }
-    
+    // MARK: - Body
     var body: some View {
         ZStack {
             
             VStack {
                 
-                TabView(selection: $homeVM.selectTab) {
+                TabView(selection: $vm.selectTab) {
                     ExploreView().tag(Tab.profile.rawValue)
-                    FavoriteView().tag(Tab.favorite.rawValue)
+                   // FavoriteView().tag(Tab.favorite.rawValue)
                     ExploreView().tag(Tab.cart.rawValue)
                     ExploreView().tag(Tab.search.rawValue)
                     HomeView().tag(Tab.home.rawValue)
                   
                 }
                 .tabViewStyle(.page(indexDisplayMode: .never))
-                .onChange(of: homeVM.selectTab) { newValue in
+                .onChange(of: vm.selectTab) { newValue in
                     debugPrint("Selected Tab: \(newValue)")
                        
                 }
@@ -65,7 +66,7 @@ struct MainTabView: View {
 //  MARK: FUNCTIONS
     
     private func tabButton(title: String, icon: String, tab: Tab, iconWidth: CGFloat = 24, iconHeight: CGFloat = 24) -> some View {
-        TabButton(title: title, icon: icon, isSelect: homeVM.selectTab == tab.rawValue) {
+        TabButton(title: title, icon: icon, isSelect: vm.selectTab == tab.rawValue) {
             updateTabSelection(to: tab.rawValue)
         }
     }
@@ -73,7 +74,7 @@ struct MainTabView: View {
     private func updateTabSelection(to index: Int) {
         DispatchQueue.main.async {
             withAnimation {
-                homeVM.selectTab = index
+                vm.selectTab = index
             }
         }
     }

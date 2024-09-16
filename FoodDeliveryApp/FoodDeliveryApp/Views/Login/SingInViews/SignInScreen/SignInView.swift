@@ -65,7 +65,7 @@ struct SignInView: View {
                 
                 VStack{
                     
-                    NavigationLink(destination: Verification(viewModel: viewModel)){
+                    NavigationLink(destination: VerificationView(vm: viewModel)){
                         Text("Продолжить")
                             .font(.customfont(.semibold, fontSize: 20))
                             .foregroundColor(.white)

@@ -1,75 +1,11 @@
 //
-//  UIExtension.swift
+//  Extention+Color.swift
 //  FoodDeliveryApp
 //
-//  Created by Khusrav Safiev on 5/26/24.
+//  Created by Khusrav Safiev on 9/16/24.
 //
 
-
 import SwiftUI
-
-enum Inter: String {
-    case regular = "FiraSans-Regular"
-    case medium = "FiraSans-Medium"
-    case semibold = "FiraSans-SemiBold"
-    case bold = "FiraSans-Bold"
-    case alfaSlabOne = "AlfaSlabOne-Regular"
-}
-
-extension Font {
-    
-    static func customfont(_ font: Inter, fontSize: CGFloat) -> Font {
-        custom(font.rawValue, size: fontSize)
-    }
-}
-
-extension CGFloat {
-    
-    static var screenWidth: Double {
-        return UIScreen.main.bounds.size.width
-    }
-    
-    static var screenHeight: Double {
-        return UIScreen.main.bounds.size.height
-    }
-    
-    static func widthPer(per: Double) -> Double {
-        return screenWidth * per
-    }
-    
-    static func heightPer(per: Double) -> Double {
-        return screenHeight * per
-    }
-    
-    static var topInsets: Double {
-        if let keyWindow = UIApplication.shared.keyWindow {
-            return keyWindow.safeAreaInsets.top
-        }
-        return 0.0
-    }
-    
-    static var bottomInsets: Double {
-        if let keyWindow = UIApplication.shared.keyWindow {
-            return keyWindow.safeAreaInsets.bottom
-        }
-        return 0.0
-    }
-    
-    static var horizontalInsets: Double {
-        if let keyWindow = UIApplication.shared.keyWindow {
-            return keyWindow.safeAreaInsets.left + keyWindow.safeAreaInsets.right
-        }
-        return 0.0
-    }
-    
-    static var verticalInsets: Double {
-        if let keyWindow = UIApplication.shared.keyWindow {
-            return keyWindow.safeAreaInsets.top + keyWindow.safeAreaInsets.bottom
-        }
-        return 0.0
-    }
-    
-}
 
 extension Color {
     
@@ -180,14 +116,14 @@ extension Color {
         Scanner(string: hex).scanHexInt64(&int)
         let a, r, g, b: UInt64
         switch hex.count {
-            case 3: // RGB(12 -bit)
-                (a, r, g, b) = (255, (int >> 8) * 17, (int >> 4 & 0xF) * 17, (int & 0xF) * 17)
-            case 6: // RGB (24-bit)
-                (a, r, g, b) = (255, int >> 16, int >> 8 & 0xFF, int & 0xFF)
-            case 8: // ARGB (32-bit)
-                (a, r, g, b) = (int >> 24, int >> 16 & 0xFF, int >> 8 & 0xFF, int & 0xFF)
-            default:
-                (a, r, g, b) = (1, 1, 1, 0)
+        case 3: // RGB(12 -bit)
+            (a, r, g, b) = (255, (int >> 8) * 17, (int >> 4 & 0xF) * 17, (int & 0xF) * 17)
+        case 6: // RGB (24-bit)
+            (a, r, g, b) = (255, int >> 16, int >> 8 & 0xFF, int & 0xFF)
+        case 8: // ARGB (32-bit)
+            (a, r, g, b) = (int >> 24, int >> 16 & 0xFF, int >> 8 & 0xFF, int & 0xFF)
+        default:
+            (a, r, g, b) = (1, 1, 1, 0)
         }
         
         self.init(

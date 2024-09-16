@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FavoriteView: View {
-    @StateObject var favoriteVM = FavoriteViewModel.shared
+    @StateObject var vm = FavoriteViewModel()
    
     var body: some View {
         ZStack {

@@ -8,19 +8,21 @@
 import SwiftUI
 
 struct WelcomeView: View {
-    // Constants
+    
+    // MARK: - Properties
     let appLogoImageName = "app_logo"
     let appTitle = "Food\nDelivery"
     let appSubtitle = "Заказ продуктов прямо домой"
     let startButton = "Начать"
     
+    // MARK: - Body
     var body: some View {
         NavigationView{
             ZStack {
                 Color.green
                     .ignoresSafeArea()
+                
                 VStack {
-                    
                     Spacer()
                 
                     Image(appLogoImageName)
@@ -46,18 +48,17 @@ struct WelcomeView: View {
                             .foregroundStyle(Color.greenPrimary)
                             .multilineTextAlignment(.center)
                             .padding()
-                            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 60, maxHeight: 60)
-                            .background(Color.cardsColor)
-                            .clipShape(RoundedRectangle(cornerRadius: 25))
+                            .frame(maxWidth: .infinity, maxHeight: 60)
+                            .background(.background)
+                            .clipShape(.rect(cornerRadius: 25))
+                            .shadow(color: .black.opacity(0.3), radius: 8, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 8)
                     }
-                   
                 }
                 .padding()
             }
             .navigationTitle("")
             .navigationBarBackButtonHidden(true)
             .navigationBarHidden(true)
-           
         }
     }
 }

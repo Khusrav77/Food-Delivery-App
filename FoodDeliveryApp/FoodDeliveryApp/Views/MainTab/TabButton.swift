@@ -10,15 +10,19 @@
 import SwiftUI
 
 struct TabButton: View {
+    
+    // MARK: - Properties
     var title: String
     var icon: String
     var isSelect: Bool
     var action: (() -> Void)?
     
+    // MARK: - Body
     var body: some View {
-        Button(action: {
+        
+        Button {
             action?()
-        }) {
+        } label: {
             VStack {
                 Image(icon)
                     .resizable()
@@ -31,7 +35,7 @@ struct TabButton: View {
             }
         }
         //.opacity(isSelect ? Color.orangePrimary : Color.gray)
-        .frame(minWidth: 0, maxWidth: .infinity)
+        .frame(maxWidth: .infinity)
     }
 }
 
