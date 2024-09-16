@@ -29,10 +29,9 @@ struct SearchTextFild: View {
         }
         .frame(height: 30)
         .padding(10)
-        //.background(Color(hex: "F8F6F1"))
         .clipShape(Capsule())
         .overlay(Capsule().stroke(Color.gray20, lineWidth: 0.5))
-        .shadow(color: .black.opacity(0.1), radius: 5, x: 0, y: 2)
+        .shadow(color: .black.opacity(0.1), radius: 5, x: 0, y: 8)
     }
 }
 
