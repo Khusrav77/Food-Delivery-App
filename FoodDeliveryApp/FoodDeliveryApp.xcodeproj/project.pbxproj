@@ -11,8 +11,11 @@
 		A400352E2C1E2DB1009D8528 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = A400352D2C1E2DB1009D8528 /* Test.swift */; };
 		A45168A72C998B9E0036D44B /* TopinfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45168A62C998B9E0036D44B /* TopinfoView.swift */; };
 		A45168A92C9998670036D44B /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45168A82C9998670036D44B /* TextFieldView.swift */; };
-		A45168AB2C999AE60036D44B /* ContinueButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45168AA2C999AE60036D44B /* ContinueButtonView.swift */; };
 		A45168AD2C99A19E0036D44B /* SocialButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45168AC2C99A19E0036D44B /* SocialButtonView.swift */; };
+		A45168AF2C99AE820036D44B /* BackgroundViewGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45168AE2C99AE820036D44B /* BackgroundViewGradient.swift */; };
+		A45168B12C99BFB10036D44B /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45168B02C99BFB10036D44B /* CodeView.swift */; };
+		A45168B32C99D6750036D44B /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45168B22C99D6750036D44B /* CustomButton.swift */; };
+		A45168B52C99E2090036D44B /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45168B42C99E2090036D44B /* BackButton.swift */; };
 		A45A898B2C0DE0FF0015A0A4 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45A898A2C0DE0FF0015A0A4 /* ProductModel.swift */; };
 		A45A898D2C0DEF0B0015A0A4 /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45A898C2C0DEF0B0015A0A4 /* Extension+String.swift */; };
 		A45A898F2C0E33160015A0A4 /* TypeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45A898E2C0E33160015A0A4 /* TypeModel.swift */; };
@@ -92,8 +95,11 @@
 		A400352D2C1E2DB1009D8528 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		A45168A62C998B9E0036D44B /* TopinfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopinfoView.swift; sourceTree = "<group>"; };
 		A45168A82C9998670036D44B /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
-		A45168AA2C999AE60036D44B /* ContinueButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueButtonView.swift; sourceTree = "<group>"; };
 		A45168AC2C99A19E0036D44B /* SocialButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialButtonView.swift; sourceTree = "<group>"; };
+		A45168AE2C99AE820036D44B /* BackgroundViewGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundViewGradient.swift; sourceTree = "<group>"; };
+		A45168B02C99BFB10036D44B /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
+		A45168B22C99D6750036D44B /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		A45168B42C99E2090036D44B /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		A45A898A2C0DE0FF0015A0A4 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		A45A898C2C0DEF0B0015A0A4 /* Extension+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+String.swift"; sourceTree = "<group>"; };
 		A45A898E2C0E33160015A0A4 /* TypeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeModel.swift; sourceTree = "<group>"; };
@@ -361,6 +367,8 @@
 			children = (
 				A460CBAD2C0FE43D00CFD249 /* CartButtont.swift */,
 				A45CE2882C0A6BC00084FD80 /* SearchTextFild.swift */,
+				A45168B22C99D6750036D44B /* CustomButton.swift */,
+				A45168B42C99E2090036D44B /* BackButton.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -385,6 +393,7 @@
 		A46D430F2C98B959004B5767 /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
+				A45168AE2C99AE820036D44B /* BackgroundViewGradient.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -411,7 +420,6 @@
 			children = (
 				A45168A62C998B9E0036D44B /* TopinfoView.swift */,
 				A45168A82C9998670036D44B /* TextFieldView.swift */,
-				A45168AA2C999AE60036D44B /* ContinueButtonView.swift */,
 				A45168AC2C99A19E0036D44B /* SocialButtonView.swift */,
 			);
 			path = SubViews;
@@ -429,6 +437,7 @@
 		A46D43142C98BA93004B5767 /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
+				A45168B02C99BFB10036D44B /* CodeView.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -579,9 +588,9 @@
 				A47638612C1872C300763BE9 /* NotificationModel.swift in Sources */,
 				A46739BA2C091D4F00AA4BDE /* HomeView.swift in Sources */,
 				A400352E2C1E2DB1009D8528 /* Test.swift in Sources */,
+				A45168B12C99BFB10036D44B /* CodeView.swift in Sources */,
 				A45C627F2C164F5E00E7E11F /* ExploreItemView.swift in Sources */,
 				A45C62722C15E74200E7E11F /* FavoriteView.swift in Sources */,
-				A45168AB2C999AE60036D44B /* ContinueButtonView.swift in Sources */,
 				A46D91722C11A8F90019A335 /* AuthService.swift in Sources */,
 				A460CBAE2C0FE43D00CFD249 /* CartButtont.swift in Sources */,
 				A46D91742C11CE690019A335 /* APIClient.swift in Sources */,
@@ -593,16 +602,19 @@
 				A47638632C1872ED00763BE9 /* OrderItemModel.swift in Sources */,
 				A47638652C18731000763BE9 /* PaymentModel.swift in Sources */,
 				A45C62832C17560100E7E11F /* MockData.swift in Sources */,
+				A45168AF2C99AE820036D44B /* BackgroundViewGradient.swift in Sources */,
 				A464CAA92C2460A50078D222 /* MyOrderDetailViewModel.swift in Sources */,
 				A46739B22C09192D00AA4BDE /* HomeViewModel.swift in Sources */,
 				A46739B72C091AB800AA4BDE /* MainTabView.swift in Sources */,
 				A46D430C2C98B21C004B5767 /* Extension+Date.swift in Sources */,
 				A46739BD2C091F4600AA4BDE /* ExploreView.swift in Sources */,
+				A45168B32C99D6750036D44B /* CustomButton.swift in Sources */,
 				A46D43082C98B0DA004B5767 /* Extension+Font.swift in Sources */,
 				A45CAEFC2C0C6DC40076A99C /* UserModel.swift in Sources */,
 				A464CAA72C2455FB0078D222 /* MyOrderViewModel.swift in Sources */,
 				A466425E2C03501A0025096A /* WelcomeView.swift in Sources */,
 				A476385F2C18729100763BE9 /* MyOrderModel.swift in Sources */,
+				A45168B52C99E2090036D44B /* BackButton.swift in Sources */,
 				A462E5D32C201DD60078B7EA /* UserAuthViewModel.swift in Sources */,
 				A46CFE402C0B6EA700BF88DD /* SectionTitleAll.swift in Sources */,
 				A45168A72C998B9E0036D44B /* TopinfoView.swift in Sources */,
@@ -776,7 +788,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -811,7 +823,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -17,10 +17,9 @@ struct WelcomeView: View {
     
     // MARK: - Body
     var body: some View {
-        NavigationView{
+        NavigationStack{
             ZStack {
-                Color.green
-                    .ignoresSafeArea()
+                BackgroundViewGradient()
                 
                 VStack {
                     Spacer()
@@ -51,15 +50,16 @@ struct WelcomeView: View {
                             .frame(maxWidth: .infinity, maxHeight: 60)
                             .background(.background)
                             .clipShape(.rect(cornerRadius: 25))
-                            .shadow(color: .black.opacity(0.3), radius: 8, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 8)
+                            .shadow(color: .black.opacity(0.1), radius: 8, x: 4, y: 8)
                     }
                 }
                 .padding()
             }
-            .navigationTitle("")
-            .navigationBarBackButtonHidden(true)
-            .navigationBarHidden(true)
+            
         }
+        .navigationTitle("")
+        .navigationBarBackButtonHidden(true)
+        .navigationBarHidden(true)
     }
 }
 

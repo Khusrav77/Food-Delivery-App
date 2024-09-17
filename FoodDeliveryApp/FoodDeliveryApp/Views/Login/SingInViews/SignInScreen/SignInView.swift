@@ -14,35 +14,43 @@ struct SignInView: View {
     // MARK: - Body
     var body: some View {
         
-        ZStack{
-            Color.cardsColor
-                .ignoresSafeArea()
-            
-            VStack(spacing: 20) {
-                
-                TopinfoView()
-                
-                TextFieldView(vm: vm)
-                
-                ContinueButtonView(vm: vm)
-                
-                Text("или войти с помощью")
-                    .font(.customfont(.regular, fontSize: 14))
-                    .multilineTextAlignment(.center)
-                    .padding()
-                
-                SocialButtonView(action: {}, imageName: "google_logo", buttonText: "Email")
-                
-                SocialButtonView(action: {}, imageName: "google_logo", buttonText: "Google")
-                
-                SocialButtonView(action: {}, imageName: "vk_logo", buttonText: "Вконтакте")
-                
-            }
-            .padding(.bottom, 50)
+       
+        NavigationStack {
+            ZStack(alignment:.topLeading){
+                    Color.cardsColor
+                        .ignoresSafeArea()
+                    
+                    VStack(spacing: 20) {
+                        
+                        TopinfoView()
+                        
+                        TextFieldView(vm: vm)
+                        
+                        NavigationLink(destination:VerificationView(vm: vm)){
+                            CustomButton(title: "Продолжить", isEnabled: vm.isLoadinButtonDisabled) {}
+                        }
+                        
+                        Text("или войти с помощью")
+                            .font(.customfont(.regular, fontSize: 14))
+                            .multilineTextAlignment(.center)
+                            .padding()
+                        
+                        SocialButtonView(action: {}, imageName: "google_logo", buttonText: "Email")
+                        
+                        SocialButtonView(action: {}, imageName: "google_logo", buttonText: "Google")
+                        
+                        SocialButtonView(action: {}, imageName: "vk_logo", buttonText: "Вконтакте")
+                        
+                    }
+                    .padding(.bottom, 50)
+                    
+                    BackButton()
+                        .padding()
+                }
+           // .navigationTitle("")
+            .navigationBarBackButtonHidden(true)
+            .navigationBarHidden(true)
         }
-        .navigationTitle("")
-        .navigationBarBackButtonHidden(true)
-        .navigationBarHidden(true)
     }
 }
 

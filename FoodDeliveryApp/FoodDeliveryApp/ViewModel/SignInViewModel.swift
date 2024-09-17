@@ -9,6 +9,7 @@ import SwiftUI
 
 
 final class SignInViewModel: ObservableObject {
+    // MARK: - Properties
     static let shared: SignInViewModel = SignInViewModel()
     
     @Published var phoneNumber: String = ""
@@ -18,16 +19,15 @@ final class SignInViewModel: ObservableObject {
     @Published var verificationCode: String = ""
     @Published var isSignedIn: Bool = false
     
-    
-    
     var isLoadinButtonDisabled: Bool {
-        !isPhoneNuberValid(phoneNumber)
+        isPhoneNuberValid(phoneNumber)
     }
 
     var isVerifiButtonDisabled: Bool {
         verificationCode.isEmpty
     }
     
+    // MARK: - Methods
     func sendCode() {
         isLoading = true
         
@@ -35,6 +35,15 @@ final class SignInViewModel: ObservableObject {
     
     func verifyCode() {
         isLoading = true
+    }
+    
+    func getCodeAtIndex(index: Int) -> String {
+        if verificationCode.count > index {
+            let start = verificationCode.startIndex
+            let current = verificationCode.index(start, offsetBy: index)
+            return String(verificationCode[current])
+        }
+        return ""
     }
     
 //    func getCountryCode() -> String {
