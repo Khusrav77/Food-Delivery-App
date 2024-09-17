@@ -10,7 +10,7 @@ import SwiftUI
 struct VerificationView: View {
     
     // MARK: - Properties
-    @ObservedObject var vm : SignInViewModel
+    @ObservedObject var vm: SignInViewModel
     @Environment(\.presentationMode) var present
    
     // MARK: - Body

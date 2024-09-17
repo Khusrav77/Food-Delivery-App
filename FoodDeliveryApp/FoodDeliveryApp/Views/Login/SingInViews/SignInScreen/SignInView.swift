@@ -8,142 +8,51 @@
 import SwiftUI
 
 struct SignInView: View {
-    @StateObject private var viewModel = SignInViewModel.shared
-    
-    
+    // MARK: - Properties
+    @StateObject private var vm = SignInViewModel.shared
+   
+    // MARK: - Body
     var body: some View {
         
         ZStack{
             Color.cardsColor
                 .ignoresSafeArea()
-            VStack {
-                
-                VStack(spacing: 20) {
-                    
-                    Image("app_logoG")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 100, height: 100)
-                        .padding(.top, 60)
-                    
-                    Text("Добро пожаловать")
-                        .font(.customfont(.semibold, fontSize: 26))
-                        .multilineTextAlignment(.center)
-                    
-                    Text("Введите номер телефона, чтобы войти или зарегистрироваться")
-                        .font(.customfont(.regular, fontSize: 14))
-                        .multilineTextAlignment(.center)
-                       
-                }
-                .frame(width: .screenWidth, height: .screenHeight / 2.6)
-                .background(.white)
-                .clipShape(RoundedRectangle(cornerRadius: 24))
-                .shadow(color: .black.opacity(0.1), radius: 5)
-                .ignoresSafeArea(edges: .top)
-              
-                
-                HStack {
-                    Button {
-                       // viewModel.getCountryCode()
-                    } label: {
-                        Text("+7")
-                            .font(.customfont(.medium, fontSize: 18))
-                            .foregroundColor(.black.opacity(0.7))
-                            .padding(8)
-                    }
-                    TextField("999 000 00 00", text: $viewModel.phoneNumber)
-                        .keyboardType(.phonePad)
-                        .frame(minWidth: 0, maxWidth: .infinity)
-                        .padding()
-                }
-                .frame(minHeight: 60)
-                .background(.white)
-                .clipShape(RoundedRectangle(cornerRadius: 24))
-                .shadow(color: .black.opacity(0.1), radius: 5)
-                .padding()
-                
-                
-                VStack{
-                    
-                    NavigationLink(destination: VerificationView(vm: viewModel)){
-                        Text("Продолжить")
-                            .font(.customfont(.semibold, fontSize: 20))
-                            .foregroundColor(.white)
-                            .multilineTextAlignment(.center)
-                            .frame(minHeight: 60)
-                            .frame(maxWidth: .infinity)
-                            .background(viewModel.isLoadinButtonDisabled ? Color.gray30 : Color.green)
-                            .clipShape(RoundedRectangle(cornerRadius: 24))
-                            .padding()
-                    }
-                    .disabled(viewModel.isLoadinButtonDisabled) 
-                    
-                    Spacer()
-                    
-                    Text("или войти с помощью")
-                        .font(.customfont(.regular, fontSize: 14))
-                        .multilineTextAlignment(.center)
-                        .padding(.top, 16)
-                    
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
-                        
-                        HStack {
-                            Spacer().padding()
-                            Image("google_logo")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 25, height: 25)
-                            
-                            Text("Google")
-                                .font(.customfont(.semibold, fontSize: 20))
-                                .foregroundColor(.white)
-                                .frame(minHeight: 60)
-                                .frame(maxWidth: .infinity)
-                            Spacer().padding()
-                        }
-                        .background(Color.gray50)
-                        .clipShape(RoundedRectangle(cornerRadius: 24))
-                        .padding()
-                    }
-                    
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
-                        
-                        HStack {
-                            Spacer().padding()
-                            Image("vk_logo")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 25, height: 25)
-                            
-                            Text("Вконтакте")
-                                .font(.customfont(.semibold, fontSize: 20))
-                                .foregroundColor(.white)
-                                .frame(minHeight: 60)
-                                .frame(maxWidth: .infinity)
-                            Spacer().padding()
-                        }
-                        .background(Color.gray50)
-                        .clipShape(RoundedRectangle(cornerRadius: 24))
-                        .padding(.horizontal)
-                        
-                    }
-                    
-                }
-                
-                Spacer()
-            }
             
+            VStack(spacing: 20) {
+                
+                TopinfoView()
+                
+                TextFieldView(vm: vm)
+                
+                ContinueButtonView(vm: vm)
+                
+                Text("или войти с помощью")
+                    .font(.customfont(.regular, fontSize: 14))
+                    .multilineTextAlignment(.center)
+                    .padding()
+                
+                SocialButtonView(action: {}, imageName: "google_logo", buttonText: "Email")
+                
+                SocialButtonView(action: {}, imageName: "google_logo", buttonText: "Google")
+                
+                SocialButtonView(action: {}, imageName: "vk_logo", buttonText: "Вконтакте")
+                
+            }
+            .padding(.bottom, 50)
         }
         .navigationTitle("")
         .navigationBarBackButtonHidden(true)
         .navigationBarHidden(true)
     }
-    
 }
-    
-
 
 #Preview {
     SignInView()
 }
+
+
+
+
+
+
 

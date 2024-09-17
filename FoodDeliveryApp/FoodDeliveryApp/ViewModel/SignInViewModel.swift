@@ -6,9 +6,9 @@
 //
 
 import SwiftUI
-import Combine
 
-final class SignInViewModel: ObservableObject{
+
+final class SignInViewModel: ObservableObject {
     static let shared: SignInViewModel = SignInViewModel()
     
     @Published var phoneNumber: String = ""
@@ -17,6 +17,8 @@ final class SignInViewModel: ObservableObject{
     @Published var isCodeSent: Bool = false
     @Published var verificationCode: String = ""
     @Published var isSignedIn: Bool = false
+    
+    
     
     var isLoadinButtonDisabled: Bool {
         !isPhoneNuberValid(phoneNumber)
