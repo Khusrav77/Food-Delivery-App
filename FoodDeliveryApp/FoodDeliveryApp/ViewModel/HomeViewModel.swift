@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-class HomeViewModel: ObservableObject {
+final class HomeViewModel: ObservableObject {
     
     static var shared: HomeViewModel = HomeViewModel()
    
-    @Published var selectTab: Int = 4
+    @Published var tabSelection: Int = 4
     @Published var textSearch: String = ""
     
     @Published var showError = false
@@ -65,7 +65,5 @@ class HomeViewModel: ObservableObject {
 //        }
 
     }
-    
-    
 }
 
