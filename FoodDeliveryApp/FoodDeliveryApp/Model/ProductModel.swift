@@ -17,7 +17,7 @@ struct ProductModel: Identifiable, Equatable{
     var brandId: Int = 0
     var typeId: Int = 0
     var orderId: Int = 0
-    var qty: Int = 0
+    var quantityinCart: Int = 0
     var detail: String = ""
     var name: String = ""
     var unitName: String = ""
@@ -45,7 +45,7 @@ struct ProductModel: Identifiable, Equatable{
            self.brandId = dict.value(forKey: "brand_id") as? Int ?? 0
            self.typeId = dict.value(forKey: "type_id") as? Int ?? 0
            self.orderId = dict.value(forKey: "order_id") as? Int ?? 0
-           self.qty = dict.value(forKey: "qty") as? Int ?? 0
+           self.quantityinCart = dict.value(forKey: "qty") as? Int ?? 0
            self.isFav = dict.value(forKey: "is_fav") as? Int ?? 0 == 1
            
            self.detail = dict.value(forKey: "detail") as? String ?? ""

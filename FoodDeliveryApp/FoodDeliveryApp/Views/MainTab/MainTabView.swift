@@ -12,7 +12,7 @@ struct MainTabView: View {
     
     // MARK: - Properties
     @StateObject var vm = HomeViewModel.shared
-    //@State var tabSelection = 5
+    
     
     // MARK: - Body
     var body: some View {
@@ -21,7 +21,7 @@ struct MainTabView: View {
             TabView(selection: $vm.tabSelection) {
                 HomeView().tag(5)
                 
-                ExploreView().tag(4)
+                ProductView().tag(4)
                 
                 ExploreView().tag(3)
                 
@@ -30,9 +30,10 @@ struct MainTabView: View {
                 ExploreView().tag(1)
                 
             }
+            
             .overlay(alignment: .bottom) {
                 TabBarView(vm: vm)
-                    .padding(.bottom)
+                    //.padding(.bottom, 8)
             }
         }
         .navigationTitle("")

@@ -12,7 +12,6 @@ struct PromoCodeModel: Identifiable, Equatable {
     
     var id: Int = 0
     var type: Int = 0
-    
     var title: String = ""
     var code: String = ""
     var description: String = ""

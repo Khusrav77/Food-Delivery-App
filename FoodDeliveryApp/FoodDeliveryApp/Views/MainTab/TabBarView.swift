@@ -16,7 +16,7 @@ struct TabBarView: View {
     let tabBarItems: [(imege: String, title: String)] = [
         ("person", "Профиль"),
         ("magnifyingglass", "Найти"),
-        ("basket", "Карзина"),
+        ("cart", "Карзина"),
         ("heart", "Любимые"),
         ("square.grid.2x2", "Главня"),
     ]
@@ -25,7 +25,7 @@ struct TabBarView: View {
     var body: some View {
         
         ZStack {
-            Capsule()
+            RoundedRectangle(cornerRadius: 25)
                 .frame(height: 80)
                 .foregroundStyle(Color(.secondarySystemBackground))
                 .shadow(color: .black.opacity(0.15), radius: 3, x: 0, y: -2)
@@ -36,7 +36,7 @@ struct TabBarView: View {
                         vm.tabSelection = index + 1
                     }label: {
                         VStack(spacing: 8) {
-                            Spacer()
+                           // Spacer()
                             Image(systemName: tabBarItems[index].imege)
                                 .resizable()
                                 .scaledToFit()
@@ -58,14 +58,15 @@ struct TabBarView: View {
                                 
                             }
                         }
-                        .foregroundStyle(index + 1 == vm.tabSelection ? Color.orangePrimary : Color.gray40)
+                        .foregroundStyle(index + 1 == vm.tabSelection ? Color.orangePrimary : Color.gray50)
                     }
                 }
             }
             .frame(height: 80)
-            .clipShape(Capsule())
+            .clipShape(.rect(cornerRadius: 25))
+            .clipShape(RoundedRectangle(cornerRadius: 25))
         }
-        .padding(.horizontal)
+       // .padding(.horizontal)
     }
 }
 

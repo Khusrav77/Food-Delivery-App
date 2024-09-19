@@ -9,46 +9,49 @@ import SwiftUI
 
 struct CategoryListView: View {
     
-        let categories = ["Все", "Фрукты", "Овощи", "Мясо", "Рыба", "Молочное", "Бакалея", "Заморозка", "Для детей", "Сладкое", "Сухофрукты", "Готовая еда"]
+    // MARK: - Properties
+    @Namespace private var animationNamespase
+    @State private var isSelectedCategory: String = "Все"
+    let categories = ["Все", "Фрукты", "Овощи", "Мясо", "Рыба", "Молочное", "Бакалея", "Заморозка", "Для детей", "Сладкое", "Сухофрукты", "Готовая еда"]
+    
+    // MARK: - body
+    var body: some View {
         
-        @State private var isSelectedCategory: String = "Все"
-        
-        var body: some View {
-            ZStack {
-                ScrollView(.horizontal, showsIndicators: false) {
-                    LazyHStack(spacing: 0){
-                        ForEach(categories, id: \.self) { category in
-                            Button(action: {
-                                isSelectedCategory = category
-                            }) {
-                                Text(category)
-                                    .padding(.vertical, 8)
-                                    .padding(.horizontal, 16)
-                                    .foregroundColor(isSelectedCategory == category ? .white : .black)
-                                    .background(
-                                        ZStack {
-                                           
-                                            if isSelectedCategory == category {
-                                                Color.orange.clipShape(Capsule())
-                                                    .shadow(radius: 5)
-                                            }
+        ScrollView(.horizontal, showsIndicators: false) {
+            LazyHStack(spacing: 6){
+                ForEach(categories, id: \.self) { category in
+                    Button(action: {
+                        isSelectedCategory = category
+                    }) {
+                        ZStack {
+                            Text(category)
+                                .font(.system(size: 14, weight: .semibold, design: .rounded))
+                                .padding(.vertical, 8)
+                                .padding(.horizontal, 16)
+                                .foregroundColor(isSelectedCategory == category ? .white : .gray50)
+                                .background(
+                                    ZStack {
+                                        
+                                        if isSelectedCategory == category {
+                                            Color.orange.clipShape(Capsule())
+                                                .matchedGeometryEffect(id: "tabSelationID", in: animationNamespase)
+                                        } else {
+                                            Color(.secondarySystemBackground)
+                                                .clipShape(Capsule())
+                                            
                                         }
-                                    )
-                                    
-                                
-                            }
-                            .frame(maxWidth: .infinity, minHeight: 45)
-                            .background(.gray.opacity(0.1))
+                                    }
+                                )
                         }
                     }
+                    
                 }
-               
             }
-            
+            .padding(.horizontal)
         }
+        
     }
-
-   
+}
 
 #Preview {
     CategoryListView()

@@ -8,15 +8,14 @@
 import SwiftUI
 
 struct HomeView: View {
-    @StateObject var homeVM = HomeViewModel.shared
+    @StateObject var vm = HomeViewModel.shared
     
     var body: some View {
         ZStack {
-            ScrollView {
+            ScrollView(.vertical, showsIndicators: false) {
                 VStack(spacing: 16) {
                     // Header
                     HStack {
-                        
                         Image("location")
                             .resizable()
                             .scaledToFit()
@@ -41,9 +40,7 @@ struct HomeView: View {
                     }// header
                     .padding(.horizontal)
                     
-                    CategoryListView()
-                        
-                    
+                  
                     SectionTitleAll(title: "Специалные предложения!") {
                             
                         }
@@ -51,10 +48,10 @@ struct HomeView: View {
                     
                     ScrollView(.horizontal, showsIndicators: false) {
                         LazyHStack(spacing: 12) {
-                            ForEach (homeVM.offerList, id: \.id) {product in
-                                ProductCell(model: product) {
-                                    
-                                }
+                            ForEach (vm.offerList, id: \.id) {product in
+//                                ProductCellView(product: product) {
+//                                    
+//                                }
                            }
                         }
                        
@@ -68,34 +65,13 @@ struct HomeView: View {
                     
                     ScrollView(.horizontal, showsIndicators: false) {
                         LazyHStack(spacing: 12) {
-                            ForEach (homeVM.bestLisr, id: \.id) {product in
-                                ProductCell(model: product) {
-                                    
-                                }
+                            ForEach (vm.bestLisr, id: \.id) {product in
+//                                ProductCellView(product: product) {
+//                                    
+//                                }
                            }
                         }
-                        
                     }
-                    
-                    
-                    SectionTitleAll(title: "Готовая еда") {
-                        
-                    }
-                    .padding(.horizontal)
-                   
-                    
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        LazyHStack(spacing: 12) {
-                            ForEach (homeVM.listProduc, id: \.id) {product in
-                                ProductCell(model: product) {
-                                    
-                                }
-                           }
-                        }
-                        
-                    }
-                    
-                    
                 }
             }
 

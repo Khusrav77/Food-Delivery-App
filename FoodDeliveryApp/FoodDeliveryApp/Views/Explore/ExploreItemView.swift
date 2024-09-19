@@ -65,8 +65,8 @@ struct ExploreItemView: View {
                 
                 ScrollView{
                     LazyVGrid(columns: colums) {
-                        ForEach(vm.listItems, id: \.id) {
-                            current in ProductCell(model: current)
+                        ForEach(vm.listItems, id: \.id) {_ in 
+//                            current in ProductCellView(product:  current)
                         }
                     }
                     

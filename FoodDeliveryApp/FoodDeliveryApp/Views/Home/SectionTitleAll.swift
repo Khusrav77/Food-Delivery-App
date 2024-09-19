@@ -9,26 +9,25 @@ import SwiftUI
 
 struct SectionTitleAll: View {
     
+    // MARK: - Properties
     @State var title: String = "Title"
-    var didTap : (() -> Void)?
+    var action : (() -> Void)?
     
+    // MARK: - Body
     var body: some View {
-       
+        
         HStack {
             Text(title)
                 .font(.customfont(.regular, fontSize: 18))
-
+            
             Spacer()
             
             Button {
-                didTap?()
+                action?()
             } label: {
-                
                 Image(systemName: "arrow.right")
                     .foregroundStyle(Color.black)
             }
-            
-                
         }
     }
 }
