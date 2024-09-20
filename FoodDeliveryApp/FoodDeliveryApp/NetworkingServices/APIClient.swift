@@ -15,7 +15,6 @@ final class APIClient {
     
     
     
-    
     func login (phoneNumber: String) -> AnyPublisher<UserModel, Error> {
         let parameters = ["phone_number": phoneNumber]
         guard let body = try? JSONSerialization.data(withJSONObject: parameters) else{
@@ -25,7 +24,6 @@ final class APIClient {
         return sendRequest(endpoint: "", method: "POST", body: body)
     }
     
-    
     func verifyCode (phoneNumber: String, code: String) -> AnyPublisher<UserModel, Error> {
         let parameters = ["phone_number": phoneNumber, "verification_code": code]
         guard let body = try? JSONSerialization.data(withJSONObject: parameters) else {
@@ -34,7 +32,6 @@ final class APIClient {
         
         return sendRequest(endpoint: "", method: "POST", body: body)
     }
-    
     
     func fetchUserProfile(authToken: String) -> AnyPublisher<UserModel, Error> {
         var request = URLRequest(url: URL(string: "")!)
@@ -52,10 +49,6 @@ final class APIClient {
             .eraseToAnyPublisher()
     }
     
-    
-    
-    
-    
  private func sendRequest(endpoint: String, method: String, body: Data?) -> AnyPublisher<UserModel, Error> {
         guard let url = URL(string: endpoint) else {
             return Fail(error: URLError(.badURL)).eraseToAnyPublisher()
@@ -69,7 +62,6 @@ final class APIClient {
             .tryMap { output in
                 guard let response = output.response as? HTTPURLResponse, response.statusCode == 200 else {
                     throw URLError(.badServerResponse)
-                    
                 }
                 return output.data
             }

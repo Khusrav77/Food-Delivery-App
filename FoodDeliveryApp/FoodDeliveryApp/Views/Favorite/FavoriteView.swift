@@ -8,40 +8,39 @@
 import SwiftUI
 
 struct FavoriteView: View {
+    
+    // MARK: -Properties
     @StateObject var vm = FavoriteViewModel()
-   
+    @Environment(\.dismiss) var dismiss
+    var columns = Array(repeating: GridItem(), count: 2)
+    
+    // MARK: - Body
     var body: some View {
-        ZStack {
-            
-            ScrollView {
+        ScrollView(.vertical, showsIndicators: false) {
+            LazyVGrid(columns: columns) {
                 
             }
-            
-            VStack {
-                HStack {
-                    Spacer()
-                    
-                    Text("Favorite")
-                        .font(.customfont(.semibold, fontSize: 20))
-                        .frame(height: 46)
-                    
-                    Spacer()
-                }
-                .padding(.top, .topInsets)
-                .background(.white)
-                .shadow(color: .black.opacity(0.2), radius: 2)
-                Spacer()
-            }
-            
         }
-        .navigationTitle("")
+        .padding(.horizontal, 8)
+        .navigationTitle("Favorites")
+        .navigationBarTitleDisplayMode(.inline)
         .navigationBarBackButtonHidden(true)
-        .navigationBarHidden(true)
-        .ignoresSafeArea()
+        .toolbar{
+            ToolbarItem(placement: .topBarLeading) {
+                Button {
+                    dismiss()
+                }label: {
+                    Image(systemName: "chevron.left")
+                        .font(.headline)
+                        .foregroundStyle(.gray)
+                }
+            }
+        }
     }
 }
 
 #Preview {
-    
-    FavoriteView()
+    NavigationStack {
+        FavoriteView()
+    }
 }

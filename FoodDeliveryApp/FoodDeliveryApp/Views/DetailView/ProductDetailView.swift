@@ -258,8 +258,6 @@ struct ProductDetailView: View {
                         .padding(.horizontal,20)
                     Spacer()
                     CartButtont(counter: $counter , title: "В карзину", addedCart: {},isSelect: true, width: 200, height: 40)
-                        
-                    
                     Spacer()
                 }
                 .frame(maxWidth: .infinity)

@@ -10,7 +10,7 @@ import Foundation
 class MockDataClass: ObservableObject {
     static let shared: MockDataClass = MockDataClass()
     
-    let mockProducts: [MockProductModel] = [
+    @Published var mockProducts: [MockProductModel] = [
         // Фрукты
         MockProductModel(id: 1, name: "Яблоко", category: "Фрукты", price: 34, description: "Свежие и сочные яблоки", imageName: "apple"),
         MockProductModel(id: 2, name: "Банан", category: "Фрукты", price: 56, description: "Спелые бананы", imageName: "banana"),

@@ -9,24 +9,20 @@ import SwiftUI
 
 struct ExploreView: View {
     
+    // MARK: - Properties
     @StateObject var exploreMV = ExploreViewModel.shared
     @State var textSearch: String = ""
+    var columns = Array(repeating: GridItem(), count: 2)
     
-    var colums = [
-        GridItem(.flexible()),
-        GridItem(.flexible())
-    ]
-    
+    // MARK: - Body
     var body: some View {
         
         ZStack{
-            
             VStack{
                 SearchTextFild(placholder: "Найти продукты", text: $textSearch)
                 
-                
                 ScrollView(showsIndicators: false) {
-                    LazyVGrid(columns: colums) {
+                    LazyVGrid(columns: columns) {
                         ForEach(exploreMV.listCategory, id: \.id) {current in
                             NavigationLink(destination: ExploreItemView(vm: ExploreItemsViewModel(expItems:current))) { ExploreCategoryCell(model: current)
                                     .aspectRatio(0.95,contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
