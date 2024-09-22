@@ -98,6 +98,7 @@
 		A4BA40D02CA0001F00E2EA82 /* SpecialOffersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BA40CF2CA0001F00E2EA82 /* SpecialOffersView.swift */; };
 		A4BA40D22CA0192500E2EA82 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BA40D12CA0192500E2EA82 /* AccountView.swift */; };
 		A4BA40D42CA020F500E2EA82 /* ButtonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BA40D32CA020F500E2EA82 /* ButtonRow.swift */; };
+		A4BA40D92CA0579300E2EA82 /* DeliveryAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BA40D82CA0579300E2EA82 /* DeliveryAddressView.swift */; };
 		A4BB21AC2C9C13420013390D /* ProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BB21AB2C9C13420013390D /* ProductsView.swift */; };
 		A4BB21AE2C9C40D70013390D /* isFavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BB21AD2C9C40D70013390D /* isFavoriteButton.swift */; };
 		A4BB21B02C9C45D30013390D /* AddToCartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BB21AF2C9C45D30013390D /* AddToCartButton.swift */; };
@@ -194,6 +195,7 @@
 		A4BA40CF2CA0001F00E2EA82 /* SpecialOffersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialOffersView.swift; sourceTree = "<group>"; };
 		A4BA40D12CA0192500E2EA82 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		A4BA40D32CA020F500E2EA82 /* ButtonRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonRow.swift; sourceTree = "<group>"; };
+		A4BA40D82CA0579300E2EA82 /* DeliveryAddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryAddressView.swift; sourceTree = "<group>"; };
 		A4BB21AB2C9C13420013390D /* ProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsView.swift; sourceTree = "<group>"; };
 		A4BB21AD2C9C40D70013390D /* isFavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = isFavoriteButton.swift; sourceTree = "<group>"; };
 		A4BB21AF2C9C45D30013390D /* AddToCartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToCartButton.swift; sourceTree = "<group>"; };
@@ -678,6 +680,9 @@
 			children = (
 				A4BA40C72C9FDD0200E2EA82 /* ProfileScreen */,
 				A4BA40C52C9FDCE100E2EA82 /* SubViews */,
+				A4BA40D62CA0566A00E2EA82 /* DeliveryAddress */,
+				A4BA40D52CA0561F00E2EA82 /* MyInfo */,
+				A4BA40D72CA056D600E2EA82 /* Orders */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -752,6 +757,28 @@
 				A46CFE3F2C0B6EA700BF88DD /* SectionTitleAll.swift */,
 			);
 			path = SubViews;
+			sourceTree = "<group>";
+		};
+		A4BA40D52CA0561F00E2EA82 /* MyInfo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MyInfo;
+			sourceTree = "<group>";
+		};
+		A4BA40D62CA0566A00E2EA82 /* DeliveryAddress */ = {
+			isa = PBXGroup;
+			children = (
+				A4BA40D82CA0579300E2EA82 /* DeliveryAddressView.swift */,
+			);
+			path = DeliveryAddress;
+			sourceTree = "<group>";
+		};
+		A4BA40D72CA056D600E2EA82 /* Orders */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Orders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -856,6 +883,7 @@
 				A4BB21AE2C9C40D70013390D /* isFavoriteButton.swift in Sources */,
 				A460CBAE2C0FE43D00CFD249 /* CartButtont.swift in Sources */,
 				A46D91742C11CE690019A335 /* APIClient.swift in Sources */,
+				A4BA40D92CA0579300E2EA82 /* DeliveryAddressView.swift in Sources */,
 				A46D91762C11E1130019A335 /* Globals.swift in Sources */,
 				A45C627D2C164C3900E7E11F /* ExploreItemsViewModel.swift in Sources */,
 				A45168AD2C99A19E0036D44B /* SocialButtonView.swift in Sources */,
