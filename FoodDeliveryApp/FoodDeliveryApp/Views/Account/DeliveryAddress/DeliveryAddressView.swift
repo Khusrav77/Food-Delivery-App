@@ -9,14 +9,19 @@ import SwiftUI
 
 struct DeliveryAddressView: View {
     // MARK: - Properties
+    @ObservedObject var vm: DeliveryAddressViewModel
     
     // MARK: - Body
     var body: some View {
         NavigationStack {
             ScrollView {
-                LazyVStack {
-                    
+                LazyVStack(spacing: 15) {
+                    ForEach(vm.address) { address in
+                        AddresRowView(address: address, action: {})
+                    }
                 }
+                .padding(.top)
+                .padding()
                 .navigationBarTitle("Мой адрес")
                 .navigationBarTitleDisplayMode(.inline)
                 .navigationBarBackButtonHidden(true)
@@ -41,6 +46,5 @@ struct DeliveryAddressView: View {
 }
 
 #Preview {
-
-    DeliveryAddressView()
+    DeliveryAddressView(vm: DeliveryAddressViewModel())
 }
