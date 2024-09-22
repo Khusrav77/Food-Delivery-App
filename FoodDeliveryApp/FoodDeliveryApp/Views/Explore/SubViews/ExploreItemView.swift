@@ -8,20 +8,19 @@
 import SwiftUI
 
 struct ExploreItemView: View {
+    // MARK: - Properties
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-    @StateObject var vm = ExploreItemsViewModel(expItems: ExploreCategoryModel(dict: [:]))
+    @StateObject var vm = ExploreItemsViewModel(expItems: ExploreCategory(dict: [:]))
    
     var colums = [
         GridItem(.flexible(), spacing: 15),
         GridItem(.flexible(), spacing: 15)
     ]
     
-    
+    // MARK: - Body
     var body: some View {
         ZStack{
-            
             VStack{
-                
                 HStack {
                     Spacer()
                     Button {
@@ -83,7 +82,7 @@ struct ExploreItemView: View {
 
 #Preview {
     NavigationView {
-        ExploreItemView(vm: ExploreItemsViewModel(expItems: ExploreCategoryModel(dict: [
+        ExploreItemView(vm: ExploreItemsViewModel(expItems: ExploreCategory(dict: [
             "cat_id":"1",
             "cat_name":"Fruits & Vegetable",
             "image":"http://192.168.1.3:3001/img/category/20230726155407547qM5gSxkrCh.png",

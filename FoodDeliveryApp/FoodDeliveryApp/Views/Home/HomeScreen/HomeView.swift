@@ -8,43 +8,26 @@
 import SwiftUI
 
 struct HomeView: View {
-    // @StateObject var vm = HomeViewModel.shared
+    @ObservedObject var vmh = HomeViewModel()
     @ObservedObject var vm = MockDataClass()
+   
     var body: some View {
         NavigationStack {
             ScrollView(.vertical, showsIndicators: false) {
                 // Header
-                NavBarView()
-                
-                SectionTitleAll(title: "Специалные предложения!") {
-                    
-                }
-                .padding(.top)
-                .padding(.horizontal)
-                
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(spacing: 12) {
-                        ForEach(vm.mockProducts) { product in
-                            ProductRowView(product: product)
-                        }
-                    }
-                    .padding()
+                NavBarView(vm: vmh)
+
+                switch vmh.navBarSelection {
+                                case "Продукты":
+                    ProductsView()
+                                case "Готовое Еда":
+                    ReadyMadeFoodView()
+                                case "Здоровья":
+                    HealthView()
+                                default:
+                    SpecialOffersView()
                 }
                 
-                SectionTitleAll(title: "Больше всего покупают") {
-                    
-                }
-                .padding(.horizontal)
-                
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(spacing: 12) {
-                        ForEach(vm.mockProducts) { product in
-                            ProductRowView(product: product)
-                            
-                        }
-                    }
-                    .padding()
-                }
             }
             .navigationTitle("")
             .navigationBarTitleDisplayMode(.inline)

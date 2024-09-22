@@ -13,7 +13,7 @@ class MyOrderViewModel: ObservableObject {
     @Published var showError = false
     @Published var errorMesage = ""
     
-    @Published var listMyOrder: [MyOrderModel] = []
+    @Published var listMyOrder: [MyOrder] = []
     
     
     init() {

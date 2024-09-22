@@ -9,12 +9,12 @@ import SwiftUI
 
 final class ProductDetailViewModel: ObservableObject {
     
-    @Published var products: ProductModel = ProductModel(dict: [:])
+    @Published var products: Product = Product(dict: [:])
     
     @Published var showError = false
     @Published var errorMessage = ""
     
-    @Published var nutritions: [NutritionModel] = []
+    @Published var nutritions: [Nutrition] = []
     @Published var images: [ImageModel] = []
     
     @Published var isFav: Bool = false
@@ -37,7 +37,7 @@ final class ProductDetailViewModel: ObservableObject {
 
     
     
-    init(products: ProductModel) {
+    init(products: Product) {
         self.products = products
         self.isFav = products.isFav
         

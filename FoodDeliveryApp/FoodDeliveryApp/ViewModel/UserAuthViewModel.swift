@@ -13,7 +13,7 @@ final class UserAuthViewModel: ObservableObject {
     @Published var txtPhoneNumber: String = ""
     @Published var txtVerificationCode: String = ""
     @Published var isUserLoggedIn: Bool = false
-    @Published var userObj: UserModel?
+    @Published var userObj: User?
     
     @Published var showError = false
     @Published var errorMessage = ""

@@ -16,7 +16,7 @@ final class CartViewModel: ObservableObject {
     @Published var showOrderAccept = false
     @Published var errorMessage = ""
     
-    @Published var listCartItems: [CartItemModel] = []
+    @Published var cartItems: [CartItem] = []
     @Published var total: String = ""
     
     @Published var showChekout: Bool = false
@@ -27,9 +27,9 @@ final class CartViewModel: ObservableObject {
     
     @Published var deliveryType: Int = 1
     @Published var paymentType: Int = 1
-    @Published var deliveryAddress: AddressModal?
-    @Published var paymentMethod: PaymentModel?
-    @Published var promoCode: PromoCodeModel?
+    @Published var deliveryAddress: Address?
+    @Published var paymentMethod: Payment?
+    @Published var promoCode: PromoCode?
     
     @Published var deliveryPriceAmount: String = ""
     @Published var discountAmount: String = ""
@@ -37,16 +37,37 @@ final class CartViewModel: ObservableObject {
     
     
     init() {
-       
+        
     }
     
     
-    private func performServiceCall(with parameters: [String: Any], path: String, completion: @escaping (NSDictionary?) -> Void, failure: @escaping (Error?) -> Void) {
-//        ServiceCall.post(parameter: parameters as NSDictionary, path: path, isToken: true){
-//            responseobj in
-//            completion(responseobj as? NSDictionary)
-//        } failure: { error in
-//            failure (error)
-//        }
-    }
+//    func addToCart(product: Product) {
+//        updateItem(product, data: ["quantityinCart" : 1])
+//    }
+//    
+//    func removeFromCart(product: Product) {
+//        updateItem(product, data: ["quantityinCart" : 0])
+//    }
+//    
+//    func increaseQuantity(product: Product) {
+//        let newQuantity = (product.quantityinCart ?? 0) + 1
+//        updateItem(product, data: ["quantityinCart" : newQuantity])
+//    }
+//    
+//    func decreaseQuantityZero(product:Product) {
+//        let currentQuantity = product.quantityinCart ?? 0
+//        let newQuantity = max(currentQuantity - 1, 0)
+//        updateItem(product, data: ["quantityinCart" : newQuantity])
+//    }
+//    
+//    func decreaseQuantity(product:Product) {
+//        let currentQuantity = product.quantityinCart ?? 0
+//        let newQuantity = max(currentQuantity - 1, 1)
+//        updateItem(product, data: ["quantityinCart" : newQuantity])
+//    }
+//    
+//    private func updateItem(_ product: Product, data: [String: Any]) {
+//        guard let id = product.id else {return}
+//       
+//    }
 }

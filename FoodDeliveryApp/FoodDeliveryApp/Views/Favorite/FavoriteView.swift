@@ -16,31 +16,21 @@ struct FavoriteView: View {
     
     // MARK: - Body
     var body: some View {
-        ScrollView(.vertical, showsIndicators: false) {
-            LazyVGrid(columns: columns) {
-                
-            }
-        }
-        .padding(.horizontal, 8)
-        .navigationTitle("Favorites")
-        .navigationBarTitleDisplayMode(.inline)
-        .navigationBarBackButtonHidden(true)
-        .toolbar{
-            ToolbarItem(placement: .topBarLeading) {
-                Button {
-                    dismiss()
-                }label: {
-                    Image(systemName: "chevron.left")
-                        .font(.headline)
-                        .foregroundStyle(.gray)
+        NavigationStack {
+            ScrollView(.vertical, showsIndicators: false) {
+                LazyVGrid(columns: columns) {
+                    
                 }
             }
+            .padding(.horizontal, 8)
+            .navigationTitle("Favorites")
+            .navigationBarBackButtonHidden(true)
         }
     }
 }
 
 #Preview {
-    NavigationStack {
+    
         FavoriteView()
-    }
+    
 }

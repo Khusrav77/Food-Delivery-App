@@ -23,7 +23,7 @@ final class DeliveryAddressViewModel: ObservableObject {
     @Published var errorMessage = ""
     @Published var isLoading = false
     
-    @Published var listAddress: [AddressModal] = []
+    @Published var listAddress: [Address] = []
     
     init() {
            serviceCallList()
@@ -39,7 +39,7 @@ final class DeliveryAddressViewModel: ObservableObject {
         txtTypeName = "Home"
     }
        
-    func setData(address: AddressModal) {
+    func setData(address: Address) {
         txtName = address.name
         txtMobile = address.phone
         txtAddress = address.address
@@ -72,7 +72,7 @@ final class DeliveryAddressViewModel: ObservableObject {
 //           }
        }
        
-       func serviceCallRemove(address: AddressModal) {
+       func serviceCallRemove(address: Address) {
 //           isLoading = true
 //           ServiceCall.post(parameter: ["address_id": address.id], path: Globals.SV_REMOVE_ADDRESS, isToken: true) { responseObj in
 //               self.isLoading = false
@@ -93,7 +93,7 @@ final class DeliveryAddressViewModel: ObservableObject {
 //           }
        }
        
-       func serviceCallUpdateAddress(address: AddressModal?, didDone: (() -> ())?) {
+       func serviceCallUpdateAddress(address: Address?, didDone: (() -> ())?) {
 //           isLoading = true
 //           ServiceCall.post(parameter: [
 //               "address_id": address?.id ?? "",
