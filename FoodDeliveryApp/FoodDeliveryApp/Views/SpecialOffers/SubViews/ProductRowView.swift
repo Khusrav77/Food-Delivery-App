@@ -50,9 +50,9 @@ struct ProductRowView: View {
                         
                         // MARK: Button is favorite
                         VStack {
-                            isFavoriteButton {
-                                
-                            }
+                            isFavoriteButton(toggleAction: {})
+                                .font(.title3)
+                            
                             Spacer()
                         }
                         .padding(.trailing,8)

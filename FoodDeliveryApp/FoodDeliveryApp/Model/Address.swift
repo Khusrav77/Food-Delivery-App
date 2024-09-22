@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct AddressModal: Identifiable, Equatable {
+struct Address: Identifiable, Equatable {
     
     var id: Int = 0
     var name: String = ""

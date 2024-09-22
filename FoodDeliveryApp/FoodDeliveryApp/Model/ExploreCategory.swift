@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 
-struct ExploreCategoryModel: Identifiable, Equatable {
+struct ExploreCategory: Identifiable, Equatable {
     var id: Int = 0
     var name: String = ""
     var image: String = ""
@@ -24,7 +24,7 @@ struct ExploreCategoryModel: Identifiable, Equatable {
          
       }
     
-    static func == (lhs: ExploreCategoryModel, rhs: ExploreCategoryModel) -> Bool {
+    static func == (lhs: ExploreCategory, rhs: ExploreCategory) -> Bool {
         return lhs.id == rhs.id
     }
 }

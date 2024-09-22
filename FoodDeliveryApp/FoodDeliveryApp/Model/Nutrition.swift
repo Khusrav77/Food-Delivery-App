@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct NutritionModel: Identifiable, Equatable {
+struct Nutrition: Identifiable, Equatable {
     
     var id: Int = 0
     var nutritionName: String = ""
@@ -22,7 +22,7 @@ struct NutritionModel: Identifiable, Equatable {
          
       }
       
-  static func == (lhs: NutritionModel, rhs: NutritionModel) -> Bool {
+  static func == (lhs: Nutrition, rhs: Nutrition) -> Bool {
           return lhs.id == rhs.id
       }
 }

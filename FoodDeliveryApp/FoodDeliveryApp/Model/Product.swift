@@ -8,8 +8,7 @@
 import Foundation
 
 
-struct ProductModel: Identifiable, Equatable{
-   
+struct Product: Identifiable, Equatable{
    
     var id: Int = 0
     var prodId: Int = 0
@@ -17,7 +16,7 @@ struct ProductModel: Identifiable, Equatable{
     var brandId: Int = 0
     var typeId: Int = 0
     var orderId: Int = 0
-    var quantityinCart: Int = 0
+    var quantityiInCart: Int = 0
     var detail: String = ""
     var name: String = ""
     var unitName: String = ""
@@ -35,9 +34,6 @@ struct ProductModel: Identifiable, Equatable{
     var isFav: Bool = false
         
         
-   
-    
-        
     init(dict: NSDictionary) {
            self.id = dict.value(forKey: "prod_id") as? Int ?? 0
            self.prodId = dict.value(forKey: "prod_id") as? Int ?? 0
@@ -45,7 +41,7 @@ struct ProductModel: Identifiable, Equatable{
            self.brandId = dict.value(forKey: "brand_id") as? Int ?? 0
            self.typeId = dict.value(forKey: "type_id") as? Int ?? 0
            self.orderId = dict.value(forKey: "order_id") as? Int ?? 0
-           self.quantityinCart = dict.value(forKey: "qty") as? Int ?? 0
+           self.quantityiInCart = dict.value(forKey: "quantityi") as? Int ?? 0
            self.isFav = dict.value(forKey: "is_fav") as? Int ?? 0 == 1
            
            self.detail = dict.value(forKey: "detail") as? String ?? ""
@@ -69,7 +65,7 @@ struct ProductModel: Identifiable, Equatable{
    
         
        
-    static func == (lhs: ProductModel, rhs: ProductModel) -> Bool {
+    static func == (lhs: Product, rhs: Product) -> Bool {
             return lhs.id == rhs.id
         }
 }

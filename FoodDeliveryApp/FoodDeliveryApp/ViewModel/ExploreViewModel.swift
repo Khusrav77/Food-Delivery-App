@@ -16,7 +16,7 @@ final class ExploreViewModel: ObservableObject {
     @Published var showError = false
     @Published var errorMessage = ""
     
-    @Published var listCategory: [ExploreCategoryModel] = []
+    @Published var listCategory: [ExploreCategory] = []
     
     
     init () {

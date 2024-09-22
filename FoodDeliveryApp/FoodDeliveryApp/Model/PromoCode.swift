@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct PromoCodeModel: Identifiable, Equatable {
+struct PromoCode: Identifiable, Equatable {
     
     var id: Int = 0
     var type: Int = 0
@@ -38,7 +38,7 @@ struct PromoCodeModel: Identifiable, Equatable {
         
     }
     
-    static func == (lhs: PromoCodeModel, rhs: PromoCodeModel) -> Bool {
+    static func == (lhs: PromoCode, rhs: PromoCode) -> Bool {
         return lhs.id == rhs.id
     }
 }

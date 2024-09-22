@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ProductView: View {
+struct ProductsView: View {
     @StateObject var vm = MockDataClass()
     var columns = Array(repeating: GridItem(), count: 2)
     var body: some View {
@@ -27,5 +27,5 @@ struct ProductView: View {
 }
 
 #Preview {
-    ProductView()
+    ProductsView()
 }

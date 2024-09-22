@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct ProductDetailView: View {
+    
+    // MARK: - Properties
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-    @StateObject var vm: ProductDetailViewModel = ProductDetailViewModel(products: ProductModel(dict: [:]))
+    @StateObject var vm: ProductDetailViewModel = ProductDetailViewModel(products: Product(dict: [:]))
     
     @State private var isExpanded: Bool = false
     @State private var counter = 0
@@ -18,13 +20,10 @@ struct ProductDetailView: View {
     enum NutritionMode {
         case per100g, perPortion
     }
-   
+   // MARK: - Body
     var body: some View {
-        
         ZStack {
-            
             ScrollView {
-                
                 ZStack {
                     
                     Rectangle()
@@ -46,17 +45,18 @@ struct ProductDetailView: View {
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                         
                         HStack {
-                            
-                            Text(vm.products.unitValue)
-                            
-                            Text(vm.products.unitName)
+                            Text("\(vm.products.price)₽")
+                                .font(.headline)
                             
                             Capsule()
-                                .fill(Color.black.opacity(0.5))
+                                .fill(Color.gray20)
                                 .frame(width: 2, height: 16)
                             
-                            Text("\(vm.products.price)₽")
-                            
+                            HStack(spacing: 0) {
+                                Text(vm.products.unitValue)
+                                Text(vm.products.unitName)
+                            }
+                           
                             Spacer()
                         }
                         
@@ -67,7 +67,6 @@ struct ProductDetailView: View {
                                 isExpanded.toggle()
                             }
                         }label: {
-                            
                             HStack {
                                 
                                 Text("Подробнее о товаре")
@@ -76,16 +75,12 @@ struct ProductDetailView: View {
                                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                                     .padding(.vertical, 8)
                                 
-                                
                                 Image(systemName: isExpanded ? "chevron.up" :  "chevron.down")
                                     .resizable()
                                     .scaledToFit()
                                     .frame(width: 20, height: 20)
                                     .foregroundColor(.gray)
                                     .padding(6)
-                                
-                                
-                                
                             }
                             .padding(.vertical,16)
                             
@@ -102,7 +97,7 @@ struct ProductDetailView: View {
                                     }
                                     
                                     Capsule()
-                                        .fill(Color.black.opacity(0.5))
+                                        .fill(Color.gray20)
                                         .frame(width: 2, height: 16)
                                     
                                     Button{
@@ -137,8 +132,6 @@ struct ProductDetailView: View {
                                                     .font(.headline)
                                                 Text("углеводы")
                                             }
-                                        
-                                        
                                     }
                                 }else {
                                     HStack(spacing: 8){
@@ -163,13 +156,9 @@ struct ProductDetailView: View {
                                                     .font(.headline)
                                                 Text("углеводы")
                                             }
-                                        
-                                        
                                     }
                                 }
                                 
-                                
-                               
                                 Divider()
                                 
                                 Text("Описания")
@@ -204,48 +193,18 @@ struct ProductDetailView: View {
                         }
                     }
                     .padding(.horizontal, 16)
-                    
                 }
             }
             .padding(.bottom, 90)
+            
             VStack {
                 HStack {
                     BackButton()
-//                    Button {
-//                        
-//                    } label: {
-//                        Image(systemName: "square.and.arrow.up")
-//                            .padding(12)
-//                            .foregroundColor(.black.opacity(0.3))
-//                            .background(.white)
-//                            .clipShape(Circle())
-//                            .shadow(radius: 2)                    }
+
                     Spacer()
-                    Button {
-                        
-                    } label: {
-                        Image(systemName: "heart")
-                            .padding(12)
-                            .foregroundColor(.black.opacity(0.3))
-                            .background(.white)
-                            .clipShape(Circle())
-                            .shadow(radius: 2)
-                          
-                    }
                     
-                    
-                    Button {
-                        mode.wrappedValue.dismiss()
-                    } label: {
-                        Image(systemName: "xmark")
-                            .padding(12)
-                            .foregroundColor(.black.opacity(0.3))
-                            .background(.white)
-                            .clipShape(Circle())
-                            .shadow(radius: 2)
-                            
-                    }
-                    
+                    isFavoriteButton(toggleAction: {})
+                        .font(.title)
                 }
                 .padding(.horizontal, 16)
                 
@@ -253,9 +212,13 @@ struct ProductDetailView: View {
                 HStack {
                     Spacer()
                     Text("\(vm.products.price)₽")
-                        .font(.customfont(.medium, fontSize: 28))
-                        .frame(alignment: .leading)
+                        .font(.title)
                         .padding(.horizontal,20)
+                        .padding(.vertical, 8)
+                        .background(.background)
+                        .clipShape(RoundedRectangle(cornerRadius: 20))
+                        .shadow(color: .black.opacity(0.15), radius: 3, x: 0, y: 2)
+                    
                     Spacer()
                     CartButtont(counter: $counter , title: "В карзину", addedCart: {},isSelect: true, width: 200, height: 40)
                     Spacer()
@@ -264,12 +227,9 @@ struct ProductDetailView: View {
                 .padding(.top, 10)
                 .padding(.bottom, .bottomInsets)
                 .padding(.horizontal, 10)
-                .background(Color.cardsColor)
+                .background(.background)
                 .cornerRadius(16)
                 .shadow(color: .black.opacity(0.15), radius: 3, x: 0, y: -2)
-                
-                
-                
                 
             }
             .padding(.top, .topInsets)
@@ -284,7 +244,7 @@ struct ProductDetailView: View {
 }
 
 #Preview {
-    ProductDetailView(vm: ProductDetailViewModel(products: ProductModel(dict: [
+    ProductDetailView(vm: ProductDetailViewModel(products: Product(dict: [
         "offer_price": 100,
         "start_date": "2023-07-30T18:30:00.000Z",
         "end_date": "2023-08-29T18:30:00.000Z",
@@ -302,10 +262,7 @@ struct ProductDetailView: View {
         "cat_name": "Frash Fruits & Vegetable",
         "type_name": "Pulses",
         "is_fav": 1
-    
-    
     ])))
-    
 }
 
 

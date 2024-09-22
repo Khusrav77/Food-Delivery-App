@@ -10,14 +10,14 @@ import Foundation
 
 final class ExploreItemsViewModel: ObservableObject {
     
-    @Published var expItems: ExploreCategoryModel = ExploreCategoryModel(dict: [:])
+    @Published var expItems: ExploreCategory = ExploreCategory(dict: [:])
     @Published var showError = false
     @Published var errorMessage = ""
     
-    @Published var listItems: [ProductModel] = []
+    @Published var listItems: [Product] = []
     
     
-    init(expItems: ExploreCategoryModel) {
+    init(expItems: ExploreCategory) {
         self.expItems = expItems
         
        // serviceCallList()

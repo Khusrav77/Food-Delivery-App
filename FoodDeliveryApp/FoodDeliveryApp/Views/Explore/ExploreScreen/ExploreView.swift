@@ -29,8 +29,6 @@ struct ExploreView: View {
                             }
                         }
                     }
-                    
-                    
                 }
                 .padding(.horizontal)
                 .padding(.top, .topInsets)

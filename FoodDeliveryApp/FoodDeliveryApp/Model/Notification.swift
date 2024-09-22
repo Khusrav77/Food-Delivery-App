@@ -9,7 +9,7 @@ import Foundation
 
 
 
-struct NotificationModel: Identifiable, Equatable {
+struct Notification: Identifiable, Equatable {
     
     var id: Int = 0
     var refId: Int = 0
@@ -32,7 +32,7 @@ struct NotificationModel: Identifiable, Equatable {
     }
     
    
-    static func == (lhs: NotificationModel, rhs: NotificationModel) -> Bool {
+    static func == (lhs: Notification, rhs: Notification) -> Bool {
         return lhs.id == rhs.id
     }
 

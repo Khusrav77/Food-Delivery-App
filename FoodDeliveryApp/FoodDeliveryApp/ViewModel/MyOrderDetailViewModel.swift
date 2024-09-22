@@ -9,15 +9,15 @@ import Foundation
 
 
 class MyOrderDetailViewModel: ObservableObject {
-    @Published var myOrderModel: MyOrderModel = MyOrderModel(dict: [:])
+    @Published var myOrderModel: MyOrder = MyOrder(dict: [:])
     
     @Published var showError = false
     @Published var errorMesage = ""
     
-    @Published var listOrderItem: [OrderItemModel] = []
+    @Published var listOrderItem: [OrderItem] = []
     
     
-    init(orderModel: MyOrderModel) {
+    init(orderModel: MyOrder) {
         self.myOrderModel = orderModel
         
     }

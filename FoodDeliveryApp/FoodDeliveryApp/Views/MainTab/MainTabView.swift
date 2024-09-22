@@ -21,19 +21,17 @@ struct MainTabView: View {
             TabView(selection: $vm.tabSelection) {
                 HomeView().tag(5)
                 
-                ProductView().tag(4)
+                FavoriteView().tag(4)
                 
-                ExploreView().tag(3)
+                CartView().tag(3)
                 
                 ExploreView().tag(2)
                 
-                ExploreView().tag(1)
+                AccountView().tag(1)
                 
             }
-            
             .overlay(alignment: .bottom) {
                 TabBarView(vm: vm)
-                    //.padding(.bottom, 8)
             }
         }
         .navigationTitle("")

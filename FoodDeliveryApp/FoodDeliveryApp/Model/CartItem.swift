@@ -9,12 +9,12 @@ import Foundation
 
 
 
-struct CartItemModel: Identifiable, Equatable {
+struct CartItem: Identifiable, Equatable {
    
     var id: UUID = UUID()
     var cartId: Int = 0
     var userId: Int = 0
-    var qty: Int = 0
+    var quantityiInCart: Int = 0
     var prodId: Int = 0
     var catId: Int = 0
     var brandId: Int = 0
@@ -42,7 +42,7 @@ struct CartItemModel: Identifiable, Equatable {
         
         self.cartId = dict.value(forKey: "cart_id") as? Int ?? 0
         self.userId = dict.value(forKey: "user_id") as? Int ?? 0
-        self.qty = dict.value(forKey: "qty") as? Int ?? 0
+        self.quantityiInCart = dict.value(forKey: "quantityi") as? Int ?? 0
         self.prodId = dict.value(forKey: "prod_id") as? Int ?? 0
         self.catId = dict.value(forKey: "cat_id") as? Int ?? 0
         self.brandId = dict.value(forKey: "brand_id") as? Int ?? 0
@@ -69,7 +69,7 @@ struct CartItemModel: Identifiable, Equatable {
    
         
        
-    static func == (lhs: CartItemModel, rhs: CartItemModel) -> Bool {
+    static func == (lhs: CartItem, rhs: CartItem) -> Bool {
             return lhs.id == rhs.id
         }
 }

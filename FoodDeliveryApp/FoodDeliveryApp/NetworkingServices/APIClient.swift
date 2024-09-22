@@ -15,7 +15,7 @@ final class APIClient {
     
     
     
-    func login (phoneNumber: String) -> AnyPublisher<UserModel, Error> {
+    func login (phoneNumber: String) -> AnyPublisher<User, Error> {
         let parameters = ["phone_number": phoneNumber]
         guard let body = try? JSONSerialization.data(withJSONObject: parameters) else{
             return Fail(error: URLError(.badURL)).eraseToAnyPublisher()
@@ -24,7 +24,7 @@ final class APIClient {
         return sendRequest(endpoint: "", method: "POST", body: body)
     }
     
-    func verifyCode (phoneNumber: String, code: String) -> AnyPublisher<UserModel, Error> {
+    func verifyCode (phoneNumber: String, code: String) -> AnyPublisher<User, Error> {
         let parameters = ["phone_number": phoneNumber, "verification_code": code]
         guard let body = try? JSONSerialization.data(withJSONObject: parameters) else {
             return Fail(error: URLError(.badURL)).eraseToAnyPublisher()
@@ -33,7 +33,7 @@ final class APIClient {
         return sendRequest(endpoint: "", method: "POST", body: body)
     }
     
-    func fetchUserProfile(authToken: String) -> AnyPublisher<UserModel, Error> {
+    func fetchUserProfile(authToken: String) -> AnyPublisher<User, Error> {
         var request = URLRequest(url: URL(string: "")!)
         request.addValue("Bearer \(authToken)", forHTTPHeaderField: "Authorization")
         
@@ -44,12 +44,12 @@ final class APIClient {
                 }
                 return output.data
             }
-            .decode(type: UserModel.self, decoder: JSONDecoder())
+            .decode(type: User.self, decoder: JSONDecoder())
             .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
     }
     
- private func sendRequest(endpoint: String, method: String, body: Data?) -> AnyPublisher<UserModel, Error> {
+ private func sendRequest(endpoint: String, method: String, body: Data?) -> AnyPublisher<User, Error> {
         guard let url = URL(string: endpoint) else {
             return Fail(error: URLError(.badURL)).eraseToAnyPublisher()
         }
@@ -65,7 +65,7 @@ final class APIClient {
                 }
                 return output.data
             }
-            .decode(type: UserModel.self, decoder: JSONDecoder())
+            .decode(type: User.self, decoder: JSONDecoder())
             .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
     }

@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct OrderItemModel: Identifiable, Equatable {
+struct OrderItem: Identifiable, Equatable {
     
     var id: UUID = UUID()
     var prodId: Int = 0
@@ -16,7 +16,7 @@ struct OrderItemModel: Identifiable, Equatable {
     var brandId: Int = 0
     var typeId: Int = 0
     var orderId: Int = 0
-    var qty: Int = 0
+    var quantityiInCart: Int = 0
     var detail: String = ""
     var name: String = ""
     var unitName: String = ""
@@ -41,7 +41,7 @@ struct OrderItemModel: Identifiable, Equatable {
         self.brandId = dict.value(forKey: "brand_id") as? Int ?? 0
         self.typeId = dict.value(forKey: "type_id") as? Int ?? 0
         self.orderId = dict.value(forKey: "order_id") as? Int ?? 0
-        self.qty = dict.value(forKey: "qty") as? Int ?? 0
+        self.quantityiInCart = dict.value(forKey: "quantityi") as? Int ?? 0
         self.isFav = dict.value(forKey: "is_fav") as? Int ?? 0 == 1
         
         self.detail = dict.value(forKey: "detail") as? String ?? ""
@@ -61,7 +61,7 @@ struct OrderItemModel: Identifiable, Equatable {
     }
       
       
-    static func == (lhs: OrderItemModel, rhs: OrderItemModel) -> Bool {
+    static func == (lhs: OrderItem, rhs: OrderItem) -> Bool {
           return lhs.id == rhs.id
     }
     

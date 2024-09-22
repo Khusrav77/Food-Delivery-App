@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct MyOrderModel: Identifiable, Equatable {
+struct MyOrder: Identifiable, Equatable {
     var id: Int = 0
     var cartId: Int = 0
     var totalPrice: Int = 0
@@ -61,7 +61,7 @@ struct MyOrderModel: Identifiable, Equatable {
            self.createdDate = (dict.value(forKey: "created_date") as? String ?? "").stringDateToDate() ?? Date()
        }
     
-    static func == (lhs: MyOrderModel, rhs: MyOrderModel) -> Bool {
+    static func == (lhs: MyOrder, rhs: MyOrder) -> Bool {
            return lhs.id == rhs.id
        }
     

@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct PaymentModel: Identifiable, Equatable {
+struct Payment: Identifiable, Equatable {
     
     var id: Int = 0
     var name: String = ""
@@ -25,7 +25,7 @@ struct PaymentModel: Identifiable, Equatable {
         self.cardYear = dict.value(forKey: "card_year") as? String ?? ""
     }
     
-    static func == (lhs: PaymentModel, rhs: PaymentModel) -> Bool {
+    static func == (lhs: Payment, rhs: Payment) -> Bool {
         return lhs.id == rhs.id
     }
 }

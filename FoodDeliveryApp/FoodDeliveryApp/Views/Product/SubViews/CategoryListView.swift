@@ -12,7 +12,7 @@ struct CategoryListView: View {
     // MARK: - Properties
     @Namespace private var animationNamespase
     @State private var isSelectedCategory: String = "Все"
-    let categories = ["Все", "Фрукты", "Овощи", "Мясо", "Рыба", "Молочное", "Бакалея", "Заморозка", "Для детей", "Сладкое", "Сухофрукты", "Готовая еда"]
+    let categories = ["Все", "Фрукты", "Овощи", "Мясо", "Рыба", "Молочное", "Бакалея", "Заморозка", "Для детей", "Сладкое", "Сухофрукты"]
     
     // MARK: - body
     var body: some View {

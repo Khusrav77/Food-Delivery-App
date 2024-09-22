@@ -59,11 +59,14 @@ struct TabBarView: View {
                             }
                         }
                         .foregroundStyle(index + 1 == vm.tabSelection ? Color.orangePrimary : Color.gray50)
+                        .padding(6)
+                        .background(index + 1 == vm.tabSelection ? Color.white : Color.clear)
+                        .clipShape(RoundedRectangle(cornerRadius: 15))
+                        .shadow(color: .black.opacity(0.15), radius: 3, x: 0, y: 2)
                     }
                 }
             }
             .frame(height: 80)
-            .clipShape(.rect(cornerRadius: 25))
             .clipShape(RoundedRectangle(cornerRadius: 25))
         }
        // .padding(.horizontal)
@@ -71,5 +74,6 @@ struct TabBarView: View {
 }
 
 #Preview {
+    
     TabBarView(vm: HomeViewModel())
 }
