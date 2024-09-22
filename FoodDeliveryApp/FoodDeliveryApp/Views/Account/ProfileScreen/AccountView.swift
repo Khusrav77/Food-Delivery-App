@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AccountView: View {
     var body: some View {
-        VStack(spacing: 15) {
+        LazyVStack(spacing: 15) {
             HStack(spacing: 15) {
                 Image(systemName: "person.crop.circle")
                     .resizable()
@@ -28,32 +28,39 @@ struct AccountView: View {
                 
             }
             Divider()
+            
             ScrollView {
-                ButtonRow(title: "Мои данные", image: "chevron.right", action: {})
+                ButtonRow(title: "Мои данные", imageOne: "person", imageTwo: "chevron.right", action: {})
                 
-                ButtonRow(title: "Мои адреса", image: "chevron.right", action: {})
+                ButtonRow(title: "Мои адреса", imageOne: "mappin.and.ellipse", imageTwo: "chevron.right", action: {})
                 
-                ButtonRow(title: "Заказы", image: "chevron.right", action: {})
+                ButtonRow(title: "Заказы", imageOne: "cart", imageTwo: "chevron.right", action: {})
                 
-                ButtonRow(title: "Способ оплаты", image: "chevron.right", action: {})
+                ButtonRow(title: "Способ оплаты", imageOne: "creditcard", imageTwo: "chevron.right", action: {})
                 
-                ButtonRow(title: "FaQ", image: "chevron.right", action: {})
+                ButtonRow(title: "Уведомления", imageOne: "bell.slash", imageTwo: "chevron.right", action: {})
                 
-                ButtonRow(title: "Чат со поддержки", image: "chevron.right", action: {})
+                ButtonRow(title: "Промокоды", imageOne: "tag", imageTwo: "chevron.right", action: {})
                 
-                ButtonRow(title: "Выйти из аккаунта", image: "rectangle.portrait.and.arrow.right", action: {})
+                ButtonRow(title: "FaQ", imageOne: "questionmark.circle", imageTwo: "chevron.right", action: {})
+                
+                ButtonRow(title: "Чат со поддержки", imageOne: "bubble.left", imageTwo: "chevron.right", action: {})
+                
+                ButtonRow(title: "Выйти из аккаунта", imageOne: "rectangle.portrait.and.arrow.right", imageTwo: "chevron.right", action: {})
                     .foregroundStyle(.secondary)
                 
-                ButtonRow(title: "Удалить аккаунт", image: "trash", action: {})
+                ButtonRow(title: "Удалить аккаунт", imageOne: "trash", imageTwo: "chevron.right" , action: {})
                     .foregroundStyle(.red)
             }
             
             
         }
         .padding()
+        .ignoresSafeArea(edges: .bottom)
     }
 }
 
 #Preview {
+    
     AccountView()
 }

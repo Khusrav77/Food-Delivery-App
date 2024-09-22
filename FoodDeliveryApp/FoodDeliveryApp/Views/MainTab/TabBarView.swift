@@ -15,10 +15,10 @@ struct TabBarView: View {
     
     let tabBarItems: [(imege: String, title: String)] = [
         ("person", "Профиль"),
-        ("magnifyingglass", "Найти"),
-        ("cart", "Карзина"),
         ("heart", "Любимые"),
-        ("square.grid.2x2", "Главня"),
+        ("cart", "Карзина"),
+        ("square.grid.2x2", "Категории"),
+        ("house", "Главня"),
     ]
     
     // MARK: - Body

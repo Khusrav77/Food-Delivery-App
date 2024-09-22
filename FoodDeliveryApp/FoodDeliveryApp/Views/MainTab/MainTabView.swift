@@ -21,11 +21,11 @@ struct MainTabView: View {
             TabView(selection: $vm.tabSelection) {
                 HomeView().tag(5)
                 
-                FavoriteView().tag(4)
+                ExploreView().tag(4)
                 
                 CartView().tag(3)
                 
-                ExploreView().tag(2)
+                FavoriteView().tag(2)
                 
                 AccountView().tag(1)
                 

@@ -8,21 +8,27 @@
 import SwiftUI
 
 struct ButtonRow: View {
-    let title: String
-    let image: String
+    @State var title: String = ""
+    @State var imageOne: String = ""
+    @State var imageTwo: String = ""
     var action: () -> Void
     var body: some View {
         Button{
             action()
         } label:{
             HStack(spacing: 15){
+                Image(systemName: imageOne)
+                    .font(.title2)
+                    .foregroundStyle(.secondary)
+                    .padding(.leading)
+                
                 Text(title)
                     .font(.title3)
-                    .padding()
+                   
                 
                 Spacer()
                 
-                Image(systemName: image)
+                Image(systemName: imageTwo)
                     .font(.title2)
                     .foregroundStyle(.secondary)
                     .padding()
@@ -38,5 +44,6 @@ struct ButtonRow: View {
 }
 
 #Preview {
-    ButtonRow(title: "", image: "", action: {})
+    
+    ButtonRow(action: {})
 }
