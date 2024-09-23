@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct SaveButton: View {
-    @State var title: String = "Save"
-    var action: () -> Void = {}
+    var title: String = "Save"
+    var action: () -> Void
     var body: some View {
         Button{
             action()
@@ -18,15 +18,14 @@ struct SaveButton: View {
                 .font(.title3)
                 .foregroundColor(.white)
                 .frame(maxWidth: .infinity)
-                .frame(height: 50)
+                .frame(height: 55)
                 .background(Color.green)
-                .clipShape(RoundedRectangle(cornerRadius: 16))
-                .shadow(color: .black.opacity(0.1), radius: 3)
+                .clipShape(RoundedRectangle(cornerRadius: 20))
         }
         .padding()
     }
 }
 
 #Preview {
-    SaveButton()
+    SaveButton(action: {})
 }

@@ -46,7 +46,7 @@ struct ExploreCategoryCell: View {
             
             Spacer()
             
-            CartButtont(counter: $counter, title: "В корзину", isSelect: false, width: .infinity, height: 24)
+            CartButtont(counter: $counter, isSelect: false, title: "В корзину", width: .infinity, height: 24)
             
         }
         .padding(8)

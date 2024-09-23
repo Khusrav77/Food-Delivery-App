@@ -8,14 +8,13 @@
 import SwiftUI
 
 struct CartButtont: View {
-    
     // MARK: - Properties
     @Binding var counter: Int
-    @State var title : String
-    var addedCart: (() -> Void)?
-    var isSelect: Bool
+    @State var isSelect: Bool = false
+    var title : String
     var width: CGFloat
     var height: CGFloat
+    var addedCart: (() -> Void)?
     
     // MARK: - Body
     var body: some View {
@@ -85,7 +84,6 @@ struct CartButtont: View {
 struct CartButton_Previews: PreviewProvider {
     @State static var counter = 0
     static var previews: some View {
-        CartButtont(counter: $counter, title: "В карзину", isSelect: false, width: 300, height: 50)
+        CartButtont(counter: $counter, isSelect: false, title: "В карзину", width: 300, height: 45)
     }
-    
 }

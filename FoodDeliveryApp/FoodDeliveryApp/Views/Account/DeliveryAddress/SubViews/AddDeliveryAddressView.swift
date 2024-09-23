@@ -15,13 +15,13 @@ struct AddDeliveryAddressView: View {
                 Button {
                     vm.txtTitle = "Home"
                 }label: {
-                        Image(systemName: vm.txtTitle == "Home" ? "record.circle" : "circle")
+                    Image(systemName: vm.txtTitle == "Home" ? "record.circle" : "circle")
                         .foregroundStyle(vm.txtTitle == "Home" ? Color.green : Color.gray)
-                        
+                    
                     Text("Дом")
-                            .font(.headline)
-                            .frame(maxWidth: .infinity)
-                            .foregroundStyle(vm.txtTitle == "Home" ? Color.green : Color.gray)
+                        .font(.headline)
+                        .frame(maxWidth: .infinity)
+                        .foregroundStyle(vm.txtTitle == "Home" ? Color.green : Color.gray)
                     
                 }
                 
@@ -48,6 +48,7 @@ struct AddDeliveryAddressView: View {
                         .frame(maxWidth: .infinity)
                         .foregroundStyle(vm.txtTitle == "Other" ? Color.green : Color.gray)
                 }
+                
             }
             .buttonStyle(.plain)
             
@@ -63,10 +64,10 @@ struct AddDeliveryAddressView: View {
                 TextField("Поезд", text: $vm.txtName)
                 TextField("Этаж", text: $vm.txtName)
             }
-               
-                TextField("Домофон", text: $vm.txtName)
             
-            SaveButton(title: "Сохранить")
+            TextField("Домофон", text: $vm.txtName)
+            
+            SaveButton(title: "Сохранить", action: {})
             
             Spacer()
         }

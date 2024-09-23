@@ -20,14 +20,13 @@ struct CustomButton: View {
         } label:{
             Text(title)
                 .font(.customfont(.semibold, fontSize: 20))
-                .foregroundColor(isEnabled ? .greenPrimary : .greenPrimary.opacity(0.2))
+                .foregroundColor(isEnabled ? .white : .white.opacity(0.6))
                 .frame(maxWidth: .infinity)
-                .frame(height: 50)
-                .background(Color.white)
-                .clipShape(RoundedRectangle(cornerRadius: 16))
-                .shadow(color: .black.opacity(0.1), radius: 3)
+                .frame(height: 55)
+                .background(isEnabled ? .green : .green.opacity(0.2))
+                .clipShape(RoundedRectangle(cornerRadius: 20))
         }
-        .padding(.horizontal, 15)
+        .padding(.horizontal, 16)
         .disabled(isEnabled)
     }
 }

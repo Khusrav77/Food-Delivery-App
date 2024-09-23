@@ -220,7 +220,7 @@ struct ProductDetailView: View {
                         .shadow(color: .black.opacity(0.15), radius: 3, x: 0, y: 2)
                     
                     Spacer()
-                    CartButtont(counter: $counter , title: "В карзину", addedCart: {},isSelect: true, width: 200, height: 40)
+                    CartButtont(counter: $counter, title: "Вкорзину", width: 200, height: 45)
                     Spacer()
                 }
                 .frame(maxWidth: .infinity)
