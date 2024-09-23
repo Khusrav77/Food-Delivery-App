@@ -8,9 +8,6 @@
 import SwiftUI
 
 final class ProductDetailViewModel: ObservableObject {
-    
-    @Published var products: Product = Product(dict: [:])
-    
     @Published var showError = false
     @Published var errorMessage = ""
     
@@ -35,14 +32,6 @@ final class ProductDetailViewModel: ObservableObject {
         quantity = isIncrease ? min(quantity + 1, 99) : max(quantity - 1, 1)
     }
 
-    
-    
-    init(products: Product) {
-        self.products = products
-        self.isFav = products.isFav
-        
-        serviceCallDetail()
-    }
     
     
     

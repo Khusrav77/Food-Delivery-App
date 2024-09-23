@@ -10,7 +10,6 @@ import Foundation
 
 final class ServiceCall {
    
-        
 //    class func post(parameter: [String: Any], path: String, isToken: Bool = false, withSuccess: @escaping (_ responseObj: AnyObject?) -> (), failure: @escaping (_ error: Error?) -> ()) {
 //        
 //        DispatchQueue.global(qos: .userInitiated).async {

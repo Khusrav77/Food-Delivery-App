@@ -9,7 +9,6 @@ import Foundation
 
 
 struct Payment: Identifiable, Equatable {
-    
     var id: Int
     var name: String
     var cardNumber: String

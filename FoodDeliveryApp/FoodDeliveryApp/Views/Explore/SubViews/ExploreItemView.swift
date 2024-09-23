@@ -10,7 +10,7 @@ import SwiftUI
 struct ExploreItemView: View {
     // MARK: - Properties
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-    @StateObject var vm = ExploreItemsViewModel(expItems: ExploreCategory(dict: [:]))
+    @StateObject var vm = ExploreItemsViewModel(expItems: ExploreCategory(id: 1, name: "", image: ""))
    
     var colums = [
         GridItem(.flexible(), spacing: 15),
@@ -64,7 +64,7 @@ struct ExploreItemView: View {
                 
                 ScrollView{
                     LazyVGrid(columns: colums) {
-                        ForEach(vm.listItems, id: \.id) {_ in 
+                        ForEach(vm.listItems, id: \.id) {_ in
 //                            current in ProductCellView(product:  current)
                         }
                     }
@@ -82,12 +82,6 @@ struct ExploreItemView: View {
 
 #Preview {
     NavigationView {
-        ExploreItemView(vm: ExploreItemsViewModel(expItems: ExploreCategory(dict: [
-            "cat_id":"1",
-            "cat_name":"Fruits & Vegetable",
-            "image":"http://192.168.1.3:3001/img/category/20230726155407547qM5gSxkrCh.png",
-            "color":"53B175"
-            
-        ])))
+        ExploreItemView(vm: ExploreItemsViewModel(expItems: ExploreCategory(id: 1, name: "", image: "")))
     }
 }

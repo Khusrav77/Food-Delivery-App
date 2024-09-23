@@ -3,8 +3,6 @@
 ////  FoodDeliveryApp
 ////
 ////  Created by Khusrav Safiev on 5/30/24.
-////
-//
 
 import SwiftUI
 
@@ -17,7 +15,6 @@ struct MainTabView: View {
     // MARK: - Body
     var body: some View {
         ZStack {
-            
             TabView(selection: $vm.tabSelection) {
                 HomeView().tag(5)
                 

@@ -11,11 +11,11 @@ struct ProductDetailView: View {
     
     // MARK: - Properties
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-    @StateObject var vm: ProductDetailViewModel = ProductDetailViewModel(products: Product(dict: [:]))
-    
+    @StateObject var vm = ProductDetailViewModel()
     @State private var isExpanded: Bool = false
     @State private var counter = 0
     @State private var selectedMode: NutritionMode = .per100g
+    let product: Product
     
     enum NutritionMode {
         case per100g, perPortion
@@ -40,12 +40,12 @@ struct ProductDetailView: View {
                             .padding(.top, .topInsets)
                         
                         
-                        Text (vm.products.name)
+                        Text (product.name)
                             .font(.customfont(.medium, fontSize: 24))
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                         
                         HStack {
-                            Text("\(vm.products.price)₽")
+                            Text("\(product.price)₽")
                                 .font(.headline)
                             
                             Capsule()
@@ -53,8 +53,8 @@ struct ProductDetailView: View {
                                 .frame(width: 2, height: 16)
                             
                             HStack(spacing: 0) {
-                                Text(vm.products.unitValue)
-                                Text(vm.products.unitName)
+                                Text(product.unitValue)
+                                Text(product.unitName)
                             }
                            
                             Spacer()
@@ -211,7 +211,7 @@ struct ProductDetailView: View {
                 Spacer()
                 HStack {
                     Spacer()
-                    Text("\(vm.products.price)₽")
+                    Text("\(product.price)₽")
                         .font(.title)
                         .padding(.horizontal,20)
                         .padding(.vertical, 8)
@@ -244,28 +244,8 @@ struct ProductDetailView: View {
 }
 
 #Preview {
-    ProductDetailView(vm: ProductDetailViewModel(products: Product(dict: [
-        "offer_price": 100,
-        "start_date": "2023-07-30T18:30:00.000Z",
-        "end_date": "2023-08-29T18:30:00.000Z",
-        "prod_id": 5,
-        "cat_id": 1,
-        "brand_id": 1,
-        "type_id": 1,
-        "name": "Organic Banana",
-        "detail": "banana, fruit of the genus Musa, of the family Musaceae, one of the most important fruit crops of the world. The banana is grown in the tropics, and, though it is most widely consumed in those regions, it is valued worldwide for its flavour, nutritional value, and availability throughout the year",
-        "unit_name": "кг",
-        "unit_value": "1",
-        "nutrition_weight": "200g",
-        "price": 150,
-        "image":"http://192.168.1.3:3001/img/product/202307310947354735xuruflIucc.png",
-        "cat_name": "Frash Fruits & Vegetable",
-        "type_name": "Pulses",
-        "is_fav": 1
-    ])))
+    ProductDetailView(product: Product(id: 1, prodId: 2, catId: 5, brandId: 7, typeId: 4, orderId: 5, quantityiInCart: 9, detail: "", name: "", unitName: "", unitValue: "", nutritionWeight: "", image: "", catName: "", typeName: "", offerPrice: 9, itemPrice: 7, totalPrice: 8, price: 99))
 }
-
-
 
 private var tabBar: some View {
     HStack {

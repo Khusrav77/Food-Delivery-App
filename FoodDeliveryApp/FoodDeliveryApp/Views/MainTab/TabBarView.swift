@@ -25,10 +25,10 @@ struct TabBarView: View {
     var body: some View {
         
         ZStack {
-            RoundedRectangle(cornerRadius: 25)
+            RoundedRectangle(cornerRadius: 20)
                 .frame(height: 80)
-                .foregroundStyle(Color(.secondarySystemBackground))
-                .shadow(color: .black.opacity(0.15), radius: 3, x: 0, y: -2)
+                .foregroundStyle(Color.gray.opacity(0.1))
+                .shadow(color: .black.opacity(0.2), radius: 3, x: 0, y: -2)
             
             HStack {
                 ForEach(0..<5) { index in
@@ -60,16 +60,15 @@ struct TabBarView: View {
                         }
                         .foregroundStyle(index + 1 == vm.tabSelection ? Color.orangePrimary : Color.gray50)
                         .padding(6)
-                        .background(index + 1 == vm.tabSelection ? Color.white : Color.clear)
+                        .background(index + 1 == vm.tabSelection ? Color.white.opacity(0.9) : Color.clear)
                         .clipShape(RoundedRectangle(cornerRadius: 15))
-                        .shadow(color: .black.opacity(0.15), radius: 3, x: 0, y: 2)
+                        .shadow(radius: 1)
                     }
                 }
             }
             .frame(height: 80)
-            .clipShape(RoundedRectangle(cornerRadius: 25))
+            .clipShape(RoundedRectangle(cornerRadius: 20))
         }
-       // .padding(.horizontal)
     }
 }
 

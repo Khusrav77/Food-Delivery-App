@@ -10,10 +10,9 @@ import Foundation
 
 final class ExploreItemsViewModel: ObservableObject {
     
-    @Published var expItems: ExploreCategory = ExploreCategory(dict: [:])
+    @Published var expItems: ExploreCategory
     @Published var showError = false
     @Published var errorMessage = ""
-    
     @Published var listItems: [Product] = []
     
     

@@ -8,19 +8,11 @@
 import SwiftUI
 
 struct ExploreCategoryCell: View {
-    //        var productImage: String
-    //        var productPrice: String
-    //        var productName: String
-    //        var productWeight: String
-    
-    @State var model: ExploreCategory = ExploreCategory(dict: [:])
-    
+    @State var model: ExploreCategory
     @State private var counter = 0
-    
     var didAddCart: (() -> Void)?
     
     var body: some View {
-        
         VStack {
             HStack{
                 Spacer()
@@ -66,12 +58,5 @@ struct ExploreCategoryCell: View {
 }
   
 #Preview {
-    
-    ExploreCategoryCell(model: ExploreCategory(dict: [
-            "cat_id":1,
-            "cat_name":"Pulses",
-            "image":"http://192.168.1.3:3001/img/type/202307261610181018aVOpgmY1W1.png" ,
-            "color":"F8A44C"
-        ]))
-        
-    }
+    ExploreCategoryCell(model: ExploreCategory(id: 1, name: "Test", image: "", color: .red))
+}

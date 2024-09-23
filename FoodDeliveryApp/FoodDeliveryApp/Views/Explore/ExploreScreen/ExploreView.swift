@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ExploreView: View {
-    
     // MARK: - Properties
     @StateObject var exploreMV = ExploreViewModel.shared
     @State var textSearch: String = ""
@@ -16,7 +15,6 @@ struct ExploreView: View {
     
     // MARK: - Body
     var body: some View {
-        
         ZStack{
             VStack{
                 SearchTextFild(placholder: "Найти продукты", text: $textSearch)

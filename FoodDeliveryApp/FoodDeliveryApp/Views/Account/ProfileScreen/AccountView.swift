@@ -12,7 +12,7 @@ struct AccountView: View {
     @State private var isPresented: Bool = false
     var body: some View {
         NavigationStack {
-            LazyVStack(spacing: 15) {
+            VStack(spacing: 15) {
                 HStack(spacing: 15) {
                     Image(systemName: "person.crop.circle")
                         .resizable()
@@ -42,7 +42,7 @@ struct AccountView: View {
                         .sheet(isPresented: $isPresented) {
                             DeliveryAddressView(vm: vmaddress)
                         }
-                    
+
                     AccountRow(title: "Заказы", imageOne: "cart", imageTwo: "chevron.right")
                     
                     AccountRow(title: "Способ оплаты", imageOne: "creditcard", imageTwo: "chevron.right")

@@ -34,13 +34,9 @@ struct AddresRowView: View {
                 
                 Spacer()
                 
-                Button {
-                    action()
-                }label: {
-                    Image(systemName: "pencil")
-                        .foregroundStyle(.green)
-                }
-                .buttonStyle(.borderless)
+                Image(systemName: "pencil")
+                    .foregroundStyle(.green)
+
             }
             Divider()
             
@@ -58,7 +54,7 @@ struct AddresRowView: View {
                 Spacer()
             }
             
-            Text(address.postalCode)
+            Text(address.postalCode ?? "")
                 .font(.subheadline)
             
         }
@@ -66,7 +62,7 @@ struct AddresRowView: View {
         .padding()
         .background(.background)
         .clipShape(RoundedRectangle(cornerRadius: 20))
-        .shadow(radius: 3)
+        .shadow(radius: 1)
         
     }
 }
@@ -74,7 +70,7 @@ struct AddresRowView: View {
 #Preview {
     AddresRowView(
         address: Address(
-            id: 1,
+            id: 1, title: "",
             name: "Офис",
             city: "Санкт-Петербург",
             street: "Невский проспект",

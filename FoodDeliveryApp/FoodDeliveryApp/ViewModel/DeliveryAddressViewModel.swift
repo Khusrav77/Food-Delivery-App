@@ -11,15 +11,16 @@ import Foundation
 final class DeliveryAddressViewModel: ObservableObject {
     static var shared: DeliveryAddressViewModel = DeliveryAddressViewModel()
     
+    @Published var txtTitle: String = ""
     @Published var txtName: String = ""
     @Published var txtCity: String = ""
-    @Published var txtstreet: String = ""
-    @Published var txthouseNumber: String = ""
-    @Published var txtapartmentOrOffice: String = ""
-    @Published var txtentrance: String = ""
-    @Published var txtfloor: String = ""
+    @Published var txtStreet: String = ""
+    @Published var txtHouseNumber: String = ""
+    @Published var txtApartmentOrOffice: String = ""
+    @Published var txtEntrance: String = ""
+    @Published var txtFloor: String = ""
     @Published var txtPostalCode: String = ""
-    @Published var txtcomment: String = ""
+    @Published var txtComment: String = ""
     @Published var isSelected: Bool = false
     
     @Published var showError = false
@@ -27,9 +28,9 @@ final class DeliveryAddressViewModel: ObservableObject {
     @Published var isLoading = false
     
     @Published var address: [Address] = [
-        Address(id: 1, name: "Домой", city: "Санкт-Петербург", street: "Невский проспект", houseNumber: "12,", apartmentOrOffice: "кв 34,", entrance: "Подъезд 1,", floor: "этаж 3,", postalCode: "191025", comment: "Доставка в офис", isSelected: false),
-                Address(id: 2, name: "Офис", city: "Москва", street: "ул.Арбат", houseNumber: "25,", apartmentOrOffice: "офис 45,", entrance: "", floor: "этаж 5,", postalCode: "119002", comment: "Доставка домой", isSelected: true),
-                Address(id: 3, name: "Родители", city: "Казань", street: "Пушкина", houseNumber: "10,", apartmentOrOffice: "кв 109,", entrance: "Подъезд 3,", floor: "этаж 7,", postalCode: "420015", comment: "Без звонка", isSelected: false)
+        Address(id: 1,title: "Home", name: "ggggg", city: "Санкт-Петербург", street: "Невский проспект", houseNumber: "12,", apartmentOrOffice: "кв 34,", entrance: "Подъезд 1,", floor: "этаж 3,", postalCode: "191025", comment: "Доставка в офис", isSelected: false),
+                Address(id: 2,title: "Home", name: "Офис", city: "Москва", street: "ул.Арбат", houseNumber: "25,", apartmentOrOffice: "офис 45,", entrance: "", floor: "этаж 5,", postalCode: "119002", comment: "Доставка домой", isSelected: true),
+                Address(id: 3,title: "Home", name: "Родители", city: "Казань", street: "Пушкина", houseNumber: "10,", apartmentOrOffice: "кв 109,", entrance: "Подъезд 3,", floor: "этаж 7,", postalCode: "420015", comment: "Без звонка", isSelected: false)
             
     ]
     
@@ -38,27 +39,29 @@ final class DeliveryAddressViewModel: ObservableObject {
     }
     
     func clearAll() {
+        txtTitle = "Home"
         txtName = ""
         txtCity = ""
-        txtstreet = ""
-        txthouseNumber = ""
-        txtapartmentOrOffice = ""
-        txtentrance = ""
-        txtfloor = ""
+        txtStreet = ""
+        txtHouseNumber = ""
+        txtApartmentOrOffice = ""
+        txtEntrance = ""
+        txtFloor = ""
         txtPostalCode = ""
-        txtcomment = ""
+        txtComment = ""
     }
     
     func setData(address: Address) {
+        txtTitle = address.title
         txtName = address.name ?? ""
         txtCity = address.city
-        txtstreet = address.street
-        txthouseNumber = address.houseNumber
-        txtapartmentOrOffice = address.city
-        txtentrance = address.entrance ?? ""
-        txtfloor = address.floor ?? ""
-        txtPostalCode = address.postalCode
-        txtcomment = address.comment ?? ""
+        txtStreet = address.street
+        txtHouseNumber = address.houseNumber
+        txtApartmentOrOffice = address.apartmentOrOffice ?? ""
+        txtEntrance = address.entrance ?? ""
+        txtFloor = address.floor ?? ""
+        txtPostalCode = address.postalCode ?? ""
+        txtComment = address.comment ?? ""
     }
     
     // MARK: - SERVICE CALL

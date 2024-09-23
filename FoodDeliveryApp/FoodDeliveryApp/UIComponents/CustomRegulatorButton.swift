@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct CustomRegulatorButton: View {
+    // MARK: - Properties
     let name: String
     let action: () -> Void
+   
+    // MARK: - Body
     var body: some View {
-        
         Button {
            action()
         }label: {

@@ -8,16 +8,13 @@
 import SwiftUI
 
 struct VerificationView: View {
-    
     // MARK: - Properties
     @ObservedObject var vm: SignInViewModel
     @Environment(\.dismiss) var dismiss
     
     // MARK: - Body
     var body: some View {
-        
         VStack(spacing: 20) {
-           
             Text("Код отправлена на номер\n\(vm.phoneNumber)")
                 .foregroundStyle(.gray)
                 .multilineTextAlignment(.center)

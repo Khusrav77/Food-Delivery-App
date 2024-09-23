@@ -8,17 +8,18 @@
 import SwiftUI
 
 struct SearchTextFild: View {
-    
+    // MARK: - Properties
     @State var placholder: String = "Placholder"
     @Binding var text: String
     
+    // MARK: - Body
     var body: some View {
-        HStack(spacing: 15) {
-            
+        HStack(spacing: 16) {
             Image(systemName: "magnifyingglass")
                 .resizable()
                 .scaledToFit()
                 .frame(width: 20, height: 20)
+                .padding(.leading, 16)
                 .foregroundColor(.gray)
             
             TextField(placholder, text: $text)
@@ -26,12 +27,11 @@ struct SearchTextFild: View {
                 .textInputAutocapitalization(.none)
                 .disableAutocorrection(true)
                 .frame(maxWidth: .infinity)
+                .frame(height: 55)
         }
-        .frame(height: 30)
-        .padding(10)
-        .clipShape(Capsule())
-        .overlay(Capsule().stroke(Color.gray20, lineWidth: 0.5))
-        .shadow(color: .black.opacity(0.1), radius: 5, x: 0, y: 8)
+        .frame(height: 55)
+        .clipShape(RoundedRectangle(cornerRadius: 20))
+        .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.gray20, lineWidth: 0.5))
     }
 }
 

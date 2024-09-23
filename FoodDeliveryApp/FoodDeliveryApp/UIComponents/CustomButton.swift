@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct CustomButton: View {
-    let title: String
-    var isEnabled: Bool = false
+    // MARK: - Properties
+    var title: String = "Продолжить"
+    @State var isEnabled: Bool = false
     let action: () -> Void
-
+    
+    // MARK: - Body
     var body: some View {
         Button{
             action()
@@ -19,11 +21,11 @@ struct CustomButton: View {
             Text(title)
                 .font(.customfont(.semibold, fontSize: 20))
                 .foregroundColor(isEnabled ? .greenPrimary : .greenPrimary.opacity(0.2))
-                .padding(.vertical)
                 .frame(maxWidth: .infinity)
+                .frame(height: 50)
                 .background(Color.white)
-                .clipShape(Capsule())
-                .shadow(color: .black.opacity(0.1), radius: 5)
+                .clipShape(RoundedRectangle(cornerRadius: 16))
+                .shadow(color: .black.opacity(0.1), radius: 3)
         }
         .padding(.horizontal, 15)
         .disabled(isEnabled)
@@ -32,5 +34,5 @@ struct CustomButton: View {
 
 
 #Preview {
-    CustomButton(title: "Продолжить", isEnabled: false, action: {})
+    CustomButton(action: {})
 }

@@ -55,9 +55,6 @@ struct Globals {
     static let SV_SEND_VERIFICATION_CODE = BASE_URL + "forgot_password_request"
     static let SV_VERIFY_CODE = BASE_URL + "forgot_password_verify"
     static let SV_FORGOT_PASSWORD_SET_PASSWORD = BASE_URL + "forgot_password_set_password"
-    
-    
-    
 }
 
 struct KKey {

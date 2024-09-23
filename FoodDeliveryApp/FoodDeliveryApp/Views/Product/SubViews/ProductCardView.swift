@@ -165,10 +165,8 @@ struct ProductCardView: View {
         .frame(height: .screenWidth * 0.7)
         .background(.white)
         .clipShape(.rect(cornerRadius: 20))
-        .shadow(color: .black.opacity(0.1), radius: 8)
-        
+        .shadow(color: .black.opacity(0.1), radius: 5)
     }
-    
 }
 
 

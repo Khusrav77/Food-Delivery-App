@@ -8,13 +8,11 @@
 import SwiftUI
 
 struct CodeView: View {
-    
     // MARK: - Properties
     var code: String
     
     // MARK: - Body
     var body: some View {
-        
         VStack(spacing: 10) {
             Text(code)
                 .foregroundStyle(Color.black)

@@ -7,20 +7,10 @@
 
 import SwiftUI
 
-struct Nutrition: Identifiable, Equatable {
-    
-    var id: Int = 0
-    var nutritionName: String = ""
-    var nutritionValue: String = ""
-      
-      
-      
-    init(dict: NSDictionary) {
-        self.id = dict.value(forKey: "nutrition_id") as? Int ?? 0
-        self.nutritionName = dict.value(forKey: "nutrition_name") as? String ?? ""
-        self.nutritionValue = dict.value(forKey: "nutrition_value") as? String ?? ""
-         
-      }
+struct Nutrition: Identifiable, Equatable, Codable {
+    var id: Int
+    var nutritionName: String
+    var nutritionValue: String
       
   static func == (lhs: Nutrition, rhs: Nutrition) -> Bool {
           return lhs.id == rhs.id

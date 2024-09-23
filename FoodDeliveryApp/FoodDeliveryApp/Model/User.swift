@@ -16,9 +16,6 @@ struct User: Identifiable, Equatable, Codable {
     var name: String?
     var email: String?
     var authToken: String?
-
-        
-    
     
     static func == (lhs: User, rhs: User) -> Bool {
         return lhs.id == rhs.id

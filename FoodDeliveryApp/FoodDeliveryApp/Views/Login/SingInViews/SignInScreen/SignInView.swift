@@ -14,11 +14,8 @@ struct SignInView: View {
     // MARK: - Body
     var body: some View {
         
-       
         NavigationStack {
             ZStack(alignment:.topLeading){
-                    Color.cardsColor
-                        .ignoresSafeArea()
                     
                     VStack(spacing: 20) {
                         
@@ -47,7 +44,7 @@ struct SignInView: View {
                     BackButton()
                         .padding()
                 }
-           // .navigationTitle("")
+        
             .navigationBarBackButtonHidden(true)
             .navigationBarHidden(true)
         }

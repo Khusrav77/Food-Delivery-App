@@ -9,11 +9,9 @@ import Foundation
 
 
 class MyOrderDetailViewModel: ObservableObject {
-    @Published var myOrderModel: MyOrder = MyOrder(dict: [:])
-    
+    @Published var myOrderModel: MyOrder
     @Published var showError = false
     @Published var errorMesage = ""
-    
     @Published var listOrderItem: [OrderItem] = []
     
     

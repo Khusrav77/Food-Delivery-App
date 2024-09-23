@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct AddToCartButton: View {
+    // MARK: - Properties
     let product: MockProductModel
-
     @State private var isExpanded: Bool = false
     
+    // MARK: - Body
     var body: some View {
         VStack {
             if isExpanded {
