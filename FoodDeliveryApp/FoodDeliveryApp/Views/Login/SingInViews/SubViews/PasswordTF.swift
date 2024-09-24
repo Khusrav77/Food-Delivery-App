@@ -13,6 +13,7 @@ struct PasswordTF: View {
     @Binding var text: String
     @FocusState var isActive
     @State var showPassword: Bool = false
+    
     // MARK: - Body
     var body: some View {
         ZStack(alignment: .leading){

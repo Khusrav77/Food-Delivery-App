@@ -71,11 +71,6 @@ struct SignInView: View {
                     
                     Spacer()
                 }
-                
-                BackButton()
-                    .padding()
-                    .padding(.top, 40)
-                
             }
             .navigationBarBackButtonHidden(true)
             .navigationBarHidden(true)

@@ -16,7 +16,6 @@ struct TopinfoView: View {
     // MARK: - Body
     var body: some View {
         VStack(spacing: 16) {
-            
             Image(logo)
                 .resizable()
                 .scaledToFit()

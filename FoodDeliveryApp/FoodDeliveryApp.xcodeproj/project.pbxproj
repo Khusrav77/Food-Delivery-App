@@ -371,8 +371,8 @@
 				A46741FC2C19842500EB811E /* Favorite */,
 				A44D35E62C9B63A1007BD140 /* Detail */,
 				A46739B52C091A6400AA4BDE /* MainTab */,
-				A46642592C033A210025096A /* Login */,
 				A4BA40C42C9FDC1200E2EA82 /* Account */,
+				A46642592C033A210025096A /* Login */,
 			);
 			path = Views;
 			sourceTree = "<group>";

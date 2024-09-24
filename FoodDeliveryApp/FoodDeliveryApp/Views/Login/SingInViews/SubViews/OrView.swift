@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct OrView: View {
+    // MARK: - Properties
     var title: String = "Или войти"
     
+    // MARK: - Body
     var body: some View {
         HStack {
             Rectangle()

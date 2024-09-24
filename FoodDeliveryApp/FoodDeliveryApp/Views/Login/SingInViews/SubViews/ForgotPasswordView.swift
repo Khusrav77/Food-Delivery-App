@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct ForgotPasswordView: View {
+    // MARK: - Properties
     @ObservedObject var vm = SignInViewModel.shared
+    // MARK: - Body
     var body: some View {
         VStack(spacing: 20) {
             Text("Forgot Password")
