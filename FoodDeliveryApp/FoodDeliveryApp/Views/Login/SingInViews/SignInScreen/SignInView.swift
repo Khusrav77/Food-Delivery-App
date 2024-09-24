@@ -9,19 +9,18 @@ import SwiftUI
 
 struct SignInView: View {
     // MARK: - Properties
-    @StateObject private var vm = SignInViewModel.shared
-   
+    @StateObject var vm = SignInViewModel.shared
+    @FocusState var isActive
+    
     // MARK: - Body
     var body: some View {
-        
         NavigationStack {
             ZStack(alignment:.topLeading){
-                    
                     VStack(spacing: 20) {
                         
                         TopinfoView()
                         
-                        TextFieldView(vm: vm)
+                        InfoTFView(title: "Email", textTF: $vm.email)
                         
                         NavigationLink(destination:VerificationView(vm: vm)){
                             CustomButton(title: "Продолжить", isEnabled: vm.isLoadinButtonDisabled) {}

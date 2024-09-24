@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SearchTextFild: View {
     // MARK: - Properties
-    @State var placholder: String = "Placholder"
+    var title: String = "Placholder"
     @Binding var text: String
     
     // MARK: - Body
@@ -22,7 +22,7 @@ struct SearchTextFild: View {
                 .padding(.leading, 16)
                 .foregroundColor(.gray)
             
-            TextField(placholder, text: $text)
+            TextField(title, text: $text)
                 .font(.customfont(.regular, fontSize: 16))
                 .textInputAutocapitalization(.none)
                 .disableAutocorrection(true)
@@ -39,7 +39,7 @@ struct SearchTextFild: View {
 struct SearchTextFild_Previews: PreviewProvider {
     @State static var text: String = ""
     static var previews: some View {
-        SearchTextFild(placholder: "Search Store", text: $text)
+        SearchTextFild(title: "Search Store", text: $text)
             .padding(15)
     }
 }

@@ -17,7 +17,7 @@ struct ExploreView: View {
     var body: some View {
         ZStack{
             VStack{
-                SearchTextFild(placholder: "Найти продукты", text: $textSearch)
+                SearchTextFild(title: "Найти продукты", text: $textSearch)
                 
                 ScrollView(showsIndicators: false) {
                     LazyVGrid(columns: columns) {

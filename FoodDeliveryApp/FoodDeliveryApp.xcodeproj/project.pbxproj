@@ -11,7 +11,7 @@
 		A44D35E82C9B7CE0007BD140 /* CardImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44D35E72C9B7CE0007BD140 /* CardImageView.swift */; };
 		A44D35EA2C9B840B007BD140 /* MockDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44D35E92C9B840B007BD140 /* MockDataClass.swift */; };
 		A45168A72C998B9E0036D44B /* TopinfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45168A62C998B9E0036D44B /* TopinfoView.swift */; };
-		A45168A92C9998670036D44B /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45168A82C9998670036D44B /* TextFieldView.swift */; };
+		A45168A92C9998670036D44B /* InfoTFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45168A82C9998670036D44B /* InfoTFView.swift */; };
 		A45168AD2C99A19E0036D44B /* SocialButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45168AC2C99A19E0036D44B /* SocialButtonView.swift */; };
 		A45168AF2C99AE820036D44B /* BackgroundViewGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45168AE2C99AE820036D44B /* BackgroundViewGradient.swift */; };
 		A45168B12C99BFB10036D44B /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45168B02C99BFB10036D44B /* CodeView.swift */; };
@@ -118,7 +118,7 @@
 		A44D35E72C9B7CE0007BD140 /* CardImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardImageView.swift; sourceTree = "<group>"; };
 		A44D35E92C9B840B007BD140 /* MockDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataClass.swift; sourceTree = "<group>"; };
 		A45168A62C998B9E0036D44B /* TopinfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopinfoView.swift; sourceTree = "<group>"; };
-		A45168A82C9998670036D44B /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
+		A45168A82C9998670036D44B /* InfoTFView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTFView.swift; sourceTree = "<group>"; };
 		A45168AC2C99A19E0036D44B /* SocialButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialButtonView.swift; sourceTree = "<group>"; };
 		A45168AE2C99AE820036D44B /* BackgroundViewGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundViewGradient.swift; sourceTree = "<group>"; };
 		A45168B02C99BFB10036D44B /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
@@ -545,7 +545,7 @@
 			isa = PBXGroup;
 			children = (
 				A45168A62C998B9E0036D44B /* TopinfoView.swift */,
-				A45168A82C9998670036D44B /* TextFieldView.swift */,
+				A45168A82C9998670036D44B /* InfoTFView.swift */,
 				A45168AC2C99A19E0036D44B /* SocialButtonView.swift */,
 			);
 			path = SubViews;
@@ -977,7 +977,7 @@
 				A45A89972C0E58250015A0A4 /* ImageModel.swift in Sources */,
 				A45A898D2C0DEF0B0015A0A4 /* Extension+String.swift in Sources */,
 				A4BB21B42C9C4E110013390D /* Extention+Text.swift in Sources */,
-				A45168A92C9998670036D44B /* TextFieldView.swift in Sources */,
+				A45168A92C9998670036D44B /* InfoTFView.swift in Sources */,
 				A46C571C2C9F4480006AD5CB /* CartRowView.swift in Sources */,
 				A45A898F2C0E33160015A0A4 /* TypeModel.swift in Sources */,
 				A45A89932C0E54B30015A0A4 /* ProductDetailViewModel.swift in Sources */,

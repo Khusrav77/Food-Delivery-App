@@ -8,26 +8,26 @@
 import SwiftUI
 
 struct TopinfoView: View {
-    
     // MARK: - Properties
-    
+    var logo: String = "app_logoG"
+    var title: String = "Добро пожаловать"
+    var info: String = "Введите номер телефона, чтобы войти или зарегистрироваться"
     
     // MARK: - Body
     var body: some View {
-        
-        VStack(spacing: 20) {
+        VStack(spacing: 16) {
             
-            Image("app_logoG")
+            Image(logo)
                 .resizable()
                 .scaledToFit()
                 .frame(width: 100, height: 100)
                 .padding(.top, 60)
             
-            Text("Добро пожаловать")
+            Text(title)
                 .font(.customfont(.semibold, fontSize: 26))
                 .multilineTextAlignment(.center)
             
-            Text("Введите номер телефона, чтобы войти или зарегистрироваться")
+            Text(info)
                 .font(.customfont(.regular, fontSize: 14))
                 .multilineTextAlignment(.center)
             

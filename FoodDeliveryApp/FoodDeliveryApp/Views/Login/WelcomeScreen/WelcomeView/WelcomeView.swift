@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct WelcomeView: View {
-    
     // MARK: - Properties
     let appLogoImageName = "app_logo"
     let appTitle = "Food\nDelivery"
@@ -47,15 +46,15 @@ struct WelcomeView: View {
                             .foregroundStyle(Color.greenPrimary)
                             .multilineTextAlignment(.center)
                             .padding()
-                            .frame(maxWidth: .infinity, maxHeight: 60)
+                            .frame(maxWidth: .infinity)
+                            .frame(height: 55)
                             .background(.background)
                             .clipShape(.rect(cornerRadius: 25))
-                            .shadow(color: .black.opacity(0.1), radius: 8, x: 4, y: 8)
+                            .shadow(radius: 3)
                     }
                 }
                 .padding()
             }
-            
         }
         .navigationTitle("")
         .navigationBarBackButtonHidden(true)

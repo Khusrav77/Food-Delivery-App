@@ -8,6 +8,7 @@
 import SwiftUI
 
 final class HomeViewModel: ObservableObject {
+    // MARK: - Properties
     static var shared: HomeViewModel = HomeViewModel()
     
     @Published var navBarSelection: String = ""

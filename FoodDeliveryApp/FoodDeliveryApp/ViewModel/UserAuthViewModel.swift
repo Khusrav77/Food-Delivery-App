@@ -8,8 +8,9 @@
 import Foundation
 
 final class UserAuthViewModel: ObservableObject {
+    // MARK: - Properties
     static var shared: UserAuthViewModel = UserAuthViewModel()
-    
+
     @Published var txtPhoneNumber: String = ""
     @Published var txtVerificationCode: String = ""
     @Published var isUserLoggedIn: Bool = false
