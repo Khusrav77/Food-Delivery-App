@@ -19,14 +19,14 @@ struct CustomButton: View {
             action()
         } label:{
             Text(title)
-                .font(.customfont(.semibold, fontSize: 20))
+                .font(.title2.bold())
                 .foregroundColor(isEnabled ? .white : .white.opacity(0.6))
                 .frame(maxWidth: .infinity)
                 .frame(height: 55)
                 .background(isEnabled ? .green : .green.opacity(0.2))
                 .clipShape(RoundedRectangle(cornerRadius: 20))
         }
-        .padding(.horizontal, 16)
+        .padding(.horizontal)
         .disabled(isEnabled)
     }
 }

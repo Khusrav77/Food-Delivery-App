@@ -40,17 +40,21 @@ struct WelcomeView: View {
                     
                     Spacer()
                     
-                    NavigationLink(destination: SignInView()){
-                        Text(startButton)
-                            .font(.customfont(.semibold, fontSize: 20))
-                            .foregroundStyle(Color.greenPrimary)
-                            .multilineTextAlignment(.center)
-                            .padding()
-                            .frame(maxWidth: .infinity)
-                            .frame(height: 55)
-                            .background(.background)
-                            .clipShape(.rect(cornerRadius: 25))
-                            .shadow(radius: 3)
+                    if #available(iOS 17.0, *) {
+                        NavigationLink(destination: SignInView()){
+                            Text(startButton)
+                                .font(.customfont(.semibold, fontSize: 20))
+                                .foregroundStyle(Color.greenPrimary)
+                                .multilineTextAlignment(.center)
+                                .padding()
+                                .frame(maxWidth: .infinity)
+                                .frame(height: 55)
+                                .background(.background)
+                                .clipShape(.rect(cornerRadius: 20))
+                                .shadow(radius: 3)
+                        }
+                    } else {
+                        // Fallback on earlier versions
                     }
                 }
                 .padding()

@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct SocialButtonView: View {
-    
     // MARK: - Properties
-    let action: () -> Void
-    let imageName: String
-    let buttonText: String
+    var image: String
+    var width: CGFloat
+    var height: CGFloat
+    var action: () -> Void
     
     // MARK: - Body
     var body: some View {
@@ -20,28 +20,20 @@ struct SocialButtonView: View {
         Button {
             action()
         }label: {
-            HStack {
-                Spacer().padding()
-                Image(imageName)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 25, height: 25)
-                
-                Text(buttonText)
-                    .font(.customfont(.semibold, fontSize: 20))
-                    .foregroundColor(.black.opacity(0.7))
-                    .padding()
-                Spacer().padding()
-            }
-            .frame(maxWidth: .infinity)
-            .background(.background)
-            .clipShape(RoundedRectangle(cornerRadius: 24))
-            .shadow(color: .black.opacity(0.1), radius: 8, x: 0, y: 8)
-            .padding(.horizontal)
+            Image(image)
+                .resizable()
+                .scaledToFit()
+                .frame(width: width, height: height)
+                .overlay {
+                    RoundedRectangle(cornerRadius: 12).stroke(lineWidth: 1.5)
+                        .frame(width: 50, height: 50)
+                        .foregroundStyle(.gray.opacity(0.3))
+                }
         }
+        .tint(.primary)
     }
 }
 
 #Preview {
-    SocialButtonView(action: {}, imageName: "google_logo", buttonText: "Google")
+    SocialButtonView(image: "", width: 32, height: 32, action: {})
 }

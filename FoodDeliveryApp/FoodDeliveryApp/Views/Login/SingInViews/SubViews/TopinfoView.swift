@@ -11,7 +11,7 @@ struct TopinfoView: View {
     // MARK: - Properties
     var logo: String = "app_logoG"
     var title: String = "Добро пожаловать"
-    var info: String = "Введите номер телефона, чтобы войти или зарегистрироваться"
+    var info: String = "Пожалуйста, войдите в учетную запииь, введите почту и пороль, чтобы войти"
     
     // MARK: - Body
     var body: some View {
@@ -24,19 +24,19 @@ struct TopinfoView: View {
                 .padding(.top, 60)
             
             Text(title)
-                .font(.customfont(.semibold, fontSize: 26))
+                .font(.title)
                 .multilineTextAlignment(.center)
             
             Text(info)
-                .font(.customfont(.regular, fontSize: 14))
+                .font(.subheadline)
                 .multilineTextAlignment(.center)
             
         }
+        .padding(.horizontal)
         .frame(width: .screenWidth, height: .screenHeight / 2.6)
         .background(.background)
-        .clipShape(.rect(cornerRadius: 25))
+        .clipShape(RoundedRectangle(cornerRadius: 25))
         .shadow(color: .black.opacity(0.1), radius: 5)
-        .ignoresSafeArea(edges: .top)
     }
 }
 

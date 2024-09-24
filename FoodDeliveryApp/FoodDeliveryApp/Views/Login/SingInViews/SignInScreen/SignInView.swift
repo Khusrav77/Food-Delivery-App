@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@available(iOS 17.0, *)
 struct SignInView: View {
     // MARK: - Properties
     @StateObject var vm = SignInViewModel.shared
@@ -16,42 +17,79 @@ struct SignInView: View {
     var body: some View {
         NavigationStack {
             ZStack(alignment:.topLeading){
-                    VStack(spacing: 20) {
-                        
-                        TopinfoView()
-                        
-                        InfoTFView(title: "Email", textTF: $vm.email)
-                        
-                        NavigationLink(destination:VerificationView(vm: vm)){
-                            CustomButton(title: "Продолжить", isEnabled: vm.isLoadinButtonDisabled) {}
-                        }
-                        
-                        Text("или войти с помощью")
-                            .font(.customfont(.regular, fontSize: 14))
-                            .multilineTextAlignment(.center)
-                            .padding()
-                        
-                        SocialButtonView(action: {}, imageName: "google_logo", buttonText: "Email")
-                        
-                        SocialButtonView(action: {}, imageName: "google_logo", buttonText: "Google")
-                        
-                        SocialButtonView(action: {}, imageName: "vk_logo", buttonText: "Вконтакте")
-                        
-                    }
-                    .padding(.bottom, 50)
+                VStack(spacing: 24) {
                     
-                    BackButton()
-                        .padding()
+                    TopinfoView()
+                    
+                    InfoTFView(title: "Email", text: $vm.email)
+                    
+                    PasswordTF(title: "Password", text: $vm.password)
+                    
+                    HStack {
+                        Toggle(isOn: $vm.rememberMe) {
+                            Text("Label")
+                        }
+                        .toggleStyle(RememberStye())
+                        
+                        Spacer()
+                        
+                        Button {
+                            vm.showForgotPassword.toggle()
+                        } label: {
+                            Text("Забыл пароль?")
+                                .font(.footnote)
+                                .foregroundColor(.black.opacity(0.8))
+                            
+                        }
+                        .buttonStyle(.plain)
+                    }
+                    .padding(.horizontal)
+                    
+                    CustomButton(title: "Продолжить", isEnabled: vm.isLoadinButtonDisabled) {}
+                        .padding(.vertical)
+                    
+                    OrView(title: "или войти")
+                    
+                    HStack(spacing: 60) {
+                        SocialButtonView(image: "aplle_logo", width: 32, height: 32, action: {})
+                        
+                        SocialButtonView(image: "google_logo", width: 32, height: 32, action: {})
+                        
+                        SocialButtonView(image: "vk_logo", width: 32, height: 32, action: {})
+                    }
+                    .padding(.top)
+                    Spacer()
+                    Button {
+                        vm.email = ""
+                        vm.password = ""
+                        vm.showSignUp = true
+                        
+                    } label: {
+                        Text("у вас нет аккаунта? ***Sign Up***")
+                    }
+                    .buttonStyle(.plain)
+                    
+                    Spacer()
                 }
-        
+                
+                BackButton()
+                    .padding()
+                    .padding(.top, 40)
+                
+            }
             .navigationBarBackButtonHidden(true)
             .navigationBarHidden(true)
+            .ignoresSafeArea()
         }
     }
 }
 
 #Preview {
-    SignInView()
+    if #available(iOS 17.0, *) {
+        SignInView()
+    } else {
+        // Fallback on earlier versions
+    }
 }
 
 

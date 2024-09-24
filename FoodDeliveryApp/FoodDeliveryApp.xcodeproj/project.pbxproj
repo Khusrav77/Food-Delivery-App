@@ -86,6 +86,11 @@
 		A47638632C1872ED00763BE9 /* OrderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47638622C1872ED00763BE9 /* OrderItem.swift */; };
 		A47638652C18731000763BE9 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47638642C18731000763BE9 /* Payment.swift */; };
 		A47638692C18736200763BE9 /* PromoCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47638682C18736200763BE9 /* PromoCode.swift */; };
+		A48E7ED32CA2E1E100C6D037 /* PasswordTF.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48E7ED22CA2E1E100C6D037 /* PasswordTF.swift */; };
+		A48E7ED52CA308D900C6D037 /* RememberStye.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48E7ED42CA308D900C6D037 /* RememberStye.swift */; };
+		A48E7ED72CA316D000C6D037 /* OrView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48E7ED62CA316D000C6D037 /* OrView.swift */; };
+		A48E7ED92CA3355B00C6D037 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48E7ED82CA3355B00C6D037 /* SignUpView.swift */; };
+		A48E7EDB2CA33DFC00C6D037 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48E7EDA2CA33DFC00C6D037 /* ForgotPasswordView.swift */; };
 		A499C50E2C03C7B500F5F371 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A499C50D2C03C7B500F5F371 /* SignInView.swift */; };
 		A499C5112C0520CA00F5F371 /* AlfaSlabOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A499C50F2C0520CA00F5F371 /* AlfaSlabOne-Regular.ttf */; };
 		A499C5292C0523D600F5F371 /* FiraSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A499C5162C0523D500F5F371 /* FiraSans-Bold.ttf */; };
@@ -186,6 +191,11 @@
 		A47638622C1872ED00763BE9 /* OrderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItem.swift; sourceTree = "<group>"; };
 		A47638642C18731000763BE9 /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
 		A47638682C18736200763BE9 /* PromoCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoCode.swift; sourceTree = "<group>"; };
+		A48E7ED22CA2E1E100C6D037 /* PasswordTF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTF.swift; sourceTree = "<group>"; };
+		A48E7ED42CA308D900C6D037 /* RememberStye.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RememberStye.swift; sourceTree = "<group>"; };
+		A48E7ED62CA316D000C6D037 /* OrView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrView.swift; sourceTree = "<group>"; };
+		A48E7ED82CA3355B00C6D037 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		A48E7EDA2CA33DFC00C6D037 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		A499C50D2C03C7B500F5F371 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		A499C50F2C0520CA00F5F371 /* AlfaSlabOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlfaSlabOne-Regular.ttf"; sourceTree = "<group>"; };
 		A499C5162C0523D500F5F371 /* FiraSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraSans-Bold.ttf"; sourceTree = "<group>"; };
@@ -528,6 +538,7 @@
 			isa = PBXGroup;
 			children = (
 				A499C50D2C03C7B500F5F371 /* SignInView.swift */,
+				A48E7ED82CA3355B00C6D037 /* SignUpView.swift */,
 			);
 			path = SignInScreen;
 			sourceTree = "<group>";
@@ -546,7 +557,11 @@
 			children = (
 				A45168A62C998B9E0036D44B /* TopinfoView.swift */,
 				A45168A82C9998670036D44B /* InfoTFView.swift */,
+				A48E7ED22CA2E1E100C6D037 /* PasswordTF.swift */,
 				A45168AC2C99A19E0036D44B /* SocialButtonView.swift */,
+				A48E7ED42CA308D900C6D037 /* RememberStye.swift */,
+				A48E7ED62CA316D000C6D037 /* OrView.swift */,
+				A48E7EDA2CA33DFC00C6D037 /* ForgotPasswordView.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -905,6 +920,7 @@
 				A47638612C1872C300763BE9 /* Notification.swift in Sources */,
 				A46739BA2C091D4F00AA4BDE /* HomeView.swift in Sources */,
 				A45168B12C99BFB10036D44B /* CodeView.swift in Sources */,
+				A48E7ED52CA308D900C6D037 /* RememberStye.swift in Sources */,
 				A45C627F2C164F5E00E7E11F /* ExploreItemView.swift in Sources */,
 				A45C62722C15E74200E7E11F /* FavoriteView.swift in Sources */,
 				A46D91722C11A8F90019A335 /* AuthService.swift in Sources */,
@@ -954,6 +970,7 @@
 				A45168B72C9A1E680036D44B /* TabBarView.swift in Sources */,
 				A4E517F72CA1F115007B931B /* SaveButton.swift in Sources */,
 				A44D35E82C9B7CE0007BD140 /* CardImageView.swift in Sources */,
+				A48E7EDB2CA33DFC00C6D037 /* ForgotPasswordView.swift in Sources */,
 				A47638692C18736200763BE9 /* PromoCode.swift in Sources */,
 				A476385D2C18725400763BE9 /* Address.swift in Sources */,
 				A45CE2892C0A6BC00084FD80 /* SearchTextFild.swift in Sources */,
@@ -961,6 +978,8 @@
 				A45C62762C161E1B00E7E11F /* ExploreViewModel.swift in Sources */,
 				A46798552C145B220015F8DC /* VerificationView.swift in Sources */,
 				A45A89912C0E46170015A0A4 /* ProductDetailView.swift in Sources */,
+				A48E7ED92CA3355B00C6D037 /* SignUpView.swift in Sources */,
+				A48E7ED32CA2E1E100C6D037 /* PasswordTF.swift in Sources */,
 				A46CFE422C0B90B500BF88DD /* ProductCardView.swift in Sources */,
 				A46C57162C9F428D006AD5CB /* ConfirmOrderButton.swift in Sources */,
 				A466424A2C0335820025096A /* FoodDeliveryAppApp.swift in Sources */,
@@ -974,6 +993,7 @@
 				A45C62742C15E91A00E7E11F /* FavoriteViewModel.swift in Sources */,
 				A4BB21B22C9C4BB30013390D /* CustomRegulatorButton.swift in Sources */,
 				A45C62812C17277E00E7E11F /* CartItem.swift in Sources */,
+				A48E7ED72CA316D000C6D037 /* OrView.swift in Sources */,
 				A45A89972C0E58250015A0A4 /* ImageModel.swift in Sources */,
 				A45A898D2C0DEF0B0015A0A4 /* Extension+String.swift in Sources */,
 				A4BB21B42C9C4E110013390D /* Extention+Text.swift in Sources */,

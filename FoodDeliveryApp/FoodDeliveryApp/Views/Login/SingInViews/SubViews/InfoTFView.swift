@@ -9,30 +9,36 @@ import SwiftUI
 
 struct InfoTFView: View {
     // MARK: - Properties
-    var title: String = "Name"
-    @Binding var textTF: String
+    var title: String = ""
+    @Binding var text: String
     @FocusState var isActive
     
     // MARK: - Body
     var body: some View {
         ZStack(alignment: .leading) {
-            TextField(title, text: $textTF)
+            TextField("", text: $text)
                 .keyboardType(.phonePad)
                 .frame(maxWidth: .infinity)
                 .frame(height: 55).focused($isActive)
                 .padding(.leading)
                 .background(.gray.opacity(0.1))
                 .clipShape(.rect(cornerRadius: 20))
+            
             Text(title).padding(.leading)
-                .offset(y: (isActive || !textTF.isEmpty) ? -45 : 0)
+                .foregroundStyle(isActive ? .gray : .gray20)
+                .offset(y: (isActive || !text.isEmpty) ? -45 : 0)
                 .animation(.spring, value: isActive)
                 .onTapGesture {
                     isActive = true
                 }
         }
-        .padding(.horizontal)
+        .padding()
     }
 }
 #Preview {
-    InfoTFView(textTF: .constant(""))
+    if #available(iOS 17.0, *) {
+        SignInView()
+    } else {
+        // Fallback on earlier versions
+    }
 }
