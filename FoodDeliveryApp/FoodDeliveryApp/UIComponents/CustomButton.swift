@@ -24,7 +24,7 @@ struct CustomButton: View {
                 .frame(maxWidth: .infinity)
                 .frame(height: 55)
                 .background(isEnabled ? .green : .green.opacity(0.2))
-                .clipShape(RoundedRectangle(cornerRadius: 20))
+                .clipShape(RoundedRectangle(cornerRadius: 16))
         }
         .padding(.horizontal)
         .disabled(isEnabled)

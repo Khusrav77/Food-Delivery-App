@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct AddDeliveryAddressView: View {
+    // MARK: - Properties
     @ObservedObject var vm = DeliveryAddressViewModel()
+    
+    // MARK: - Body
     var body: some View {
-        VStack(spacing: 16) {
+        VStack(spacing: 20) {
             HStack {
                 Button {
                     vm.txtTitle = "Home"
@@ -22,7 +25,6 @@ struct AddDeliveryAddressView: View {
                         .font(.headline)
                         .frame(maxWidth: .infinity)
                         .foregroundStyle(vm.txtTitle == "Home" ? Color.green : Color.gray)
-                    
                 }
                 
                 Button {
@@ -50,27 +52,33 @@ struct AddDeliveryAddressView: View {
                 }
                 
             }
+            .padding(.vertical)
             .buttonStyle(.plain)
             
-            TextField("Введите Имя", text: $vm.txtName)
-            TextField("Номер телефона", text: $vm.txtName)
-            TextField("Город", text: $vm.txtName)
+            CustomInfoTF(title: "Введите Имя", text: $vm.txtName)
+                
+            CustomInfoTF(title: "Номер телефон", text: $vm.txtPhone)
+            
+            CustomInfoTF(title: "Город", text: $vm.txtCity)
+            
             HStack {
-                TextField("Улица", text: $vm.txtName)
-                TextField("Дом", text: $vm.txtName)
+                CustomInfoTF(title: "Улица", text: $vm.txtStreet)
+                CustomInfoTF(title: "Дом", text: $vm.txtHouseNumber)
             }
             
             HStack {
-                TextField("Поезд", text: $vm.txtName)
-                TextField("Этаж", text: $vm.txtName)
+                CustomInfoTF(title: "Поезд", text: $vm.txtName)
+                CustomInfoTF(title: "Этаж", text: $vm.txtName)
             }
             
-            TextField("Домофон", text: $vm.txtName)
+            CustomInfoTF(title: "Домофон", text: $vm.txtName)
             
             SaveButton(title: "Сохранить", action: {})
+                .padding(.vertical)
             
             Spacer()
         }
+        .padding(.top)
         .padding()
         .navigationTitle("Адрес доставки")
         .navigationBarTitleDisplayMode(.inline)

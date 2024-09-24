@@ -26,7 +26,7 @@ struct ForgotPasswordView: View {
                 .frame(height: 55)
                 .padding(.leading)
                 .background(.gray.opacity(0.1))
-                .clipShape(.rect(cornerRadius: 20))
+                .clipShape(.rect(cornerRadius: 16))
                 .padding(.horizontal)
             
             SaveButton(title: "Send") {}

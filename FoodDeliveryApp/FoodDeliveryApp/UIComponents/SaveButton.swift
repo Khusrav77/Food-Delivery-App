@@ -20,9 +20,8 @@ struct SaveButton: View {
                 .frame(maxWidth: .infinity)
                 .frame(height: 55)
                 .background(Color.green)
-                .clipShape(RoundedRectangle(cornerRadius: 20))
+                .clipShape(RoundedRectangle(cornerRadius: 16))
         }
-        .padding()
     }
 }
 

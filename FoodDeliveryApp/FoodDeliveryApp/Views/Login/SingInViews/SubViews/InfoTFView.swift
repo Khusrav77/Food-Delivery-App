@@ -17,12 +17,11 @@ struct InfoTFView: View {
     var body: some View {
         ZStack(alignment: .leading) {
             TextField("", text: $text)
-                .keyboardType(.phonePad)
                 .frame(maxWidth: .infinity)
                 .frame(height: 55).focused($isActive)
                 .padding(.leading)
                 .background(.gray.opacity(0.1))
-                .clipShape(.rect(cornerRadius: 20))
+                .clipShape(.rect(cornerRadius: 16))
             
             Text(title).padding(.leading)
                 .foregroundStyle(isActive ? .gray : .gray20)

@@ -27,7 +27,6 @@ struct VerificationView: View {
             }
             .padding(.horizontal)
             
-            
             Button {
                 
             } label: {

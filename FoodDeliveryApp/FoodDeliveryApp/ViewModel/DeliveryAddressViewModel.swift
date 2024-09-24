@@ -14,6 +14,7 @@ final class DeliveryAddressViewModel: ObservableObject {
     
     @Published var txtTitle: String = ""
     @Published var txtName: String = ""
+    @Published var txtPhone: String = ""
     @Published var txtCity: String = ""
     @Published var txtStreet: String = ""
     @Published var txtHouseNumber: String = ""
@@ -42,6 +43,7 @@ final class DeliveryAddressViewModel: ObservableObject {
     func clearAll() {
         txtTitle = "Home"
         txtName = ""
+        txtPhone = ""
         txtCity = ""
         txtStreet = ""
         txtHouseNumber = ""
@@ -55,6 +57,7 @@ final class DeliveryAddressViewModel: ObservableObject {
     func setData(address: Address) {
         txtTitle = address.title
         txtName = address.name ?? ""
+        txtPhone = address.phone ?? ""
         txtCity = address.city
         txtStreet = address.street
         txtHouseNumber = address.houseNumber

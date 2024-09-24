@@ -23,7 +23,7 @@ struct PasswordTF: View {
                 .frame(maxWidth: .infinity)
                 .frame(height: 55)
                 .background(Color.gray.opacity(0.1))
-                .clipShape(RoundedRectangle(cornerRadius: 20))
+                .clipShape(RoundedRectangle(cornerRadius: 16))
                 .opacity(showPassword ? 0 : 1)
                 
             TextField("", text: $text)
@@ -31,7 +31,7 @@ struct PasswordTF: View {
                 .frame(maxWidth: .infinity)
                 .frame(height: 55).focused($isActive)
                 .background(Color.gray.opacity(0.1))
-                .clipShape(RoundedRectangle(cornerRadius: 20))
+                .clipShape(RoundedRectangle(cornerRadius: 16))
                 .opacity(showPassword ? 1 : 0)
             
             Text(title).padding(.leading)

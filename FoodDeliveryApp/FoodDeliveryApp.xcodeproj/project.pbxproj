@@ -91,6 +91,7 @@
 		A48E7ED72CA316D000C6D037 /* OrView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48E7ED62CA316D000C6D037 /* OrView.swift */; };
 		A48E7ED92CA3355B00C6D037 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48E7ED82CA3355B00C6D037 /* SignUpView.swift */; };
 		A48E7EDB2CA33DFC00C6D037 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48E7EDA2CA33DFC00C6D037 /* ForgotPasswordView.swift */; };
+		A48E7EDD2CA34B5B00C6D037 /* CustomInfoTF.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48E7EDC2CA34B5B00C6D037 /* CustomInfoTF.swift */; };
 		A499C50E2C03C7B500F5F371 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A499C50D2C03C7B500F5F371 /* SignInView.swift */; };
 		A499C5112C0520CA00F5F371 /* AlfaSlabOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A499C50F2C0520CA00F5F371 /* AlfaSlabOne-Regular.ttf */; };
 		A499C5292C0523D600F5F371 /* FiraSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A499C5162C0523D500F5F371 /* FiraSans-Bold.ttf */; };
@@ -196,6 +197,7 @@
 		A48E7ED62CA316D000C6D037 /* OrView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrView.swift; sourceTree = "<group>"; };
 		A48E7ED82CA3355B00C6D037 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		A48E7EDA2CA33DFC00C6D037 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
+		A48E7EDC2CA34B5B00C6D037 /* CustomInfoTF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInfoTF.swift; sourceTree = "<group>"; };
 		A499C50D2C03C7B500F5F371 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		A499C50F2C0520CA00F5F371 /* AlfaSlabOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlfaSlabOne-Regular.ttf"; sourceTree = "<group>"; };
 		A499C5162C0523D500F5F371 /* FiraSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraSans-Bold.ttf"; sourceTree = "<group>"; };
@@ -443,6 +445,7 @@
 				A4BB21B12C9C4BB30013390D /* CustomRegulatorButton.swift */,
 				A4E517F42CA1EC95007B931B /* DownButton.swift */,
 				A4E517F62CA1F115007B931B /* SaveButton.swift */,
+				A48E7EDC2CA34B5B00C6D037 /* CustomInfoTF.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -983,6 +986,7 @@
 				A46CFE422C0B90B500BF88DD /* ProductCardView.swift in Sources */,
 				A46C57162C9F428D006AD5CB /* ConfirmOrderButton.swift in Sources */,
 				A466424A2C0335820025096A /* FoodDeliveryAppApp.swift in Sources */,
+				A48E7EDD2CA34B5B00C6D037 /* CustomInfoTF.swift in Sources */,
 				A46C57182C9F435E006AD5CB /* CustomRemoteControlButton.swift in Sources */,
 				A462E5D52C202D030078B7EA /* CartViewModel.swift in Sources */,
 				A45A898B2C0DE0FF0015A0A4 /* Product.swift in Sources */,

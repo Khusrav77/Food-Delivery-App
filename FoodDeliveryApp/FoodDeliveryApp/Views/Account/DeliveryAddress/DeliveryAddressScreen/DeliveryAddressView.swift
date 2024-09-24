@@ -22,7 +22,7 @@ struct DeliveryAddressView: View {
                 }
                 .padding(.top)
                 .padding()
-                .navigationBarTitle("Мой адрес")
+                .navigationBarTitle("Мои адреса")
                 .navigationBarTitleDisplayMode(.inline)
                 .navigationBarBackButtonHidden(true)
                 .toolbar {
