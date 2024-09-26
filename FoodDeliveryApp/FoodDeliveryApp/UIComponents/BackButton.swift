@@ -16,7 +16,7 @@ struct BackButton: View {
             Image(systemName: "chevron.left")
                 .font(.title3)
                 .foregroundColor(.black.opacity(0.5))
-                .padding()
+                .padding(12)
                 .background(.gray.opacity(0.1))
                 .clipShape(Circle())
         }

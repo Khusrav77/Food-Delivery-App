@@ -34,7 +34,7 @@ struct AccountRow: View {
         .frame(maxWidth: .infinity)
         .background(Color.white)
         .clipShape(RoundedRectangle(cornerRadius: 20))
-        .shadow(color: .black.opacity(0.1), radius: 3, x: 0, y: 3)
+        .shadow(color: .black.opacity(0.1), radius: 0, x: 0, y: 2)
         .buttonStyle(.plain)
     }
 }

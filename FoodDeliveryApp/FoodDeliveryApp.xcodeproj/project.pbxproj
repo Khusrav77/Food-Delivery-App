@@ -117,6 +117,8 @@
 		A4E517F32CA1A086007B931B /* AddDeliveryAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E517F22CA1A086007B931B /* AddDeliveryAddressView.swift */; };
 		A4E517F52CA1EC95007B931B /* DownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E517F42CA1EC95007B931B /* DownButton.swift */; };
 		A4E517F72CA1F115007B931B /* SaveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E517F62CA1F115007B931B /* SaveButton.swift */; };
+		A4EC904D2CA5F9B100D2B49E /* ProfileInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EC904C2CA5F9B100D2B49E /* ProfileInfo.swift */; };
+		A4EC904F2CA5FA6C00D2B49E /* DeteilProfileInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EC904E2CA5FA6C00D2B49E /* DeteilProfileInfo.swift */; };
 		A4F4A8272C111E9200EBC384 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F4A8262C111E9200EBC384 /* SignInViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -225,6 +227,8 @@
 		A4E517F22CA1A086007B931B /* AddDeliveryAddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeliveryAddressView.swift; sourceTree = "<group>"; };
 		A4E517F42CA1EC95007B931B /* DownButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownButton.swift; sourceTree = "<group>"; };
 		A4E517F62CA1F115007B931B /* SaveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveButton.swift; sourceTree = "<group>"; };
+		A4EC904C2CA5F9B100D2B49E /* ProfileInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfo.swift; sourceTree = "<group>"; };
+		A4EC904E2CA5FA6C00D2B49E /* DeteilProfileInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeteilProfileInfo.swift; sourceTree = "<group>"; };
 		A4F4A8262C111E9200EBC384 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -709,10 +713,11 @@
 		A4BA40C42C9FDC1200E2EA82 /* Account */ = {
 			isa = PBXGroup;
 			children = (
-				A4BA40C72C9FDD0200E2EA82 /* ProfileScreen */,
-				A4BA40D62CA0566A00E2EA82 /* DeliveryAddress */,
+				A4EC904A2CA5EA9500D2B49E /* Main */,
 				A4BA40D52CA0561F00E2EA82 /* MyInfo */,
-				A4BA40D72CA056D600E2EA82 /* Orders */,
+				A4BA40D62CA0566A00E2EA82 /* DeliveryAddress */,
+				A4BA40D72CA056D600E2EA82 /* MyOrders */,
+				A4EC904B2CA5EBFD00D2B49E /* Payment */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -720,7 +725,7 @@
 		A4BA40C52C9FDCE100E2EA82 /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
-				A4BA40D32CA020F500E2EA82 /* AccountRow.swift */,
+				A4EC904E2CA5FA6C00D2B49E /* DeteilProfileInfo.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -728,8 +733,7 @@
 		A4BA40C72C9FDD0200E2EA82 /* ProfileScreen */ = {
 			isa = PBXGroup;
 			children = (
-				A4BA40D12CA0192500E2EA82 /* AccountView.swift */,
-				A4BA40C52C9FDCE100E2EA82 /* SubViews */,
+				A4EC904C2CA5F9B100D2B49E /* ProfileInfo.swift */,
 			);
 			path = ProfileScreen;
 			sourceTree = "<group>";
@@ -793,6 +797,8 @@
 		A4BA40D52CA0561F00E2EA82 /* MyInfo */ = {
 			isa = PBXGroup;
 			children = (
+				A4BA40C72C9FDD0200E2EA82 /* ProfileScreen */,
+				A4BA40C52C9FDCE100E2EA82 /* SubViews */,
 			);
 			path = MyInfo;
 			sourceTree = "<group>";
@@ -806,11 +812,11 @@
 			path = DeliveryAddress;
 			sourceTree = "<group>";
 		};
-		A4BA40D72CA056D600E2EA82 /* Orders */ = {
+		A4BA40D72CA056D600E2EA82 /* MyOrders */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Orders;
+			path = MyOrders;
 			sourceTree = "<group>";
 		};
 		A4E517F02CA1A001007B931B /* SubViews */ = {
@@ -828,6 +834,22 @@
 				A4BA40D82CA0579300E2EA82 /* DeliveryAddressView.swift */,
 			);
 			path = DeliveryAddressScreen;
+			sourceTree = "<group>";
+		};
+		A4EC904A2CA5EA9500D2B49E /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				A4BA40D12CA0192500E2EA82 /* AccountView.swift */,
+				A4BA40D32CA020F500E2EA82 /* AccountRow.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		A4EC904B2CA5EBFD00D2B49E /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Payment;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -976,6 +998,7 @@
 				A45168B72C9A1E680036D44B /* TabBarView.swift in Sources */,
 				A4E517F72CA1F115007B931B /* SaveButton.swift in Sources */,
 				A44D35E82C9B7CE0007BD140 /* CardImageView.swift in Sources */,
+				A4EC904D2CA5F9B100D2B49E /* ProfileInfo.swift in Sources */,
 				A48E7EDB2CA33DFC00C6D037 /* ForgotPasswordView.swift in Sources */,
 				A47638692C18736200763BE9 /* PromoCode.swift in Sources */,
 				A476385D2C18725400763BE9 /* Address.swift in Sources */,
@@ -989,6 +1012,7 @@
 				A48E7ED32CA2E1E100C6D037 /* PasswordTF.swift in Sources */,
 				A46CFE422C0B90B500BF88DD /* ProductCardView.swift in Sources */,
 				A46C57162C9F428D006AD5CB /* ConfirmOrderButton.swift in Sources */,
+				A4EC904F2CA5FA6C00D2B49E /* DeteilProfileInfo.swift in Sources */,
 				A466424A2C0335820025096A /* FoodDeliveryAppApp.swift in Sources */,
 				A48E7EDD2CA34B5B00C6D037 /* CustomInfoTF.swift in Sources */,
 				A46C57182C9F435E006AD5CB /* CustomRemoteControlButton.swift in Sources */,

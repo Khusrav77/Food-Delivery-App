@@ -13,24 +13,7 @@ struct AccountView: View {
     var body: some View {
         NavigationStack {
             VStack(spacing: 15) {
-                HStack(spacing: 15) {
-                    Image(systemName: "person.crop.circle")
-                        .resizable()
-                        .foregroundStyle(.secondary)
-                        .frame(width: 60, height: 60)
-                        .clipShape(Circle())
-                    VStack(alignment: .leading) {
-                        Text("Your nament")
-                            .font(.headline)
-                        
-                        Text("Your email")
-                            .font(.subheadline)
-                    }
-                    Spacer()
-                    Image(systemName: "pencil")
-                    
-                }
-                Divider()
+                ProfileInfo()
                 
                 ScrollView {
                     AccountRow(title: "Мои данные", imageOne: "person", imageTwo: "chevron.right")
