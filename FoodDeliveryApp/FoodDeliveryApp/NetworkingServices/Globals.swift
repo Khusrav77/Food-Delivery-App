@@ -9,7 +9,7 @@ import Foundation
 
 struct Globals {
     
-    static let AppName = "Halal Product"
+    static let AppName = "Product"
     
     static let BASE_URL = ""
     

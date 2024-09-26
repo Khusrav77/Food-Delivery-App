@@ -35,13 +35,13 @@ struct AccountView: View {
                 ScrollView {
                     AccountRow(title: "Мои данные", imageOne: "person", imageTwo: "chevron.right")
                     
-                    AccountRow(title: "Мои адреса", imageOne: "mappin.and.ellipse", imageTwo: "chevron.right")
-                        .onTapGesture {
-                            isPresented = true
-                        }
-                        .sheet(isPresented: $isPresented) {
-                            DeliveryAddressView(vm: vmaddress)
-                        }
+                    NavigationLink(destination: DeliveryAddressView(vm: vmaddress)) {
+                        AccountRow(title: "Мои адреса", imageOne: "mappin.and.ellipse", imageTwo: "chevron.right")
+                           
+                    }
+                    .buttonStyle(.plain)
+                    
+                        
 
                     AccountRow(title: "Заказы", imageOne: "cart", imageTwo: "chevron.right")
                     

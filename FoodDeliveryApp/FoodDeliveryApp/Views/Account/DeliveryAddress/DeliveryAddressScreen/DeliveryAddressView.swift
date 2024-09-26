@@ -28,7 +28,7 @@ struct DeliveryAddressView: View {
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button {
-                            
+                            vm.showaddedAddress.toggle()
                         } label: {
                             Image(systemName: "plus")
                                 .font(.title3)
@@ -36,9 +36,13 @@ struct DeliveryAddressView: View {
                         }
                         .buttonStyle(.plain)
                     }
+                    
                     ToolbarItem(placement: .navigationBarLeading) {
                         BackButton()
                     }
+                }
+                .sheet(isPresented: $vm.showaddedAddress) {
+                    AddDeliveryAddressView()
                 }
             }
         }

@@ -13,7 +13,7 @@ struct DownButton: View {
         Button {
             dismiss()
         }label: {
-            Image(systemName: "chevron.down")
+            Image(systemName: "xmark")
                 .font(.headline)
                 .foregroundColor(.black.opacity(0.5))
                 .padding()

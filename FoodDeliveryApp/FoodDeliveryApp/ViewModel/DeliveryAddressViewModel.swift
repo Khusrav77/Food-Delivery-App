@@ -25,9 +25,10 @@ final class DeliveryAddressViewModel: ObservableObject {
     @Published var txtComment: String = ""
     @Published var isSelected: Bool = false
     
+    
     @Published var showError = false
     @Published var errorMessage = ""
-    @Published var isLoading = false
+    @Published var showaddedAddress = false
     
     @Published var address: [Address] = [
         Address(id: 1,title: "Home", name: "ggggg", city: "Санкт-Петербург", street: "Невский проспект", houseNumber: "12,", apartmentOrOffice: "кв 34,", entrance: "Подъезд 1,", floor: "этаж 3,", postalCode: "191025", comment: "Доставка в офис", isSelected: false),
