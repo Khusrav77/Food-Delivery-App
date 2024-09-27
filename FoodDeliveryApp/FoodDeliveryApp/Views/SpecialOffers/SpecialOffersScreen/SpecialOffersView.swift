@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SpecialOffersView: View {
-    @ObservedObject var vm = MockDataClass()
+    @ObservedObject var vm = ProductViewModel()
         
         var body: some View {
             VStack {
@@ -20,7 +20,7 @@ struct SpecialOffersView: View {
                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 12) {
-                        ForEach(vm.mockProducts) { product in
+                        ForEach(vm.producList) { product in
                             ProductRowView(product: product)
                         }
                     }
@@ -34,7 +34,7 @@ struct SpecialOffersView: View {
                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 12) {
-                        ForEach(vm.mockProducts) { product in
+                        ForEach(vm.producList) { product in
                             ProductRowView(product: product)
                         }
                     }

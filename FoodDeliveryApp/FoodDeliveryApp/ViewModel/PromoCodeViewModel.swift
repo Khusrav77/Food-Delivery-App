@@ -8,7 +8,7 @@
 import Foundation
 
 
-final class PromoCodeViewModel {
+final class PromoCodeViewModel: ObservableObject {
     @Published var promoCodes: [PromoCode] = []
     
     @Published var showError = false

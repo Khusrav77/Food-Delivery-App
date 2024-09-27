@@ -21,8 +21,8 @@ struct ExploreView: View {
                 
                 ScrollView(showsIndicators: false) {
                     LazyVGrid(columns: columns) {
-                        ForEach(exploreMV.listCategory, id: \.id) {current in
-                            NavigationLink(destination: ExploreItemView(vm: ExploreItemsViewModel(expItems:current))) { ExploreCategoryCell(model: current)
+                        ForEach(exploreMV.listCategories, id: \.id) {current in
+                            NavigationLink(destination: ExploreItemView(vm: ExploreItemsViewModel(expItems:current))) { ExploreCategoryCell(category: current)
                                     .aspectRatio(0.95,contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
                             }
                         }

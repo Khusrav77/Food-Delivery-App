@@ -10,27 +10,24 @@ import Foundation
 
 struct OrderItem: Identifiable, Equatable, Codable {
     var id: UUID = UUID()
-    var prodId: Int
-    var catId: Int
-    var brandId: Int
-    var typeId: Int
     var orderId: Int
-    var quantityiInCart: Int
-    var detail: String
+    var prodId: Int
+    var typeId: Int
+    var typeName: String
+    var brandId: Int
     var name: String
+    var detail: String
     var unitName: String
     var unitValue: String
     var nutritionWeight: String
+    var quantityInCart: Int
     var image: String
-    var catName: String
-    var typeName: String
+    var price: Int
     var offerPrice: Int?
     var itemPrice: Int
-    var totalPrice: Int
-    var price: Int
+    var totalPrice: Int?
     var startDate: Date = Date()
     var endDate: Date = Date()
-    var isFav: Bool = false
       
       
     static func == (lhs: OrderItem, rhs: OrderItem) -> Bool {

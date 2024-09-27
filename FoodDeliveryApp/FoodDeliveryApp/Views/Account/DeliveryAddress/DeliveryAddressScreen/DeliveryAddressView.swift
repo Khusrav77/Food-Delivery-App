@@ -16,9 +16,9 @@ struct DeliveryAddressView: View {
         NavigationStack {
             ScrollView {
                 LazyVStack(spacing: 15) {
-                    ForEach(vm.address) { address in
-                        AddresRowView(address: address, action: {})
-                    }
+                        ForEach(vm.address) { address in
+                            AddresRowView(address: address, action: {})
+                        }
                 }
                 .padding(.top)
                 .padding()

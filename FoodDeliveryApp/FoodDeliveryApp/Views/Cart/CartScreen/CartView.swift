@@ -6,29 +6,29 @@
 //
 
 import SwiftUI
+import FirebaseFirestore
 
 struct CartView: View {
     // MARK: - Properties
-      // @FirestoreQuery(collectionPath: "Shop") private var items: [Product]
+    @FirestoreQuery(collectionPath: "Shop") var items: [Product]
     @EnvironmentObject var vm: CartViewModel
-       // MARK: - Body
-       var body: some View {
-           
-           ZStack(alignment: .bottom){
-               VStack {
-//                   ScrollView(.vertical, showsIndicators: false){
-//                       ForEach(items.filter { $0.quantityinCart ?? 0 > 0 }) { item in
-//                           ProductRowView(product: item)
-//                               .padding(.horizontal,10)
-//                       }
-//                   }
-                  // .padding(.bottom, 50)
-               }
-               .navigationTitle("Cart")
-               
-//               ConfirmOrderButton(count: "\(vm.cartItemCount) товаров на сумму", total: "\(vm.totalPrice) ₽.")
-           }
-       }
+    // MARK: - Body
+    var body: some View {
+        NavigationStack {
+            ScrollView(.vertical, showsIndicators: false){
+                ForEach(items.filter { $0.quantityInCart > 0 }) { item in
+                    ProductRowView(product: item)
+                        .padding(.horizontal,10)
+                }
+                
+                ConfirmOrderButton(count: "\($vm.cartItems.count) товаров на сумму", total: "\($vm.total) ₽.")
+            }
+            .padding(.bottom, 50)
+        }
+        .navigationTitle("Cart")
+        
+        
+    }
 }
 
 #Preview {

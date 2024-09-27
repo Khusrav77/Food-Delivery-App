@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct ProductRowView: View {
-    let product: MockProductModel
+    let product: Product
     var body: some View {
         VStack {
             VStack(alignment: .leading) {
                 
                 ZStack(alignment: .top) {
-                    if let url = URL(string: product.imageName ?? "") {
+                    if let url = URL(string: product.image ?? "") {
                         CardImageView(url: url, width: .screenWidth / 2, height: .screenWidth / 2)
                             .padding(.top,8)
                     } else {
@@ -100,7 +100,7 @@ struct ProductRowView: View {
                     
                     // Country
                     HStack {
-                        Text(product.description ?? "")
+                        Text(product.nutritionWeight ?? "")
                             .subtitle()
                             .foregroundStyle(.black)
                             .multilineTextAlignment(.leading)
@@ -156,5 +156,5 @@ struct ProductRowView: View {
 }
 
 #Preview {
-    ProductRowView(product: MockProductModel(id: 1, name: "", category: "", price: 99))
+    ProductRowView(product: Product(id: 3, prodId: 3, catId: 1, brandId: 6, typeId: 4, orderId: 4, quantityInCart: 2, detail: "", name: "", unitName: "", unitValue: "", nutritionWeight: "", image: "", catName: "", typeName: "", offerPrice: 4, itemPrice: 45, totalPrice: 4, price: 56))
 }

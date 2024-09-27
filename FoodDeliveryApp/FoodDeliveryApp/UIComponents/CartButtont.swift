@@ -33,7 +33,7 @@ struct CartButtont: View {
                 .padding(4)
                 .background(Color.white)
                 .clipShape(Capsule())
-                .overlay(Capsule().stroke(Color.gray20, lineWidth: 0.5))
+                .overlay(Capsule().stroke(Color.gray.opacity(0.3), lineWidth: 0.5))
                 .shadow(color: .black.opacity(0.1), radius: 8, x: 5, y: 5)
             } else {
                 HStack(spacing: 16) {

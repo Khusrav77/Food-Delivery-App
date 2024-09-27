@@ -9,79 +9,36 @@ import SwiftUI
 
 struct ExploreItemView: View {
     // MARK: - Properties
-    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-    @StateObject var vm = ExploreItemsViewModel(expItems: ExploreCategory(id: 1, name: "", image: ""))
-   
+    @StateObject var vm = ExploreItemsViewModel(expItems: TypeCategory(id: 1, name: "", image: ""))
+    @ObservedObject var vmCategory = ExploreViewModel()
+    
     var colums = [
-        GridItem(.flexible(), spacing: 15),
-        GridItem(.flexible(), spacing: 15)
+        GridItem(.flexible(), spacing: 16),
+        GridItem(.flexible(), spacing: 16)
     ]
     
     // MARK: - Body
     var body: some View {
-        ZStack{
-            VStack{
-                HStack {
-                    Spacer()
-                    Button {
-                        
-                    } label: {
-                        Image(systemName: "arrowshape.turn.up.backward")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 24, height: 24)
-                            .foregroundColor(.gray)
-                            .padding(6)
-                            .background(Color.cardsColor)
-                            .clipShape(Circle())
-                            .shadow(color: .black.opacity(0.1), radius: 5, x: 0, y: 2)
+        NavigationStack {
+            ScrollView(.vertical, showsIndicators: false){
+                SearchTextFild(title: "Найти", text: $vm.searchItem )
+                LazyVGrid(columns: colums) {
+                    ForEach(vmCategory.listCategories, id: \.id) {category in
+                        ExploreCategoryCell(category: category )
+                            .padding(.vertical, 4)
                     }
-                    
-                    
-                    Text("Фрукты и ягоды")
-                        .font(.customfont(.medium, fontSize: 20))
-                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
-                    
-                    
-                    Button {
-                        mode.wrappedValue.dismiss()
-                    } label: {
-                        Image(systemName: "xmark")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 22, height: 22)
-                            .foregroundColor(.gray)
-                            .padding(6)
-                            .background(Color.cardsColor)
-                            .clipShape(Circle())
-                            .shadow(color: .black.opacity(0.1), radius: 5, x: 0, y: 2)
-                    }
-                    
-                }
-                .padding(.top, .topInsets)
-                .padding(.horizontal, 16)
-                Spacer()
-                
-                ScrollView{
-                    LazyVGrid(columns: colums) {
-                        ForEach(vm.listItems, id: \.id) {_ in
-//                            current in ProductCellView(product:  current)
-                        }
-                    }
-                    
                 }
             }
-                        
         }
-        .navigationTitle("")
+        .padding(.horizontal, 16)
+        .navigationTitle("Категории")
         .navigationBarBackButtonHidden(true)
-        .navigationBarHidden(true)
-        .ignoresSafeArea()
+        .ignoresSafeArea(edges: .bottom)
     }
 }
 
 #Preview {
-    NavigationView {
-        ExploreItemView(vm: ExploreItemsViewModel(expItems: ExploreCategory(id: 1, name: "", image: "")))
+    NavigationStack {
+        ExploreItemView(vm: ExploreItemsViewModel(expItems: TypeCategory(id: 1, name: "", image: "")))
     }
 }

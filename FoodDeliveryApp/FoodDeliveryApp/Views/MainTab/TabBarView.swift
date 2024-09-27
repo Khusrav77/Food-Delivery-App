@@ -23,12 +23,11 @@ struct TabBarView: View {
     
     // MARK: - Body
     var body: some View {
-        
         ZStack {
             RoundedRectangle(cornerRadius: 20)
                 .frame(height: 80)
-                .foregroundStyle(Color.gray.opacity(0.1))
-                .shadow(color: .black.opacity(0.2), radius: 3, x: 0, y: -2)
+                .foregroundStyle(Color(.systemGray6))
+                .shadow(color: .black.opacity(0.2), radius: 2, x: 0, y: -2)
             
             HStack {
                 ForEach(0..<5) { index in
@@ -48,7 +47,7 @@ struct TabBarView: View {
                             if index + 1 == vm.tabSelection {
                                 Capsule()
                                     .frame(height: 6)
-                                    .foregroundStyle(Color.orangePrimary)
+                                    .foregroundStyle(.green)
                                     .matchedGeometryEffect(id: "tabSelationID", in: animationNamespase)
                                 
                             } else {
@@ -58,11 +57,8 @@ struct TabBarView: View {
                                 
                             }
                         }
-                        .foregroundStyle(index + 1 == vm.tabSelection ? Color.orangePrimary : Color.gray50)
+                        .foregroundStyle(index + 1 == vm.tabSelection ? Color.green : Color.gray)
                         .padding(6)
-                        .background(index + 1 == vm.tabSelection ? Color.white.opacity(0.9) : Color.clear)
-                        .clipShape(RoundedRectangle(cornerRadius: 15))
-                        .shadow(radius: 1)
                     }
                 }
             }

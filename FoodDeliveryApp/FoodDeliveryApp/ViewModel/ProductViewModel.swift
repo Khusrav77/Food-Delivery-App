@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-final class ProductDetailViewModel: ObservableObject {
+final class ProductViewModel: ObservableObject {
     // MARK: - Properties
     @Published var showError = false
     @Published var errorMessage = ""
-    
+    @Published var producList: [Product] = []
     @Published var nutritions: [Nutrition] = []
     @Published var images: [ImageModel] = []
     

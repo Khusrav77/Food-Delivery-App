@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct ProductsView: View {
-    @StateObject var vm = MockDataClass()
+    @ObservedObject var vm = ProductViewModel()
     var columns = Array(repeating: GridItem(), count: 2)
     var body: some View {
         NavigationStack {
             ScrollView(.vertical, showsIndicators: false) {
                 CategoryListView()
                 LazyVGrid(columns: columns) {
-                    ForEach(vm.mockProducts) { product in
+                    ForEach(vm.producList) { product in
                         ProductCardView(product: product)
                            
                     }

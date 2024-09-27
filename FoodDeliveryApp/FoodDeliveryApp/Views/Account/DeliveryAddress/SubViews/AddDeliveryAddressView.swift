@@ -68,13 +68,20 @@ struct AddDeliveryAddressView: View {
                 }
                 
                 HStack {
-                    CustomInfoTF(title: "Подъезд", text: $vm.txtName)
-                    CustomInfoTF(title: "Этаж", text: $vm.txtName)
+                    CustomInfoTF(title: "Подъезд", text: $vm.txtEntrance)
+                    CustomInfoTF(title: "Этаж", text: $vm.txtFloor)
                 }
                 
-                CustomInfoTF(title: "Домофон", text: $vm.txtName)
+                HStack {
+                    CustomInfoTF(title: "кв/офис", text: $vm.txtPostalCode)
+                    
+                    CustomInfoTF(title: "Домофон", text: $vm.txtApartmentOrOffice)
+                }
+                CustomInfoTF(title: "Коментарий", text: $vm.txtComment)
                 
-                SaveButton(title: "Сохранить", action: {})
+                SaveButton(title: "Сохранить", action: {
+                    vm.saveAddress()
+                })
                     .padding(.vertical)
                 
                 Spacer()

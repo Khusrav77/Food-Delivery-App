@@ -9,7 +9,6 @@ import SwiftUI
 
 struct HomeView: View {
     @ObservedObject var vmh = HomeViewModel()
-    @ObservedObject var vm = MockDataClass()
    
     var body: some View {
         NavigationStack {

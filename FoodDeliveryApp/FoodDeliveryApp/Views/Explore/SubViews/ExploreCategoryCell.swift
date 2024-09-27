@@ -8,55 +8,31 @@
 import SwiftUI
 
 struct ExploreCategoryCell: View {
-    @State var model: ExploreCategory
-    @State private var counter = 0
-    var didAddCart: (() -> Void)?
+    @State var category: TypeCategory
     
     var body: some View {
-        VStack {
-            HStack{
-                Spacer()
-                Image (systemName: "heart")
-            }
-            
-            Image("app_logoG")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 80, height: 100)
-                .padding(.top, 8)
-            
-            
-            
-            Text("Банан")
-                .font(.customfont(.regular, fontSize: 16))
-                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-            
-            
-            HStack {
-                Group {
-                    
-                    Text("1к")
-                    Text("100$")
-                    
-                }
-                .font(.customfont(.regular, fontSize: 16))
-                
-                Spacer()
-            }
-            
+        VStack(alignment: .leading) {
+            Text(category.name)
+                .font(.headline)
+                .padding([.top, .leading], 10)
             Spacer()
             
-            CartButtont(counter: $counter, isSelect: false, title: "В корзину", width: .infinity, height: 24)
-            
+            HStack {
+                Spacer()
+                Image(category.image)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 100, height: 100)
+                    .padding([.bottom, .trailing], 10)
+            }
         }
-        .padding(8)
-        .frame(width: 180, height: 230)
-        .background(Color(hex: "F8F6F1"))
+        .frame(width: .infinity, height: 160)
+        .background(category.color ?? Color(.systemGray6))
         .cornerRadius(16)
         .overlay(RoundedRectangle(cornerRadius: 16).stroke(Color.black.opacity(0.1)))
     }
 }
   
 #Preview {
-    ExploreCategoryCell(model: ExploreCategory(id: 1, name: "Test", image: "", color: .red))
+    ExploreCategoryCell(category: TypeCategory(id: 1, name: "Test", image: "app_logoG", color: .purple))
 }

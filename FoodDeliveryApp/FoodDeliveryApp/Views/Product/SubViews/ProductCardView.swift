@@ -13,7 +13,7 @@ import SwiftUI
 struct ProductCardView: View {
     
     // MARK: - Properties
-    let product: MockProductModel
+    let product: Product
     @State private var counter = 0
     var didAddCart: (() -> Void)?
     
@@ -27,7 +27,7 @@ struct ProductCardView: View {
                 VStack(alignment: .leading) {
                     
                     ZStack(alignment: .top) {
-                        if let url = URL(string: product.imageName ?? "") {
+                        if let url = URL(string: product.image ?? "") {
                             CardImageView(url: url, width: size.width, height: size.height * 0.5)
                                 .padding(.top,8)
                         } else {
@@ -113,7 +113,7 @@ struct ProductCardView: View {
                         
                         // Country
                         HStack {
-                            Text(product.description ?? "")
+                            Text(product.detail ?? "")
                                 .subtitle()
                                 .foregroundStyle(.black)
                                 .multilineTextAlignment(.leading)
@@ -171,6 +171,6 @@ struct ProductCardView: View {
 
 
 #Preview {
-    ProductCardView(product: MockProductModel(id: 1, name: "Банан", category: "", price: 345, description: "bjgbjgnbjgn"))
+    ProductCardView(product: Product(id: 3, prodId: 2, catId: 2, brandId: 2, typeId: 2, orderId: 2, quantityInCart: 2, detail: "", name: "", unitName: "", unitValue: "", nutritionWeight: "", image: "", catName: "", typeName: "", offerPrice: 4, itemPrice: 45, totalPrice: 67, price: 99))
     
 }

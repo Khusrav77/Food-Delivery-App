@@ -25,7 +25,7 @@ struct CategoryListView: View {
                     }label: {
                         Text(category)
                             .font(.system(size: 16, weight: .bold, design: .rounded))
-                            .foregroundStyle(category  == isSelectedCategory ? Color.orangePrimary : Color.black.opacity(0.5))
+                            .foregroundStyle(category  == isSelectedCategory ? Color.orange : Color.black.opacity(0.5))
                             .padding(.horizontal, 15)
                             .padding(.vertical, 10)
                             .background(category  == isSelectedCategory ? Color.white : Color.gray.opacity(0.1))

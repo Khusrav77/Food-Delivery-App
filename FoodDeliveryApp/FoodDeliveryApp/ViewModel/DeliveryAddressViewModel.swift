@@ -12,8 +12,7 @@ final class DeliveryAddressViewModel: ObservableObject {
     // MARK: - Properties
     static var shared: DeliveryAddressViewModel = DeliveryAddressViewModel()
     
-    @Published var txtTitle: String = ""
-    @Published var txtName: String = ""
+    @Published var txtName: String = "Home"
     @Published var txtPhone: String = ""
     @Published var txtCity: String = ""
     @Published var txtStreet: String = ""
@@ -25,38 +24,18 @@ final class DeliveryAddressViewModel: ObservableObject {
     @Published var txtComment: String = ""
     @Published var isSelected: Bool = false
     
-    
     @Published var showError = false
     @Published var errorMessage = ""
     @Published var showaddedAddress = false
     
-    @Published var address: [Address] = [
-        Address(id: 1,title: "Home", name: "ggggg", city: "Санкт-Петербург", street: "Невский проспект", houseNumber: "12,", apartmentOrOffice: "кв 34,", entrance: "Подъезд 1,", floor: "этаж 3,", postalCode: "191025", comment: "Доставка в офис", isSelected: false),
-                Address(id: 2,title: "Home", name: "Офис", city: "Москва", street: "ул.Арбат", houseNumber: "25,", apartmentOrOffice: "офис 45,", entrance: "", floor: "этаж 5,", postalCode: "119002", comment: "Доставка домой", isSelected: true),
-                Address(id: 3,title: "Home", name: "Родители", city: "Казань", street: "Пушкина", houseNumber: "10,", apartmentOrOffice: "кв 109,", entrance: "Подъезд 3,", floor: "этаж 7,", postalCode: "420015", comment: "Без звонка", isSelected: false)
-            
-    ]
+    @Published var address: [Address] = []
     
     init() {
         serviceCallList()
     }
     
-    func clearAll() {
-        txtTitle = "Home"
-        txtName = ""
-        txtPhone = ""
-        txtCity = ""
-        txtStreet = ""
-        txtHouseNumber = ""
-        txtApartmentOrOffice = ""
-        txtEntrance = ""
-        txtFloor = ""
-        txtPostalCode = ""
-        txtComment = ""
-    }
     
     func setData(address: Address) {
-        txtTitle = address.title
         txtName = address.name ?? ""
         txtPhone = address.phone ?? ""
         txtCity = address.city
@@ -69,20 +48,42 @@ final class DeliveryAddressViewModel: ObservableObject {
         txtComment = address.comment ?? ""
     }
     
+    func saveAddress() {
+        let newId = (address.map { $0.id }.max() ?? 0) + 1
+        let newAddress = Address(
+            id: newId,
+            name: txtName,
+            city: txtCity,
+            street: txtStreet,
+            houseNumber: txtHouseNumber,
+            apartmentOrOffice: txtApartmentOrOffice,
+            entrance: txtEntrance,
+            floor: txtFloor,
+            postalCode: txtPostalCode,
+            comment: txtComment
+        )
+        address.append(newAddress)
+        print("Новый адрес добавлен: \(newAddress)")
+            print("Текущий список адресов: \(address)")
+        showaddedAddress.toggle()
+        clearAll()
+    }
+    
+    private  func clearAll() {
+        txtName = "Home"
+        txtPhone = ""
+        txtCity = ""
+        txtStreet = ""
+        txtHouseNumber = ""
+        txtApartmentOrOffice = ""
+        txtEntrance = ""
+        txtFloor = ""
+        txtPostalCode = ""
+        txtComment = ""
+    }
+    
     // MARK: - SERVICE CALL
     func serviceCallList() {
-       
-    }
-    
-    func serviceCallRemove(address: Address) {
-       
-    }
-    
-    func serviceCallUpdateAddress(address: Address?, didDone: (() -> ())?) {
-       
-    }
-    
-    func serviceCallAddAddress(didDone: (() -> ())?) {
-       
+        
     }
 }

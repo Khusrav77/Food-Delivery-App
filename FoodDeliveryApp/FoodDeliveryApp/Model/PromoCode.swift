@@ -13,7 +13,7 @@ struct PromoCode: Identifiable, Equatable {
     var type: Int
     var title: String
     var code: String
-    var description: String
+    var details: String
     var startDate: Date = Date()
     var endDate: Date = Date()
     var minOrderAmount: Int

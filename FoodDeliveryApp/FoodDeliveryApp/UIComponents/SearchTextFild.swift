@@ -31,7 +31,7 @@ struct SearchTextFild: View {
         }
         .frame(height: 55)
         .clipShape(RoundedRectangle(cornerRadius: 16))
-        .overlay(RoundedRectangle(cornerRadius: 16).stroke(Color.gray20, lineWidth: 0.5))
+        .overlay(RoundedRectangle(cornerRadius: 16).stroke(Color.gray.opacity(0.3), lineWidth: 0.5))
     }
 }
 

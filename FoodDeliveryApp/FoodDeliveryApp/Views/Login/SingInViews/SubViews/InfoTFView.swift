@@ -24,7 +24,7 @@ struct InfoTFView: View {
                 .clipShape(.rect(cornerRadius: 16))
             
             Text(title).padding(.leading)
-                .foregroundStyle(isActive ? .gray : .gray20)
+                .foregroundStyle(isActive ? .gray : .gray.opacity(0.3))
                 .offset(y: (isActive || !text.isEmpty) ? -45 : 0)
                 .animation(.spring, value: isActive)
                 .onTapGesture {

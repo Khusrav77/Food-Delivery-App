@@ -7,10 +7,11 @@
 
 import Foundation
 
-class MyOrderViewModel: ObservableObject {
+class OrderViewModel: ObservableObject {
     // MARK: - Properties
-    static var sharred: MyOrderViewModel = MyOrderViewModel()
-    @Published var listMyOrder: [MyOrder] = []
+    static var sharred: OrderViewModel = OrderViewModel()
+    @Published var listMyOrders: [MyOrder] = []
+    @Published var listOrderItems: [OrderItem] = []
     
     @Published var showError = false
     @Published var errorMesage = ""

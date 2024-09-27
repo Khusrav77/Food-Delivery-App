@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AddToCartButton: View {
     // MARK: - Properties
-    let product: MockProductModel
+    let product: Product
     @State private var isExpanded: Bool = false
     
     // MARK: - Body
@@ -26,18 +26,18 @@ struct AddToCartButton: View {
                     VStack(spacing: 4) {
                         
                        // if let quantityinCart = product.quantityinCart {
-                        Text("\(product.quantityinCart ?? 0)")
+                        Text("\(product.quantityInCart)")
                                 .titleFont()
                                 .font(.system(size: 14, weight: .semibold))
                                 .foregroundColor(.white)
-                      //  }
+                       // }
                         
-                        if let quantityinCart = product.quantityinCart {
-                        let sum = quantityinCart * product.price
-                            Text("\(sum) ₽")
-                                .font(.system(size: 14))
-                                .foregroundColor(.white.opacity(0.8))
-                        }
+//                        if let quantityinCart = product.quantityInCart {
+//                        let sum = quantityinCart * product.price
+//                            Text("\(sum) ₽")
+//                                .font(.system(size: 14))
+//                                .foregroundColor(.white.opacity(0.8))
+//                        }
                     }
                     
                     Spacer()
@@ -70,5 +70,5 @@ struct AddToCartButton: View {
 }
 
 #Preview {
-    AddToCartButton(product: MockProductModel(id: 1, name: "Банан", category: "фрукты", price: 199))
+    AddToCartButton(product: Product(id: 2, prodId: 5, catId: 5, brandId: 3, typeId: 7, orderId: 7, quantityInCart: 2, detail: "", name: "", unitName: "", unitValue: "", nutritionWeight: "", image: "", catName: "", typeName: "", offerPrice: 4, itemPrice: 78, totalPrice: 90, price: 455))
 }

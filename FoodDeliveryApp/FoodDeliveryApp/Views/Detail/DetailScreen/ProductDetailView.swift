@@ -11,7 +11,7 @@ struct ProductDetailView: View {
     
     // MARK: - Properties
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-    @StateObject var vm = ProductDetailViewModel()
+    @StateObject var vm = ProductViewModel()
     @State private var isExpanded: Bool = false
     @State private var counter = 0
     @State private var selectedMode: NutritionMode = .per100g
@@ -49,7 +49,7 @@ struct ProductDetailView: View {
                                 .font(.headline)
                             
                             Capsule()
-                                .fill(Color.gray20)
+                                .fill(Color.gray.opacity(0.3))
                                 .frame(width: 2, height: 16)
                             
                             HStack(spacing: 0) {
@@ -97,7 +97,7 @@ struct ProductDetailView: View {
                                     }
                                     
                                     Capsule()
-                                        .fill(Color.gray20)
+                                        .fill(Color.gray.opacity(0.3))
                                         .frame(width: 2, height: 16)
                                     
                                     Button{
@@ -244,7 +244,7 @@ struct ProductDetailView: View {
 }
 
 #Preview {
-    ProductDetailView(product: Product(id: 1, prodId: 2, catId: 5, brandId: 7, typeId: 4, orderId: 5, quantityiInCart: 9, detail: "", name: "", unitName: "", unitValue: "", nutritionWeight: "", image: "", catName: "", typeName: "", offerPrice: 9, itemPrice: 7, totalPrice: 8, price: 99))
+    ProductDetailView(product: Product(id: 1, prodId: 2, catId: 5, brandId: 7, typeId: 4, orderId: 5, quantityInCart: 9, detail: "", name: "", unitName: "", unitValue: "", nutritionWeight: "", image: "", catName: "", typeName: "", offerPrice: 9, itemPrice: 7, totalPrice: 8, price: 99))
 }
 
 private var tabBar: some View {

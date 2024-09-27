@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CartRowView: View {
     // MARK: - Properties
-    let product: MockProductModel
+    let product: Product
     
     // MARK: - Body
     var body: some View {
@@ -27,18 +27,18 @@ struct CartRowView: View {
                     Text(product.name)
                         .titleFont()
                     
-                    HStack {
-                        if let quantityinCart = product.quantityinCart {
-                            let sum = quantityinCart * product.price
-                            Text("\(sum) ₽/кг")
-                                .titleFont()
-                        }
-                        
-                    }
-                    .padding(.horizontal,10)
-                    .padding(.vertical,5)
-                    .background(.gray.opacity(0.1))
-                    .clipShape(Capsule())
+//                    HStack {
+//                        if let quantity = product.quantityInCart {
+//                            let sum = quantity * product.price
+//                            Text("\(sum) ₽/кг")
+//                                .titleFont()
+//                        }
+//                        
+//                    }
+//                    .padding(.horizontal,10)
+//                    .padding(.vertical,5)
+//                    .background(.gray.opacity(0.1))
+//                    .clipShape(Capsule())
                 }
                 Spacer()
             }
@@ -54,5 +54,5 @@ struct CartRowView: View {
 }
 
 #Preview {
-    CartRowView(product: MockProductModel(id: 1, name: "Банан", category: "", price: 89))
+    CartRowView(product: Product(id: 1, prodId: 1, typeId: 1, quantityInCart: 1, name: "", unitName: "", unitValue: "", catName: "", typeName: "", price: 99))
 }

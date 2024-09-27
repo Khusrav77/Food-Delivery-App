@@ -9,13 +9,13 @@ import Foundation
 import SwiftUI
 
 
-struct ExploreCategory: Identifiable, Equatable {
+struct TypeCategory: Identifiable, Equatable {
     var id: Int
     var name: String
     var image: String
-    var color: Color = Color.cardsColor
+    var color: Color?
     
-    static func == (lhs: ExploreCategory, rhs: ExploreCategory) -> Bool {
+    static func == (lhs: TypeCategory, rhs: TypeCategory) -> Bool {
         return lhs.id == rhs.id
     }
 }

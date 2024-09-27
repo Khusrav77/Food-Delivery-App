@@ -12,7 +12,7 @@ import FirebaseFirestoreSwift
 
 struct User: Identifiable, Equatable, Codable {
     @DocumentID  var id: String?
-    var phoneNumber: String
+    var phone: String
     var name: String?
     var email: String?
     var authToken: String?

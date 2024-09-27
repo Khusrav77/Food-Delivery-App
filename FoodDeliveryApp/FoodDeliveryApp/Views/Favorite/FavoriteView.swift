@@ -25,6 +25,7 @@ struct FavoriteView: View {
             .padding(.horizontal, 8)
             .navigationTitle("Favorites")
             .navigationBarBackButtonHidden(true)
+            .ignoresSafeArea()
         }
     }
 }

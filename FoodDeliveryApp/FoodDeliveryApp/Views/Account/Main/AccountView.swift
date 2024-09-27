@@ -16,15 +16,11 @@ struct AccountView: View {
                 ProfileInfo()
                 
                 ScrollView {
-                    AccountRow(title: "Мои данные", imageOne: "person", imageTwo: "chevron.right")
-                    
                     NavigationLink(destination: DeliveryAddressView(vm: vmaddress)) {
                         AccountRow(title: "Мои адреса", imageOne: "mappin.and.ellipse", imageTwo: "chevron.right")
                            
                     }
                     .buttonStyle(.plain)
-                    
-                        
 
                     AccountRow(title: "Заказы", imageOne: "cart", imageTwo: "chevron.right")
                     

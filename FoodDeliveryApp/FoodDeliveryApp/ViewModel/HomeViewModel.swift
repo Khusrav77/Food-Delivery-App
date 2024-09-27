@@ -18,10 +18,11 @@ final class HomeViewModel: ObservableObject {
     @Published var showError = false
     @Published var errorMessage = ""
     
+    @Published var typeList: [TypeCategory] = []
     @Published var offerList: [Product] = []
     @Published var bestList: [Product] = []
-    @Published var producList: [Product] = []
-    @Published var typeList: [TypeModel] = []
+    
+     
     
     let navBarMenu = ["Продукты", "Готовое Еда", "Здоровья"]
    
