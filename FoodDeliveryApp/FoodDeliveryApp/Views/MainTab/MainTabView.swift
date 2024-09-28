@@ -27,7 +27,6 @@ struct MainTabView: View {
                 AccountView().tag(1)
                 
             }
-            .ignoresSafeArea()
             .overlay(alignment: .bottom) {
                 TabBarView(vm: vm)
                     .padding()

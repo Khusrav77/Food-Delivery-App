@@ -12,7 +12,8 @@ final class DeliveryAddressViewModel: ObservableObject {
     // MARK: - Properties
     static var shared: DeliveryAddressViewModel = DeliveryAddressViewModel()
     
-    @Published var txtName: String = "Home"
+    @Published var txtTitle: String = "Home"
+    @Published var txtName: String = ""
     @Published var txtPhone: String = ""
     @Published var txtCity: String = ""
     @Published var txtStreet: String = ""
@@ -36,6 +37,7 @@ final class DeliveryAddressViewModel: ObservableObject {
     
     
     func setData(address: Address) {
+        txtTitle = address.title
         txtName = address.name
         txtPhone = address.phone
         txtCity = address.city
@@ -52,6 +54,7 @@ final class DeliveryAddressViewModel: ObservableObject {
         let newId = (address.map { $0.id }.max() ?? 0) + 1
         let newAddress = Address(
             id: newId,
+            title: txtTitle,
             name: txtName,
             phone: txtPhone,
             city: txtCity,
@@ -71,7 +74,8 @@ final class DeliveryAddressViewModel: ObservableObject {
     }
     
     private  func clearAll() {
-        txtName = "Home"
+        txtTitle = "Home"
+        txtName = ""
         txtPhone = ""
         txtCity = ""
         txtStreet = ""

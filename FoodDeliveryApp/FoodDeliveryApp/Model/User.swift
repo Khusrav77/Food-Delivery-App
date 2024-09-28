@@ -22,6 +22,10 @@ struct User: Identifiable, Equatable, Codable {
     var createdAt: Date = Date()
     var updatedAt: Date = Date()
     var authMethod: AuthMethod
+    
+    mutating func updateTimestamp() {
+           self.updatedAt = Date()
+       }
 }
 
 enum AuthMethod: String, Codable {

@@ -17,39 +17,39 @@ struct AddDeliveryAddressView: View {
             VStack(spacing: 20) {
                 HStack {
                     Button {
-                        vm.txtName = "Home"
+                        vm.txtTitle = "Home"
                     }label: {
-                        Image(systemName: vm.txtName == "Home" ? "record.circle" : "circle")
-                            .foregroundStyle(vm.txtName == "Home" ? Color.green : Color.gray)
+                        Image(systemName: vm.txtTitle == "Home" ? "record.circle" : "circle")
+                            .foregroundStyle(vm.txtTitle == "Home" ? Color.green : Color.gray)
                         
                         Text("Дом")
                             .font(.headline)
                             .frame(maxWidth: .infinity)
-                            .foregroundStyle(vm.txtName == "Home" ? Color.green : Color.gray)
+                            .foregroundStyle(vm.txtTitle == "Home" ? Color.green : Color.gray)
                     }
                     
                     Button {
-                        vm.txtName = "Office"
+                        vm.txtTitle = "Office"
                     }label: {
-                        Image(systemName: vm.txtName == "Office" ? "record.circle" : "circle")
-                            .foregroundStyle(vm.txtName == "Office" ? Color.green : Color.gray)
+                        Image(systemName: vm.txtTitle == "Office" ? "record.circle" : "circle")
+                            .foregroundStyle(vm.txtTitle == "Office" ? Color.green : Color.gray)
                         
                         Text("Офис")
                             .font(.headline)
                             .frame(maxWidth: .infinity)
-                            .foregroundStyle(vm.txtName == "Office" ? Color.green : Color.gray)
+                            .foregroundStyle(vm.txtTitle == "Office" ? Color.green : Color.gray)
                     }
                     
                     Button {
-                        vm.txtName = "Other"
+                        vm.txtTitle = "Other"
                     }label: {
-                        Image(systemName: vm.txtName == "Other" ? "record.circle" : "circle")
-                            .foregroundStyle(vm.txtName == "Other" ? Color.green : Color.gray)
+                        Image(systemName: vm.txtTitle == "Other" ? "record.circle" : "circle")
+                            .foregroundStyle(vm.txtTitle == "Other" ? Color.green : Color.gray)
                         
                         Text("Другой")
                             .font(.headline)
                             .frame(maxWidth: .infinity)
-                            .foregroundStyle(vm.txtName == "Other" ? Color.green : Color.gray)
+                            .foregroundStyle(vm.txtTitle == "Other" ? Color.green : Color.gray)
                     }
                     
                 }

@@ -12,6 +12,7 @@ struct CartView: View {
     // MARK: - Properties
     @FirestoreQuery(collectionPath: "Shop") var items: [Product]
     @EnvironmentObject var vm: CartViewModel
+    
     // MARK: - Body
     var body: some View {
         NavigationStack {

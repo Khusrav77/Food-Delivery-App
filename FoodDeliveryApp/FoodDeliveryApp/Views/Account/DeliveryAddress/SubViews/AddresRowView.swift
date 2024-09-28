@@ -70,7 +70,8 @@ struct AddresRowView: View {
 #Preview {
     AddresRowView(
         address: Address(
-            id: 1, 
+            id: 1,
+            title: "Офис",
             name: "Офис",
             phone: "",
             city: "Санкт-Петербург",

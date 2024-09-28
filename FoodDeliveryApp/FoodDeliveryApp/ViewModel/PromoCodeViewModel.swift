@@ -9,8 +9,8 @@ import Foundation
 
 
 final class PromoCodeViewModel: ObservableObject {
-    @Published var promoCodes: [PromoCode] = []
     
+    @Published var promoCodes: [PromoCode] = []
     @Published var showError = false
     @Published var errorMesage = ""
     

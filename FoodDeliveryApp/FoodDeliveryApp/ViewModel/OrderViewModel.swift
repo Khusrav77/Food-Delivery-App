@@ -7,7 +7,7 @@
 
 import Foundation
 
-class OrderViewModel: ObservableObject {
+final class OrderViewModel: ObservableObject {
     // MARK: - Properties
     static var sharred: OrderViewModel = OrderViewModel()
     @Published var listMyOrders: [MyOrder] = []

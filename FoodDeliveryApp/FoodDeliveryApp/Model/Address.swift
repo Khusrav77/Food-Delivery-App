@@ -10,6 +10,7 @@ import Foundation
 
 struct Address: Identifiable, Equatable, Codable {
     var id: Int
+    var title: String
     var name: String
     var phone: String
     var city: String
