@@ -16,8 +16,18 @@ struct User: Identifiable, Equatable, Codable {
     var name: String?
     var email: String?
     var authToken: String?
-    
-    static func == (lhs: User, rhs: User) -> Bool {
-        return lhs.id == rhs.id
-    }
+    var googleId: String?
+    var appleId: String?
+    var vkId: String?
+    var createdAt: Date = Date()
+    var updatedAt: Date = Date()
+    var authMethod: AuthMethod
+}
+
+enum AuthMethod: String, Codable {
+    case phone
+    case email
+    case google
+    case apple
+    case vk
 }

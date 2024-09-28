@@ -9,8 +9,8 @@ import SwiftUI
 
 struct ExploreItemView: View {
     // MARK: - Properties
-    @StateObject var vm = ExploreItemsViewModel(expItems: TypeCategory(id: 1, name: "", image: ""))
-    @ObservedObject var vmCategory = ExploreViewModel()
+    @StateObject var vm = ExploreViewModel()
+    
     
     var colums = [
         GridItem(.flexible(), spacing: 16),
@@ -21,9 +21,9 @@ struct ExploreItemView: View {
     var body: some View {
         NavigationStack {
             ScrollView(.vertical, showsIndicators: false){
-                SearchTextFild(title: "Найти", text: $vm.searchItem )
+                SearchTextFild(title: "Найти", text: $vm.searchCategory )
                 LazyVGrid(columns: colums) {
-                    ForEach(vmCategory.listCategories, id: \.id) {category in
+                    ForEach(vm.listCategories, id: \.id) {category in
                         ExploreCategoryCell(category: category )
                             .padding(.vertical, 4)
                     }
@@ -39,6 +39,6 @@ struct ExploreItemView: View {
 
 #Preview {
     NavigationStack {
-        ExploreItemView(vm: ExploreItemsViewModel(expItems: TypeCategory(id: 1, name: "", image: "")))
+        ExploreItemView()
     }
 }

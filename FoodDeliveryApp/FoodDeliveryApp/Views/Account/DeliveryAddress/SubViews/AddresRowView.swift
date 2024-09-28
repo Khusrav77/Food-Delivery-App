@@ -29,7 +29,7 @@ struct AddresRowView: View {
                 Rectangle()
                     .frame(width: 2, height: 15)
                     .foregroundStyle(.secondary.opacity(0.5))
-                Text(address.name ?? "")
+                Text(address.name)
                     .font(.subheadline)
                 
                 Spacer()
@@ -70,8 +70,9 @@ struct AddresRowView: View {
 #Preview {
     AddresRowView(
         address: Address(
-            id: 1, title: "",
+            id: 1, 
             name: "Офис",
+            phone: "",
             city: "Санкт-Петербург",
             street: "Невский проспект",
             houseNumber: "88,",

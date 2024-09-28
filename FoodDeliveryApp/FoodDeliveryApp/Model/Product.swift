@@ -15,31 +15,28 @@ struct ProductCategory: Identifiable, Codable {
 
 struct Product: Identifiable, Equatable, Codable{
     var id: Int
-    var prodId: Int?
+    var prodId: Int
     var typeId: Int
     var typeName: String
     var brandId: Int?
     var brandName: String?
     var name: String
     var detail: String?
-    var unitName: String
+    var unitName: Unit
     var unitValue: String
-    var nutritionWeight: String?
+    var nutritionWeight: Nutrition?
     var quantityInCart: Int
     var image: String?
-    var price: Int
-    var offerPrice: Int?
-    var itemPrice: Int?
-    var totalPrice: Int?
+    var price: Price
     var startDate: Date = Date()
     var endDate: Date = Date()
     var isFav: Bool = false
-        
+    
     static func == (lhs: Product, rhs: Product) -> Bool {
-            return lhs.id == rhs.id
-        }
+        return lhs.id == rhs.id
+    }
 }
 
-    
+
 
 

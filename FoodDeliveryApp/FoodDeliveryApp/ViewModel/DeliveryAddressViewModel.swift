@@ -36,8 +36,8 @@ final class DeliveryAddressViewModel: ObservableObject {
     
     
     func setData(address: Address) {
-        txtName = address.name ?? ""
-        txtPhone = address.phone ?? ""
+        txtName = address.name
+        txtPhone = address.phone
         txtCity = address.city
         txtStreet = address.street
         txtHouseNumber = address.houseNumber
@@ -53,6 +53,7 @@ final class DeliveryAddressViewModel: ObservableObject {
         let newAddress = Address(
             id: newId,
             name: txtName,
+            phone: txtPhone,
             city: txtCity,
             street: txtStreet,
             houseNumber: txtHouseNumber,

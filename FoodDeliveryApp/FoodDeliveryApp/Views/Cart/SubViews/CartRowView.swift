@@ -54,5 +54,5 @@ struct CartRowView: View {
 }
 
 #Preview {
-    CartRowView(product: Product(id: 1, prodId: 1, typeId: 1, quantityInCart: 1, name: "", unitName: "", unitValue: "", catName: "", typeName: "", price: 99))
+    CartRowView(product: Product(id: 1, prodId: 1, typeId: 1, typeName: "", name: "", unitName: Unit.grams, unitValue: "1", quantityInCart: 1, price: Price(basePrice: 99)))
 }

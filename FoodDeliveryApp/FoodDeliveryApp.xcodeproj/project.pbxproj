@@ -99,6 +99,7 @@
 		A499C5352C0523D600F5F371 /* FiraSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A499C5222C0523D500F5F371 /* FiraSans-Light.ttf */; };
 		A499C5372C0523D600F5F371 /* FiraSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A499C5242C0523D600F5F371 /* FiraSans-Regular.ttf */; };
 		A499C5382C0523D600F5F371 /* FiraSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A499C5252C0523D600F5F371 /* FiraSans-Medium.ttf */; };
+		A4AD535D2CA821CD00A8F31A /* ModelHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AD535C2CA821B300A8F31A /* ModelHelpers.swift */; };
 		A4BA40D02CA0001F00E2EA82 /* SpecialOffersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BA40CF2CA0001F00E2EA82 /* SpecialOffersView.swift */; };
 		A4BA40D22CA0192500E2EA82 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BA40D12CA0192500E2EA82 /* AccountView.swift */; };
 		A4BA40D42CA020F500E2EA82 /* AccountRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BA40D32CA020F500E2EA82 /* AccountRow.swift */; };
@@ -205,6 +206,7 @@
 		A499C5242C0523D600F5F371 /* FiraSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraSans-Regular.ttf"; sourceTree = "<group>"; };
 		A499C5252C0523D600F5F371 /* FiraSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraSans-Medium.ttf"; sourceTree = "<group>"; };
 		A499C53E2C05333100F5F371 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A4AD535C2CA821B300A8F31A /* ModelHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelHelpers.swift; sourceTree = "<group>"; };
 		A4BA40CF2CA0001F00E2EA82 /* SpecialOffersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialOffersView.swift; sourceTree = "<group>"; };
 		A4BA40D12CA0192500E2EA82 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		A4BA40D32CA020F500E2EA82 /* AccountRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRow.swift; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 				A466425B2C033A5D0025096A /* Views */,
 				A466425C2C033A7A0025096A /* ViewModel */,
 				A466425A2C033A410025096A /* Model */,
+				A4AD535B2CA8120300A8F31A /* Helper */,
 				A46D91702C11A82D0019A335 /* NetworkingServices */,
 				A46642582C0339D70025096A /* Extensions */,
 				A46798562C150AA70015F8DC /* UIComponents */,
@@ -698,6 +701,14 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		A4AD535B2CA8120300A8F31A /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				A4AD535C2CA821B300A8F31A /* ModelHelpers.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		A4BA40C42C9FDC1200E2EA82 /* Account */ = {
 			isa = PBXGroup;
 			children = (
@@ -1018,6 +1029,7 @@
 				A46C571C2C9F4480006AD5CB /* CartRowView.swift in Sources */,
 				A45A89932C0E54B30015A0A4 /* ProductViewModel.swift in Sources */,
 				A46C57232C9F5B72006AD5CB /* ReadyMadeFoodView.swift in Sources */,
+				A4AD535D2CA821CD00A8F31A /* ModelHelpers.swift in Sources */,
 				A4E517F52CA1EC95007B931B /* DownButton.swift in Sources */,
 				A46642602C037D5E0025096A /* Extension+CGFloat.swift in Sources */,
 				A462E5D72C20444E0078B7EA /* DeliveryAddressViewModel.swift in Sources */,

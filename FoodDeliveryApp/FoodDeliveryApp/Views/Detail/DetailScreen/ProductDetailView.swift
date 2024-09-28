@@ -54,7 +54,7 @@ struct ProductDetailView: View {
                             
                             HStack(spacing: 0) {
                                 Text(product.unitValue)
-                                Text(product.unitName)
+                                Text(product.unitName.rawValue)
                             }
                            
                             Spacer()
@@ -244,7 +244,7 @@ struct ProductDetailView: View {
 }
 
 #Preview {
-    ProductDetailView(product: Product(id: 1, prodId: 2, catId: 5, brandId: 7, typeId: 4, orderId: 5, quantityInCart: 9, detail: "", name: "", unitName: "", unitValue: "", nutritionWeight: "", image: "", catName: "", typeName: "", offerPrice: 9, itemPrice: 7, totalPrice: 8, price: 99))
+    ProductDetailView(product: Product(id: 1, prodId: 1, typeId: 1, typeName: "", name: "", unitName: Unit.grams, unitValue: "1", quantityInCart: 1, price: Price(basePrice: 99)))
 }
 
 private var tabBar: some View {

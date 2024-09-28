@@ -70,5 +70,5 @@ struct AddToCartButton: View {
 }
 
 #Preview {
-    AddToCartButton(product: Product(id: 2, prodId: 5, catId: 5, brandId: 3, typeId: 7, orderId: 7, quantityInCart: 2, detail: "", name: "", unitName: "", unitValue: "", nutritionWeight: "", image: "", catName: "", typeName: "", offerPrice: 4, itemPrice: 78, totalPrice: 90, price: 455))
+    AddToCartButton(product: Product(id: 1, prodId: 1, typeId: 1, typeName: "", name: "", unitName: Unit.grams, unitValue: "1", quantityInCart: 1, price: Price(basePrice: 99)))
 }

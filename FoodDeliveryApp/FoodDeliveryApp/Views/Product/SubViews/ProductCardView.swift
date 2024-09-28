@@ -171,6 +171,6 @@ struct ProductCardView: View {
 
 
 #Preview {
-    ProductCardView(product: Product(id: 3, prodId: 2, catId: 2, brandId: 2, typeId: 2, orderId: 2, quantityInCart: 2, detail: "", name: "", unitName: "", unitValue: "", nutritionWeight: "", image: "", catName: "", typeName: "", offerPrice: 4, itemPrice: 45, totalPrice: 67, price: 99))
+    ProductCardView(product: Product(id: 1, prodId: 1, typeId: 1, typeName: "", name: "", unitName: Unit.grams, unitValue: "1", quantityInCart: 1, price: Price(basePrice: 99)))
     
 }

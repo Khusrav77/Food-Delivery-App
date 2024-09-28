@@ -10,8 +10,8 @@ import Foundation
 
 struct Address: Identifiable, Equatable, Codable {
     var id: Int
-    var name: String?
-    var phone: String?
+    var name: String
+    var phone: String
     var city: String
     var street: String
     var houseNumber: String

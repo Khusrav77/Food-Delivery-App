@@ -15,7 +15,4 @@ struct TypeCategory: Identifiable, Equatable {
     var image: String
     var color: Color?
     
-    static func == (lhs: TypeCategory, rhs: TypeCategory) -> Bool {
-        return lhs.id == rhs.id
-    }
 }

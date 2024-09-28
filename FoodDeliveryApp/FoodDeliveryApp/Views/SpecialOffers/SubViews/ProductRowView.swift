@@ -100,7 +100,7 @@ struct ProductRowView: View {
                     
                     // Country
                     HStack {
-                        Text(product.nutritionWeight ?? "")
+                        Text(product.nutritionWeight?.nutritionValue ?? "")
                             .subtitle()
                             .foregroundStyle(.black)
                             .multilineTextAlignment(.leading)
@@ -156,5 +156,5 @@ struct ProductRowView: View {
 }
 
 #Preview {
-    ProductRowView(product: Product(id: 3, prodId: 3, catId: 1, brandId: 6, typeId: 4, orderId: 4, quantityInCart: 2, detail: "", name: "", unitName: "", unitValue: "", nutritionWeight: "", image: "", catName: "", typeName: "", offerPrice: 4, itemPrice: 45, totalPrice: 4, price: 56))
+    ProductRowView(product: Product(id: 1, prodId: 1, typeId: 1, typeName: "", name: "", unitName: Unit.grams, unitValue: "1", quantityInCart: 1, price: Price(basePrice: 99)))
 }

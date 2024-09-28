@@ -15,22 +15,32 @@ struct MyOrder: Identifiable, Equatable {
     var userPayPrice: Int?
     var discountPrice: Int?
     var deliverPrice: Int?
-    var deliverType: Int
-    var paymentType: Int
-    var paymentStatus: Int
-    var orderStatus: Int
-    var status: Int
+    var deliverType: DeliveryType
+    var paymentType: PaymentType
+    var paymentStatus: OrderStatus
+    var orderStatus: OrderStatus
+    var status: OrderStatus
     var names: String
-    var userName: String
-    var phone: String
-    var address: String
-    var city: String
-    var state: String
-    var postalCode: String
+    var address: Address
     var images: [String] = []
     var createdDate: Date = Date()
-       
-    static func == (lhs: MyOrder, rhs: MyOrder) -> Bool {
-           return lhs.id == rhs.id
-       }
+}
+
+
+enum DeliveryType: Int, Codable {
+    case pickup = 0
+    case delivery = 1
+}
+
+enum PaymentType: Int, Codable {
+    case cash = 0
+    case card = 1
+    case online = 2
+}
+
+enum OrderStatus: Int, Codable {
+    case pending = 0
+    case confirmed = 1
+    case delivered = 2
+    case canceled = 3
 }

@@ -12,11 +12,10 @@ final class ExploreViewModel: ObservableObject {
     // MARK: - Properties
     static let shared: ExploreViewModel = ExploreViewModel()
     
-    @Published var searchCategory: String = ""
-    @Published var listItems: [Product] = []
-    
     @Published var showError = false
     @Published var errorMessage = ""
+    @Published var searchItems: String = ""
+    @Published var searchCategory: String = ""
     
     @Published var listCategories: [TypeCategory] = [
         TypeCategory(id: 1, name: "Fruits", image: "fruits", color: nil),
@@ -34,6 +33,7 @@ final class ExploreViewModel: ObservableObject {
             TypeCategory(id: 13, name: "For Home", image: "foHome", color: nil)
            ]
     
+    @Published var listItems: [Product] = []
     
     
     init () {
