@@ -12,6 +12,8 @@ final class DeliveryAddressViewModel: ObservableObject {
     // MARK: - Properties
     static var shared: DeliveryAddressViewModel = DeliveryAddressViewModel()
     
+    @Published var address: [Address] = []
+    
     @Published var txtTitle: String = "Home"
     @Published var txtName: String = ""
     @Published var txtPhone: String = ""
@@ -23,13 +25,15 @@ final class DeliveryAddressViewModel: ObservableObject {
     @Published var txtFloor: String = ""
     @Published var txtPostalCode: String = ""
     @Published var txtComment: String = ""
+    @Published var errorMessage: String = ""
+    
     @Published var isSelected: Bool = false
+    @Published var showaddedAddress: Bool = false
+    @Published var showError: Bool = false
     
-    @Published var showError = false
-    @Published var errorMessage = ""
-    @Published var showaddedAddress = false
     
-    @Published var address: [Address] = []
+    
+    
     
     init() {
         serviceCallList()

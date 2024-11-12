@@ -9,16 +9,19 @@ import SwiftUI
 
 final class ProductViewModel: ObservableObject {
     // MARK: - Properties
-    @Published var showError = false
-    @Published var errorMessage = ""
+    
     @Published var producList: [Product] = []
     @Published var nutritions: [Nutrition] = []
     @Published var images: [ImageModel] = []
     
+    @Published var quantity: Int = 1
+    @Published var errorMessage: String = ""
+    
+    @Published var showError: Bool = false
     @Published var isFav: Bool = false
     @Published var isShowDetail: Bool = false
     @Published var isShowNutrition: Bool = false
-    @Published var quantity: Int = 1
+    
     
     
     // MARK: - Methods

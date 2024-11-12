@@ -13,8 +13,8 @@ final class OrderViewModel: ObservableObject {
     @Published var listMyOrders: [MyOrder] = []
     @Published var listOrderItems: [OrderItem] = []
     
-    @Published var showError = false
-    @Published var errorMesage = ""
+    @Published var errorMesage: String = ""
+    @Published var showError: Bool = false
     
     
     init() {

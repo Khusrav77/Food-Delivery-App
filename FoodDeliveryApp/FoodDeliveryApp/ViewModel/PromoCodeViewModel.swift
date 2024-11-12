@@ -11,8 +11,8 @@ import Foundation
 final class PromoCodeViewModel: ObservableObject {
     
     @Published var promoCodes: [PromoCode] = []
-    @Published var showError = false
-    @Published var errorMesage = ""
+    @Published var errorMesage: String = ""
+    @Published var showError: Bool = false
     
     
     init() {

@@ -596,8 +596,8 @@
 			isa = PBXGroup;
 			children = (
 				A46D91712C11A8F90019A335 /* AuthService.swift */,
-				A46D91732C11CE690019A335 /* APIClient.swift */,
 				A45C626F2C15D7F300E7E11F /* ServiceCall.swift */,
+				A46D91732C11CE690019A335 /* APIClient.swift */,
 				A46D91752C11E1130019A335 /* Globals.swift */,
 				A462E5D82C2179900078B7EA /* Utils.swift */,
 			);

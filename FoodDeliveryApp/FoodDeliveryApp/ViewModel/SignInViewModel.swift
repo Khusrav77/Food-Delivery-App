@@ -11,18 +11,21 @@ import SwiftUI
 final class SignInViewModel: ObservableObject {
     // MARK: - Properties
     static let shared: SignInViewModel = SignInViewModel()
+    
     @Published var email: String = ""
     @Published var password: String = ""
+    @Published var phoneNumber: String = ""
+    @Published var verificationCode: String = ""
+    @Published var errorMessage: String = ""
+    
     @Published var rememberMe: Bool = false
     @Published var showSignUp: Bool = false
     @Published var showForgotPassword: Bool = false
     
-    @Published var phoneNumber: String = ""
     @Published var isLoading: Bool = false
     @Published var isCodeSent: Bool = false
-    @Published var verificationCode: String = ""
     @Published var isSignedIn: Bool = false
-    @Published var errorMessage: String = ""
+    
     
     var isLoadinButtonDisabled: Bool {
         isPhoneNuberValid(phoneNumber)

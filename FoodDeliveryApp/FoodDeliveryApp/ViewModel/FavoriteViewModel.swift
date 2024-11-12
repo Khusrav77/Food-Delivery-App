@@ -11,8 +11,8 @@ final class FavoriteViewModel: ObservableObject {
     // MARK: - Properties
     @Published var favorites: [Product] = []
     
-    @Published var showError = false
-    @Published var errorMessage = ""
+    @Published var errorMessage: String = ""
+    @Published var showError: Bool = false
     
     
     init() {}

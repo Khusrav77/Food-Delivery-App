@@ -10,14 +10,15 @@ import Foundation
 final class UserAuthViewModel: ObservableObject {
     // MARK: - Properties
     static var shared: UserAuthViewModel = UserAuthViewModel()
-
+    
+    @Published var user: User?
     @Published var txtPhoneNumber: String = ""
     @Published var txtVerificationCode: String = ""
-    @Published var isUserLoggedIn: Bool = false
-    @Published var user: User?
     
-    @Published var showError = false
-    @Published var errorMessage = ""
+    @Published var errorMessage: String = ""
+    @Published var isUserLoggedIn: Bool = false
+    @Published var showError: Bool = false
+    
     
 //    init() {
 //        if Utils.UDValueBool(key: Globals.userLogin) {
