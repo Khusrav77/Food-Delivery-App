@@ -15,11 +15,12 @@ struct BackButton: View {
         }label: {
             Image(systemName: "chevron.left")
                 .font(.title3)
-                .foregroundColor(.black.opacity(0.5))
+                .foregroundStyle(.white.opacity(0.8))
                 .padding(12)
-                .background(.gray.opacity(0.1))
+                .background(.gray.opacity(0.2))
                 .clipShape(Circle())
         }
+        .buttonStyle(.plain)
     }
 }
 

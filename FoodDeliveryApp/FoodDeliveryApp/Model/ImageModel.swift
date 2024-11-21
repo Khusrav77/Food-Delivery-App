@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct ImageModel: Identifiable, Equatable, Codable {
-    var id: Int
-    var prodId: Int
-    var image: String
+    let id: Int
+    let prodId: Int
+    let image: String
        
     static func == (lhs: ImageModel, rhs: ImageModel) -> Bool {
         return lhs.id == rhs.id

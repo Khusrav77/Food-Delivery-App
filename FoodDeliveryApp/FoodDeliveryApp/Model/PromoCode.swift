@@ -9,16 +9,16 @@ import Foundation
 
 
 struct PromoCode: Identifiable, Equatable {
-    var id: Int
-    var type: Int
-    var title: String
-    var code: String
-    var details: String
+    let id: Int
+    let type: Int
+    let title: String
+    let code: String
+    let details: String
     var startDate: Date = Date()
     var endDate: Date = Date()
-    var minOrderAmount: Int
-    var maxDiscountAmount: Int
-    var offerPrice: Int
+    let minOrderAmount: Int
+    let maxDiscountAmount: Int
+    let offerPrice: Int
     
     static func == (lhs: PromoCode, rhs: PromoCode) -> Bool {
         return lhs.id == rhs.id

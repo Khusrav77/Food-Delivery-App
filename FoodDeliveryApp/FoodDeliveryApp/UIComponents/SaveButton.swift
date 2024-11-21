@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct SaveButton: View {
-    var title: String = "Save"
-    var action: () -> Void
+    let title: String
+    let action: () -> Void
+    
     var body: some View {
+        
         Button{
             action()
         }label: {
@@ -26,5 +28,5 @@ struct SaveButton: View {
 }
 
 #Preview {
-    SaveButton(action: {})
+    SaveButton(title: "Save", action: {})
 }

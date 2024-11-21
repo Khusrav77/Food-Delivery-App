@@ -10,8 +10,6 @@ import Foundation
 
 final class CartViewModel: ObservableObject {
     // MARK: - Properties
-    static let shared: CartViewModel = CartViewModel()
-    
     @Published var cartItems: [CartItem] = []
     
     @Published var deliveryAddress: Address?

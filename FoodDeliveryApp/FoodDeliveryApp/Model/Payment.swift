@@ -9,11 +9,11 @@ import Foundation
 
 
 struct Payment: Identifiable, Equatable {
-    var id: Int
-    var name: String
-    var cardNumber: String
-    var cardMonth: String
-    var cardYear: String 
+    let id: Int
+    let name: String
+    let cardNumber: String
+    let cardMonth: String
+    let cardYear: String 
     
     static func == (lhs: Payment, rhs: Payment) -> Bool {
         return lhs.id == rhs.id

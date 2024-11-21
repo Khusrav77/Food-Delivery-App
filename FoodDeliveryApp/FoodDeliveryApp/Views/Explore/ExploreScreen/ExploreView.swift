@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ExploreView: View {
     // MARK: - Properties
-    @StateObject var vm = ExploreViewModel.shared
+    @StateObject var vm = ExploreViewModel()
     var columns = Array(repeating: GridItem(), count: 2)
     
     // MARK: - Body

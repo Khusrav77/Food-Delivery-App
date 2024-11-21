@@ -62,7 +62,9 @@ struct AddresRowView: View {
         .padding()
         .background(.background)
         .clipShape(RoundedRectangle(cornerRadius: 20))
-        .shadow(radius: 1)
+        .overlay {
+            RoundedRectangle(cornerRadius: 20).stroke(.gray.opacity(0.6), lineWidth: 0.5)
+        }
         
     }
 }
@@ -81,7 +83,7 @@ struct AddresRowView: View {
             entrance: "Подъезд 5,",
             floor: "этаж 8",
             postalCode: "123456",
-            comment: "оставить у двери"
+            comment: "оставить у двери", isSelected: false
         ),
         action: {}
     )

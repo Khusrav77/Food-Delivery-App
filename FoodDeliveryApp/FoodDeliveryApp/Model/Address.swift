@@ -9,19 +9,19 @@ import Foundation
 
 
 struct Address: Identifiable, Equatable, Codable {
-    var id: Int
-    var title: String
-    var name: String
-    var phone: String
-    var city: String
-    var street: String
-    var houseNumber: String
-    var apartmentOrOffice: String?
-    var entrance: String?
-    var floor: String?
-    var postalCode: String?
-    var comment: String?
-    var isSelected: Bool = false
+    let id: Int
+    let title: String
+    let name: String
+    let phone: String
+    let city: String
+    let street: String
+    let houseNumber: String
+    let apartmentOrOffice: String?
+    let entrance: String?
+    let floor: String?
+    let postalCode: String?
+    let comment: String?
+    let isSelected: Bool
     
     static func == (lhs: Address, rhs: Address) -> Bool {
         return lhs.id == rhs.id

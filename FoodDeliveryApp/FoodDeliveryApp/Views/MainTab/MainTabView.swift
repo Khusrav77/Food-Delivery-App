@@ -9,7 +9,7 @@ import SwiftUI
 struct MainTabView: View {
     
     // MARK: - Properties
-    @StateObject var vm = HomeViewModel.shared
+    @StateObject var vm = HomeViewModel()
     
     
     // MARK: - Body

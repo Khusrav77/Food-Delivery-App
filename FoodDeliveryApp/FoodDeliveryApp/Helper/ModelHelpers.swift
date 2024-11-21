@@ -6,10 +6,10 @@
 //
 
 struct Price: Codable {
-    var basePrice: Int
-    var offerPrice: Int?
-    var itemPrice: Int?
-    var totalPrice: Int?
+    let basePrice: Int
+    let offerPrice: Int?
+    let itemPrice: Int?
+    let totalPrice: Int?
     
 }
 

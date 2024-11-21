@@ -23,7 +23,7 @@ struct DeteilProfileInfo: View {
                     .padding(16)
                     .overlay {
                         RoundedRectangle(cornerRadius: 20)
-                            .stroke(.gray.opacity(0.2), lineWidth: 1)
+                            .stroke(Color.primary.opacity(0.2), lineWidth: 1)
                     }
                     
                     RoundedRectangle(cornerRadius: 20)
@@ -42,9 +42,10 @@ struct DeteilProfileInfo: View {
                 .padding()
                 .frame(maxWidth: .infinity)
                 .background(.background)
+                .clipShape(RoundedRectangle(cornerRadius: 20))
                 .overlay {
                     RoundedRectangle(cornerRadius: 20)
-                        .stroke(.gray.opacity(0.2), lineWidth: 1)
+                        .stroke(Color.primary.opacity(0.2), lineWidth: 1)
                 }
                 Spacer()
             }
@@ -57,6 +58,7 @@ struct DeteilProfileInfo: View {
                     Button("Править") {
                         
                     }
+                    .buttonStyle(.plain)
                 }
                 
                 ToolbarItem(placement: .navigationBarLeading) {

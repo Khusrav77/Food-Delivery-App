@@ -9,12 +9,12 @@ import Foundation
 
 
 struct Notification: Identifiable, Equatable {
-    var id: Int
-    var refId: Int
-    var isRead: Int
-    var notificationType: Int
-    var title: String
-    var message: String
+    let id: Int
+    let refId: Int
+    let isRead: Int
+    let notificationType: Int
+    let title: String
+    let message: String
     var createdDate: Date = Date()
    
     static func == (lhs: Notification, rhs: Notification) -> Bool {

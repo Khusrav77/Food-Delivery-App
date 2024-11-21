@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct AccountView: View {
-    @ObservedObject var vmaddress = DeliveryAddressViewModel.shared
+    @ObservedObject var vmaddress = DeliveryAddressViewModel()
     @State private var isPresented: Bool = false
+    
     var body: some View {
         NavigationStack {
-            VStack(spacing: 15) {
+            VStack(spacing: 16) {
                 ProfileInfo()
                 
                 ScrollView {

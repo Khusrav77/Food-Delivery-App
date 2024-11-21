@@ -10,19 +10,19 @@ import Foundation
 
 struct OrderItem: Identifiable, Equatable, Codable {
     var id: UUID = UUID()
-    var orderId: Int
-    var prodId: Int
-    var typeId: Int
-    var typeName: String
-    var brandId: Int
-    var name: String
-    var detail: String?
-    var unitName: Unit
-    var unitValue: String
-    var nutritionWeight: Nutrition?
-    var quantityInCart: Int
-    var image: String
-    var price: Price
+    let orderId: Int
+    let prodId: Int
+    let typeId: Int
+    let typeName: String
+    let brandId: Int
+    let name: String
+    let detail: String?
+    let unitName: Unit
+    let unitValue: String
+    let nutritionWeight: Nutrition?
+    let quantityInCart: Int
+    let image: String
+    let price: Price
     var startDate: Date = Date()
     var endDate: Date = Date()
     

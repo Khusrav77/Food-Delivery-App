@@ -10,8 +10,6 @@ import Foundation
 
 final class DeliveryAddressViewModel: ObservableObject {
     // MARK: - Properties
-    static var shared: DeliveryAddressViewModel = DeliveryAddressViewModel()
-    
     @Published var address: [Address] = []
     
     @Published var txtTitle: String = "Home"
@@ -68,7 +66,7 @@ final class DeliveryAddressViewModel: ObservableObject {
             entrance: txtEntrance,
             floor: txtFloor,
             postalCode: txtPostalCode,
-            comment: txtComment
+            comment: txtComment, isSelected: false
         )
         address.append(newAddress)
         print("Новый адрес добавлен: \(newAddress)")

@@ -32,9 +32,12 @@ struct AccountRow: View {
         }
         .padding()
         .frame(maxWidth: .infinity)
-        .background(Color.white)
-        .clipShape(RoundedRectangle(cornerRadius: 20))
-        .shadow(color: .black.opacity(0.1), radius: 0, x: 0, y: 2)
+        .background(.background)
+        .clipShape(RoundedRectangle(cornerRadius: 16))
+        .overlay {
+            RoundedRectangle(cornerRadius: 20)
+                .stroke(Color.gray.opacity(0.2), lineWidth: 1)
+        }
         .buttonStyle(.plain)
     }
 }

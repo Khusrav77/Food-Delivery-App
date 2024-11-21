@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CustomInfoTF: View {
     // MARK: - Properties
-    var title: String = "Hello, World!"
+    let title: String
     @Binding var text: String
     
     // MARK: - Body
@@ -24,5 +24,5 @@ struct CustomInfoTF: View {
 }
 
 #Preview {
-    CustomInfoTF(text: .constant("Hello, World!"))
+    CustomInfoTF(title: "Enter your name", text: .constant("Hello, World!"))
 }

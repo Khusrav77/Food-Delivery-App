@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SignUpView: View {
-    @ObservedObject var vm = SignInViewModel.shared
+    @ObservedObject var vm = SignInViewModel()
     var body: some View {
         VStack(spacing: 24) {
             

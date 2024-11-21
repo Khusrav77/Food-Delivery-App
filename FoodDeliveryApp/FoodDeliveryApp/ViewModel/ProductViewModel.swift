@@ -9,7 +9,6 @@ import SwiftUI
 
 final class ProductViewModel: ObservableObject {
     // MARK: - Properties
-    
     @Published var producList: [Product] = []
     @Published var nutritions: [Nutrition] = []
     @Published var images: [ImageModel] = []

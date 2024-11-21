@@ -12,16 +12,16 @@ import FirebaseFirestoreSwift
 
 struct User: Identifiable, Equatable, Codable {
     @DocumentID  var id: String?
-    var phone: String
-    var name: String?
-    var email: String?
-    var authToken: String?
-    var googleId: String?
-    var appleId: String?
-    var vkId: String?
+    let phone: String
+    let name: String?
+    let email: String?
+    let authToken: String?
+    let googleId: String?
+    let appleId: String?
+    let vkId: String?
     var createdAt: Date = Date()
     var updatedAt: Date = Date()
-    var authMethod: AuthMethod
+    let authMethod: AuthMethod
     
     mutating func updateTimestamp() {
            self.updatedAt = Date()

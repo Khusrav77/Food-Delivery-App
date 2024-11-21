@@ -9,8 +9,6 @@ import SwiftUI
 
 final class HomeViewModel: ObservableObject {
     // MARK: - Properties
-    static var shared: HomeViewModel = HomeViewModel()
-    
     @Published var typeList: [TypeCategory] = []
     @Published var offerList: [Product] = []
     @Published var bestList: [Product] = []
@@ -20,7 +18,7 @@ final class HomeViewModel: ObservableObject {
     @Published var textSearch: String = ""
     
     @Published var errorMessage: String = ""
-    @Published var showError = false
+    @Published var showError: Bool = false
     
     
    

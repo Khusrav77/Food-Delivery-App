@@ -10,8 +10,6 @@ import SwiftUI
 
 final class SignInViewModel: ObservableObject {
     // MARK: - Properties
-    static let shared: SignInViewModel = SignInViewModel()
-    
     @Published var email: String = ""
     @Published var password: String = ""
     @Published var phoneNumber: String = ""

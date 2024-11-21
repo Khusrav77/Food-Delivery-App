@@ -9,19 +9,19 @@ import Foundation
 
 
 struct MyOrder: Identifiable, Equatable {
-    var id: Int
-    var cartId: Int
-    var totalPrice: Int
-    var userPayPrice: Int?
-    var discountPrice: Int?
-    var deliverPrice: Int?
-    var deliverType: DeliveryType
-    var paymentType: PaymentType
-    var paymentStatus: OrderStatus
-    var orderStatus: OrderStatus
-    var status: OrderStatus
-    var names: String
-    var address: Address
+    let id: Int
+    let cartId: Int
+    let totalPrice: Int
+    let userPayPrice: Int?
+    let discountPrice: Int?
+    let deliverPrice: Int?
+    let deliverType: DeliveryType
+    let paymentType: PaymentType
+    let paymentStatus: OrderStatus
+    let orderStatus: OrderStatus
+    let status: OrderStatus
+    let names: String
+    let address: Address
     var images: [String] = []
     var createdDate: Date = Date()
 }

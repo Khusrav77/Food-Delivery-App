@@ -8,10 +8,9 @@
 import Foundation
 import SwiftUICore
 
+
 final class ExploreViewModel: ObservableObject {
     // MARK: - Properties
-    static let shared: ExploreViewModel = ExploreViewModel()
-    
     @Published var listItems: [Product] = []
     
     @Published var searchItems: String = ""

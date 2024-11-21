@@ -10,9 +10,9 @@ import SwiftUI
 
 
 struct TypeCategory: Identifiable, Equatable {
-    var id: Int
-    var name: String
-    var image: String
-    var color: Color?
+    let id: Int
+    let name: String
+    let image: String
+    let color: Color?
     
 }

@@ -19,8 +19,9 @@ struct CustomRegulatorButton: View {
         }label: {
             Image(systemName: name)
                 .font(.title3)
-                .foregroundStyle(.white.opacity(0.8))
+                .foregroundStyle(.primary.opacity(0.8))
         }
+        .buttonStyle(PlainButtonStyle())
     }
 }
 

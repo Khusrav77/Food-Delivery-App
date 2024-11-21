@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct Nutrition: Identifiable, Equatable, Codable {
-    var id: Int
-    var nutritionName: String
-    var nutritionValue: String
+    let id: Int
+    let nutritionName: String
+    let nutritionValue: String
       
   static func == (lhs: Nutrition, rhs: Nutrition) -> Bool {
           return lhs.id == rhs.id

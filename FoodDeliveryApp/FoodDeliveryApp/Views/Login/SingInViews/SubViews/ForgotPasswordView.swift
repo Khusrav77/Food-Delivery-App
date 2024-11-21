@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ForgotPasswordView: View {
     // MARK: - Properties
-    @ObservedObject var vm = SignInViewModel.shared
+    @ObservedObject var vm = SignInViewModel()
     // MARK: - Body
     var body: some View {
         VStack(spacing: 20) {
