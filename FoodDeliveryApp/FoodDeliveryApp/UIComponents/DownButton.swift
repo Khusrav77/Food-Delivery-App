@@ -16,9 +16,9 @@ struct DownButton: View {
         }label: {
             Image(systemName: "chevron.down")
                 .font(.headline)
-                .foregroundStyle(.white.opacity(0.8))
+                .foregroundStyle(.white.opacity(0.9))
                 .padding(12)
-                .background(.gray.opacity(0.2))
+                .background(.gray.opacity(0.15))
                 .clipShape(Circle())
         }
         .buttonStyle(PlainButtonStyle())

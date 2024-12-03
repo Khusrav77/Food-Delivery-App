@@ -20,9 +20,9 @@ struct isFavoriteButton: View {
             Image(systemName: "heart.fill")
                 .foregroundStyle(.red.opacity(0.8))
                 .padding(8)
-                .background(.gray.opacity(0.2))
+                .background(.gray.opacity(0.15))
                 .clipShape(Circle())
-                //.shadow(color: .black.opacity(0.2), radius: 5, x: 0, y: 2)
+                
             
         }
     }

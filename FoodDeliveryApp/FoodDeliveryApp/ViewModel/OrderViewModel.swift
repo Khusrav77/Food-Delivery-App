@@ -17,7 +17,7 @@ final class OrderViewModel: ObservableObject {
     
     
     init() {
-        serviceCallList()
+        
     }
     
     // MARK: - SERVICE CALL

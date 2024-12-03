@@ -10,6 +10,7 @@ import SwiftUI
 struct ProductsView: View {
     @ObservedObject var vm = ProductViewModel()
     var columns = Array(repeating: GridItem(), count: 2)
+    
     var body: some View {
         NavigationStack {
             ScrollView(.vertical, showsIndicators: false) {

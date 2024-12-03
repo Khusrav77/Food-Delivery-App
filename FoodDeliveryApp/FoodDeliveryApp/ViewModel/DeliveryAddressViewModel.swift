@@ -34,7 +34,7 @@ final class DeliveryAddressViewModel: ObservableObject {
     
     
     init() {
-        serviceCallList()
+      
     }
     
     

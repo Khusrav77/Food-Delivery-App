@@ -16,7 +16,7 @@ final class PromoCodeViewModel: ObservableObject {
     
     
     init() {
-        fetchPromoCodes()
+        
     }
     
     func fetchPromoCodes() {

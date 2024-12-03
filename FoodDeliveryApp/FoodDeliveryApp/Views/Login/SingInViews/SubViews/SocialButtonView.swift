@@ -9,9 +9,9 @@ import SwiftUI
 
 struct SocialButtonView: View {
     // MARK: - Properties
-    var image: String
-    var width: CGFloat
-    var height: CGFloat
+    let image: String
+    let width: CGFloat
+    let height: CGFloat
     var action: () -> Void
     
     // MARK: - Body
@@ -25,9 +25,9 @@ struct SocialButtonView: View {
                 .scaledToFit()
                 .frame(width: width, height: height)
                 .overlay {
-                    RoundedRectangle(cornerRadius: 12).stroke(lineWidth: 1.5)
+                    RoundedRectangle(cornerRadius: 12).stroke(lineWidth: 1)
                         .frame(width: 50, height: 50)
-                        .foregroundStyle(.gray.opacity(0.3))
+                        .foregroundStyle(.blue)
                 }
         }
         .tint(.primary)

@@ -26,7 +26,7 @@ final class HomeViewModel: ObservableObject {
     let navBarMenu = ["Продукты", "Готовое Еда", "Здоровья"]
    
     init() {
-        getProduct()
+       
     }
     
     

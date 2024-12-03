@@ -16,6 +16,7 @@ struct RememberStye: ToggleStyle {
             HStack {
                 Image(systemName: configuration.isOn ? "checkmark.square" : "square")
                     .contentTransition(.symbolEffect)
+                    .foregroundStyle(configuration.isOn ? .green : .gray)
                 
                 Text("Remember me")
             }
