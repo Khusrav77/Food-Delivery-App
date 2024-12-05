@@ -10,24 +10,29 @@ import FirebaseAuth
 import FirebaseFirestoreSwift
 
 
-struct User: Identifiable, Equatable, Codable {
-    @DocumentID  var id: String?
+// Базовая модель данных пользователя
+struct UserBase: Identifiable, Equatable, Codable {
+    @DocumentID var id: String?
     let phone: String
     let name: String?
     let email: String?
-    let authToken: String?
-    let googleId: String?
-    let appleId: String?
-    let vkId: String?
-    var createdAt: Date = Date()
-    var updatedAt: Date = Date()
     let authMethod: AuthMethod
-    
-    mutating func updateTimestamp() {
-           self.updatedAt = Date()
-       }
 }
 
+// Полная модель данных пользователя
+struct UserFull: Identifiable, Equatable, Codable {
+    @DocumentID var id: String?
+    let base: UserBase // Включаем базовую модель
+    let authToken: String?
+    var createdAt: Date = Date()
+    var updatedAt: Date = Date()
+
+    mutating func updateTimestamp() {
+        self.updatedAt = Date()
+    }
+}
+
+// Методы аутентификации
 enum AuthMethod: String, Codable {
     case phone
     case email

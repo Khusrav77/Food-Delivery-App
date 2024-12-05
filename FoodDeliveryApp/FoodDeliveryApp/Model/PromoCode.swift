@@ -14,11 +14,11 @@ struct PromoCode: Identifiable, Equatable {
     let title: String
     let code: String
     let details: String
-    var startDate: Date = Date()
-    var endDate: Date = Date()
     let minOrderAmount: Int
     let maxDiscountAmount: Int
     let offerPrice: Int
+    var startDate: Date = Date()
+    var endDate: Date = Date()
     
     static func == (lhs: PromoCode, rhs: PromoCode) -> Bool {
         return lhs.id == rhs.id

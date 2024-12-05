@@ -23,7 +23,6 @@
 		A45A898D2C0DEF0B0015A0A4 /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45A898C2C0DEF0B0015A0A4 /* Extension+String.swift */; };
 		A45A89912C0E46170015A0A4 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45A89902C0E46170015A0A4 /* ProductDetailView.swift */; };
 		A45A89932C0E54B30015A0A4 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45A89922C0E54B30015A0A4 /* ProductViewModel.swift */; };
-		A45A89952C0E56540015A0A4 /* Nutrition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45A89942C0E56540015A0A4 /* Nutrition.swift */; };
 		A45A89972C0E58250015A0A4 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45A89962C0E58250015A0A4 /* ImageModel.swift */; };
 		A45C62702C15D7F300E7E11F /* ServiceCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45C626F2C15D7F300E7E11F /* ServiceCall.swift */; };
 		A45C62722C15E74200E7E11F /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45C62712C15E74200E7E11F /* FavoriteView.swift */; };
@@ -100,7 +99,6 @@
 		A499C5352C0523D600F5F371 /* FiraSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A499C5222C0523D500F5F371 /* FiraSans-Light.ttf */; };
 		A499C5372C0523D600F5F371 /* FiraSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A499C5242C0523D600F5F371 /* FiraSans-Regular.ttf */; };
 		A499C5382C0523D600F5F371 /* FiraSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A499C5252C0523D600F5F371 /* FiraSans-Medium.ttf */; };
-		A4AD535D2CA821CD00A8F31A /* ModelHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AD535C2CA821B300A8F31A /* ModelHelpers.swift */; };
 		A4BA40D02CA0001F00E2EA82 /* SpecialOffersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BA40CF2CA0001F00E2EA82 /* SpecialOffersView.swift */; };
 		A4BA40D22CA0192500E2EA82 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BA40D12CA0192500E2EA82 /* AccountView.swift */; };
 		A4BA40D42CA020F500E2EA82 /* AccountRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BA40D32CA020F500E2EA82 /* AccountRow.swift */; };
@@ -137,7 +135,6 @@
 		A45A898C2C0DEF0B0015A0A4 /* Extension+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+String.swift"; sourceTree = "<group>"; };
 		A45A89902C0E46170015A0A4 /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
 		A45A89922C0E54B30015A0A4 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
-		A45A89942C0E56540015A0A4 /* Nutrition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nutrition.swift; sourceTree = "<group>"; };
 		A45A89962C0E58250015A0A4 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 		A45C626F2C15D7F300E7E11F /* ServiceCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCall.swift; sourceTree = "<group>"; };
 		A45C62712C15E74200E7E11F /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
@@ -208,7 +205,6 @@
 		A499C5242C0523D600F5F371 /* FiraSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraSans-Regular.ttf"; sourceTree = "<group>"; };
 		A499C5252C0523D600F5F371 /* FiraSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraSans-Medium.ttf"; sourceTree = "<group>"; };
 		A499C53E2C05333100F5F371 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		A4AD535C2CA821B300A8F31A /* ModelHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelHelpers.swift; sourceTree = "<group>"; };
 		A4BA40CF2CA0001F00E2EA82 /* SpecialOffersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialOffersView.swift; sourceTree = "<group>"; };
 		A4BA40D12CA0192500E2EA82 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		A4BA40D32CA020F500E2EA82 /* AccountRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRow.swift; sourceTree = "<group>"; };
@@ -353,7 +349,6 @@
 				A45C62782C1624D400E7E11F /* TypeCategory.swift */,
 				A476385C2C18725400763BE9 /* Address.swift */,
 				A47638642C18731000763BE9 /* Payment.swift */,
-				A45A89942C0E56540015A0A4 /* Nutrition.swift */,
 				A47638682C18736200763BE9 /* PromoCode.swift */,
 				A47638602C1872C300763BE9 /* Notification.swift */,
 				A45A89962C0E58250015A0A4 /* ImageModel.swift */,
@@ -707,7 +702,6 @@
 		A4AD535B2CA8120300A8F31A /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				A4AD535C2CA821B300A8F31A /* ModelHelpers.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -991,7 +985,6 @@
 				A462E5D92C2179900078B7EA /* Utils.swift in Sources */,
 				A4BA40D42CA020F500E2EA82 /* AccountRow.swift in Sources */,
 				A46CFE3E2C0B48A700BF88DD /* CategoryListView.swift in Sources */,
-				A45A89952C0E56540015A0A4 /* Nutrition.swift in Sources */,
 				A45C627B2C163EDF00E7E11F /* ExploreCategoryCell.swift in Sources */,
 				A4BB21AC2C9C13420013390D /* ProductsView.swift in Sources */,
 				A46D430A2C98B174004B5767 /* Extension+Color.swift in Sources */,
@@ -1033,7 +1026,6 @@
 				A46C571C2C9F4480006AD5CB /* CartRowView.swift in Sources */,
 				A45A89932C0E54B30015A0A4 /* ProductViewModel.swift in Sources */,
 				A46C57232C9F5B72006AD5CB /* ReadyMadeFoodView.swift in Sources */,
-				A4AD535D2CA821CD00A8F31A /* ModelHelpers.swift in Sources */,
 				A4E517F52CA1EC95007B931B /* DownButton.swift in Sources */,
 				A46642602C037D5E0025096A /* Extension+CGFloat.swift in Sources */,
 				A462E5D72C20444E0078B7EA /* DeliveryAddressViewModel.swift in Sources */,
